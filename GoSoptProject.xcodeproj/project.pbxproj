@@ -24,6 +24,7 @@
 		D2D2196229E23A3D00C7B126 /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2196129E23A3D00C7B126 /* UILabel+.swift */; };
 		D2D2196429E23A4B00C7B126 /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2196329E23A4B00C7B126 /* UIButton+.swift */; };
 		D2D2196629E23A6900C7B126 /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2196529E23A6900C7B126 /* UIImageView+.swift */; };
+		D2D2196929E23ABB00C7B126 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2196829E23ABB00C7B126 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		D2D2196129E23A3D00C7B126 /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
 		D2D2196329E23A4B00C7B126 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
 		D2D2196529E23A6900C7B126 /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
+		D2D2196829E23ABB00C7B126 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 		D2D2193729E2356400C7B126 /* GoSoptProject */ = {
 			isa = PBXGroup;
 			children = (
+				D2D2196729E23AAB00C7B126 /* Base */,
 				D2D2195029E2397700C7B126 /* Resource */,
 				D2D2194D29E2395300C7B126 /* Global */,
 				D2D2194C29E2392300C7B126 /* Application */,
@@ -138,6 +141,14 @@
 				D2D2194129E2356500C7B126 /* Assets.xcassets */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		D2D2196729E23AAB00C7B126 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				D2D2196829E23ABB00C7B126 /* BaseViewController.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,6 +227,7 @@
 				D2D2196629E23A6900C7B126 /* UIImageView+.swift in Sources */,
 				D2D2193D29E2356400C7B126 /* ViewController.swift in Sources */,
 				D2D2195629E2399F00C7B126 /* URLs.swift in Sources */,
+				D2D2196929E23ABB00C7B126 /* BaseViewController.swift in Sources */,
 				D2D2196029E23A2A00C7B126 /* UIColor+.swift in Sources */,
 				D2D2195A29E239E700C7B126 /* UIViewController+.swift in Sources */,
 				D2D2196229E23A3D00C7B126 /* UILabel+.swift in Sources */,
