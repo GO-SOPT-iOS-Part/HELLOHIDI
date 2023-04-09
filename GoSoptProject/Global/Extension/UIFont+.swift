@@ -24,7 +24,7 @@ extension UIFont{
     }
     
     class var tvingDisplay3: UIFont {
-        return UIFont(name: "Pretendard-Normal", size: 14)!
+        return UIFont(name: "Pretendard-SemiBold", size: 14)!
     }
 }
 
