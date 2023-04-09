@@ -16,6 +16,14 @@
 		D2D2195229E2398D00C7B126 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2195129E2398D00C7B126 /* Device.swift */; };
 		D2D2195429E2399500C7B126 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2195329E2399500C7B126 /* Image.swift */; };
 		D2D2195629E2399F00C7B126 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2195529E2399F00C7B126 /* URLs.swift */; };
+		D2D2195829E239D100C7B126 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2195729E239D100C7B126 /* UIView+.swift */; };
+		D2D2195A29E239E700C7B126 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2195929E239E700C7B126 /* UIViewController+.swift */; };
+		D2D2195C29E23A0000C7B126 /* UITableViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2195B29E23A0000C7B126 /* UITableViewCell+.swift */; };
+		D2D2195E29E23A1000C7B126 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2195D29E23A1000C7B126 /* UITextField+.swift */; };
+		D2D2196029E23A2A00C7B126 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2195F29E23A2A00C7B126 /* UIColor+.swift */; };
+		D2D2196229E23A3D00C7B126 /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2196129E23A3D00C7B126 /* UILabel+.swift */; };
+		D2D2196429E23A4B00C7B126 /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2196329E23A4B00C7B126 /* UIButton+.swift */; };
+		D2D2196629E23A6900C7B126 /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2196529E23A6900C7B126 /* UIImageView+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +38,14 @@
 		D2D2195129E2398D00C7B126 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		D2D2195329E2399500C7B126 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		D2D2195529E2399F00C7B126 /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
+		D2D2195729E239D100C7B126 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		D2D2195929E239E700C7B126 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		D2D2195B29E23A0000C7B126 /* UITableViewCell+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+.swift"; sourceTree = "<group>"; };
+		D2D2195D29E23A1000C7B126 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
+		D2D2195F29E23A2A00C7B126 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		D2D2196129E23A3D00C7B126 /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
+		D2D2196329E23A4B00C7B126 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
+		D2D2196529E23A6900C7B126 /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +120,14 @@
 		D2D2194F29E2396600C7B126 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				D2D2195729E239D100C7B126 /* UIView+.swift */,
+				D2D2195929E239E700C7B126 /* UIViewController+.swift */,
+				D2D2195B29E23A0000C7B126 /* UITableViewCell+.swift */,
+				D2D2195D29E23A1000C7B126 /* UITextField+.swift */,
+				D2D2195F29E23A2A00C7B126 /* UIColor+.swift */,
+				D2D2196129E23A3D00C7B126 /* UILabel+.swift */,
+				D2D2196329E23A4B00C7B126 /* UIButton+.swift */,
+				D2D2196529E23A6900C7B126 /* UIImageView+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -187,8 +211,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2D2195C29E23A0000C7B126 /* UITableViewCell+.swift in Sources */,
+				D2D2195E29E23A1000C7B126 /* UITextField+.swift in Sources */,
+				D2D2196629E23A6900C7B126 /* UIImageView+.swift in Sources */,
 				D2D2193D29E2356400C7B126 /* ViewController.swift in Sources */,
 				D2D2195629E2399F00C7B126 /* URLs.swift in Sources */,
+				D2D2196029E23A2A00C7B126 /* UIColor+.swift in Sources */,
+				D2D2195A29E239E700C7B126 /* UIViewController+.swift in Sources */,
+				D2D2196229E23A3D00C7B126 /* UILabel+.swift in Sources */,
+				D2D2196429E23A4B00C7B126 /* UIButton+.swift in Sources */,
+				D2D2195829E239D100C7B126 /* UIView+.swift in Sources */,
 				D2D2193929E2356400C7B126 /* AppDelegate.swift in Sources */,
 				D2D2193B29E2356400C7B126 /* SceneDelegate.swift in Sources */,
 				D2D2195229E2398D00C7B126 /* Device.swift in Sources */,
