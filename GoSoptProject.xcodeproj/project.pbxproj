@@ -61,6 +61,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D2A7F31929E23C5500BFA4E9 /* SecondSeminarAssignment */ = {
+			isa = PBXGroup;
+			children = (
+				D2A7F31A29E23C6400BFA4E9 /* Presentation */,
+			);
+			path = SecondSeminarAssignment;
+			sourceTree = "<group>";
+		};
+		D2A7F31A29E23C6400BFA4E9 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				D2A7F31C29E23C7F00BFA4E9 /* View */,
+				D2A7F31B29E23C7A00BFA4E9 /* ViewController */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		D2A7F31B29E23C7A00BFA4E9 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		D2A7F31C29E23C7F00BFA4E9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		D2D2192C29E2356400C7B126 = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +111,7 @@
 		D2D2193729E2356400C7B126 /* GoSoptProject */ = {
 			isa = PBXGroup;
 			children = (
+				D2A7F31929E23C5500BFA4E9 /* SecondSeminarAssignment */,
 				D2D2196729E23AAB00C7B126 /* Base */,
 				D2D2195029E2397700C7B126 /* Resource */,
 				D2D2194D29E2395300C7B126 /* Global */,
