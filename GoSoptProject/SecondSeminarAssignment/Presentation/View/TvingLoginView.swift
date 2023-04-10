@@ -14,20 +14,18 @@ final class TvingLoginView: UIView {
     
     private lazy var backButton = UIButton()
     private let titleLabel = UILabel()
-    private lazy var idTextField = UITextField()
-    private lazy var passwordTextField = UITextField()
-    private lazy var cleanButton = UIButton()
-    private lazy var securityButton = UIButton()
-    private lazy var loginButton = UIButton()
-    private lazy var findIDButton = UIButton()
-    private lazy var findPasswordButton = UIButton()
+    public lazy var idTextField = UITextField()
+    public lazy var passwordTextField = UITextField()
+    public lazy var cleanButton = UIButton()
+    public lazy var securityButton = UIButton()
+    public lazy var loginButton = UIButton()
+    public lazy var findIDButton = UIButton()
+    public lazy var findPasswordButton = UIButton()
     private let describeSignUpLabel = UILabel()
-    private lazy var signUpButton = UIButton()
+    public lazy var signUpButton = UIButton()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        target()
         
         style()
         hierarchy()
@@ -64,6 +62,7 @@ final class TvingLoginView: UIView {
         
         passwordTextField.do{
             $0.placeholder = "비밀번호"
+            $0.isSecureTextEntry = true
             $0.attributedPlaceholder = NSAttributedString(string: "비밀번호", attributes: [NSAttributedString.Key.foregroundColor : UIColor.tvingGray2])
             $0.textColor = .tvingGray2
             $0.font = .tvingDisplay1
@@ -73,10 +72,12 @@ final class TvingLoginView: UIView {
         
         cleanButton.do {
             $0.setImage(Image.close, for: .normal)
+            $0.isHidden = true
         }
         
         securityButton.do {
             $0.setImage(Image.eye, for: .normal)
+            $0.isHidden = true
         }
         
         loginButton.do {
@@ -84,7 +85,9 @@ final class TvingLoginView: UIView {
             $0.setTitleColor(.tvingWhite, for: .normal)
             $0.titleLabel?.font = .tvingDisplay2
             $0.titleLabel?.textAlignment = .center
-            $0.backgroundColor = .tvingRed
+            $0.backgroundColor = .tvingBlack
+            $0.layer.borderColor = UIColor.tvingGray4.cgColor
+            $0.layer.borderWidth = 1
         }
         
         findIDButton.do {
