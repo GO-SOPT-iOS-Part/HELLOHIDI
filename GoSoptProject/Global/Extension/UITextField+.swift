@@ -21,6 +21,12 @@ extension UITextField {
         self.rightViewMode = ViewMode.always
     }
     
+    func isEmpty() -> Bool {
+        if let text = self.text, !text.isEmpty {
+            return false
+        } else {
+            return true
+        }
+    }
 }
-
 

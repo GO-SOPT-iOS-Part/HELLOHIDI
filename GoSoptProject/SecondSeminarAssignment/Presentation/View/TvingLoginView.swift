@@ -57,6 +57,8 @@ final class TvingLoginView: UIView {
             $0.textColor = .tvingGray2
             $0.font = .tvingDisplay1
             $0.backgroundColor = .tvingGray4
+            $0.makeCornerRadius(ratio: 3)
+            $0.makeCornerBorder(borderWidth: 1, borderColor: .tvingGray4)
             $0.addLeftPadding(inset: 22)
         }
         
@@ -67,6 +69,8 @@ final class TvingLoginView: UIView {
             $0.textColor = .tvingGray2
             $0.font = .tvingDisplay1
             $0.backgroundColor = .tvingGray4
+            $0.makeCornerRadius(ratio: 3)
+            $0.makeCornerBorder(borderWidth: 1, borderColor: .tvingGray4)
             $0.addLeftPadding(inset: 22)
         }
         
