@@ -29,10 +29,15 @@ final class TvingLoginViewController: BaseViewController {
         rootView.idTextField.delegate = self
         
         rootView.securityButton.addTarget(self, action: #selector(securityButtonDidTap), for: .touchUpInside)
+        rootView.clearButton.addTarget(self, action: #selector(clearButtonDidTap), for: .touchUpInside)
     }
     
     @objc private func securityButtonDidTap() {
         disableSecureEntry()
+    }
+    
+    @objc private func clearButtonDidTap() {
+        clearTextField()
     }
 }
 
@@ -42,7 +47,7 @@ extension TvingLoginViewController: UITextFieldDelegate {
         case "아이디":
             rootView.idTextField.layer.borderColor = UIColor.tvingGray2.cgColor
         case "비밀번호":
-            rootView.cleanButton.isHidden = false
+            rootView.clearButton.isHidden = false
             rootView.securityButton.isHidden = false
             rootView.passwordTextField.layer.borderColor = UIColor.tvingGray2.cgColor
         default:
@@ -51,9 +56,11 @@ extension TvingLoginViewController: UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        print(rootView.passwordTextField.isEmpty())
         changeButtonColor()
+        rootView.idTextField.layer.borderColor = UIColor.tvingGray4.cgColor
+        rootView.passwordTextField.layer.borderColor = UIColor.tvingGray4.cgColor
     }
+    
 }
 
 extension TvingLoginViewController {
@@ -62,8 +69,15 @@ extension TvingLoginViewController {
     }
     
     private func changeButtonColor() {
-        if !(rootView.idTextField.isEmpty() || rootView.passwordTextField.isEmpty()) {
-            rootView.loginButton.backgroundColor = .tvingRed
+        rootView.loginButton.backgroundColor =
+        !(rootView.idTextField.isEmpty() || rootView.passwordTextField.isEmpty()) ?
+            .tvingRed : .tvingBlack
+    }
+    
+    private func clearTextField() {
+        if !rootView.passwordTextField.isEmpty() {
+            rootView.passwordTextField.text = ""
         }
+        changeButtonColor()
     }
 }

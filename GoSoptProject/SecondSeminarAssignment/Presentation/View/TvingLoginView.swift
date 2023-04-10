@@ -16,7 +16,7 @@ final class TvingLoginView: UIView {
     private let titleLabel = UILabel()
     public lazy var idTextField = UITextField()
     public lazy var passwordTextField = UITextField()
-    public lazy var cleanButton = UIButton()
+    public lazy var clearButton = UIButton()
     public lazy var securityButton = UIButton()
     public lazy var loginButton = UIButton()
     public lazy var findIDButton = UIButton()
@@ -74,7 +74,7 @@ final class TvingLoginView: UIView {
             $0.addLeftPadding(inset: 22)
         }
         
-        cleanButton.do {
+        clearButton.do {
             $0.setImage(Image.close, for: .normal)
             $0.isHidden = true
         }
@@ -132,7 +132,7 @@ final class TvingLoginView: UIView {
         )
         
         passwordTextField.addSubviews(
-            cleanButton,
+            clearButton,
             securityButton
         )
     }
@@ -201,7 +201,7 @@ final class TvingLoginView: UIView {
             $0.height.equalTo(22)
         }
         
-        cleanButton.snp.makeConstraints {
+        clearButton.snp.makeConstraints {
             $0.trailing.equalToSuperview().inset(56)
             $0.centerY.equalToSuperview()
             $0.size.equalTo(20)
