@@ -16,4 +16,8 @@ final class TvingWelcomeViewController: BaseViewController {
     override func loadView() {
         self.view = rootView
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
 }

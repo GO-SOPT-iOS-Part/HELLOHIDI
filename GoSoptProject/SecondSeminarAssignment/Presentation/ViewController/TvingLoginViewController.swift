@@ -29,9 +29,12 @@ final class TvingLoginViewController: BaseViewController {
         rootView.idTextField.delegate = self
         
         rootView.passwordTextField.addTarget(self, action: #selector(updateLoginButton(textField:)), for: .editingChanged)
+        rootView.idTextField.addTarget(self, action: #selector(updateLoginButton(textField:)), for: .editingChanged)
+
 
         rootView.securityButton.addTarget(self, action: #selector(securityButtonDidTap), for: .touchUpInside)
         rootView.clearButton.addTarget(self, action: #selector(clearButtonDidTap), for: .touchUpInside)
+        rootView.loginButton.addTarget(self, action: #selector(loginButtonDidTap), for: .touchUpInside)
     }
     
     @objc private func securityButtonDidTap() {
@@ -40,6 +43,10 @@ final class TvingLoginViewController: BaseViewController {
     
     @objc private func clearButtonDidTap() {
         clearTextField()
+    }
+    
+    @objc private func loginButtonDidTap() {
+        pushToTvingWelcomeView()
     }
 }
 
@@ -85,5 +92,10 @@ private extension TvingLoginViewController {
             rootView.loginButton.isEnabled = false
             rootView.loginButton.backgroundColor = .tvingBlack
         }
+    }
+    
+    func pushToTvingWelcomeView() {
+        let tvingWelcomeViewController = TvingWelcomeViewController()
+        self.navigationController?.pushViewController(tvingWelcomeViewController, animated: true)
     }
 }
