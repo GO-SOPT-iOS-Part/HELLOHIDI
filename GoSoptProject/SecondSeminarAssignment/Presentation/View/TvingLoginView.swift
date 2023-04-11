@@ -92,6 +92,7 @@ final class TvingLoginView: UIView {
             $0.backgroundColor = .tvingBlack
             $0.layer.borderColor = UIColor.tvingGray4.cgColor
             $0.layer.borderWidth = 1
+            $0.isEnabled = false
         }
         
         findIDButton.do {
