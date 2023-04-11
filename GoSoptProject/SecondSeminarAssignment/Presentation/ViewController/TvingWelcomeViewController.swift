@@ -10,4 +10,10 @@ import UIKit
 import SnapKit
 import Then
 
-final class TvingWelcomeViewController: BaseViewController {}
+final class TvingWelcomeViewController: BaseViewController {
+    private let rootView = TvingWelcomeView()
+    
+    override func loadView() {
+        self.view = rootView
+    }
+}

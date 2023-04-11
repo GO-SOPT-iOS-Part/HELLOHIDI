@@ -14,5 +14,6 @@ public enum Image {
     static let eye = UIImage(named: "tving_eye")!
     static let close = UIImage(named: "tving_close")!
     static let back = UIImage(named: "tving_back")!
+    static let adImage = UIImage(named: "tving_adImagez")
     
 }
