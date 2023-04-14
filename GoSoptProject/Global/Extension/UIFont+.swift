@@ -23,8 +23,8 @@ extension UIFont{
         return UIFont(name: "Pretendard-SemiBold", size: 14)!
     }
     
-    class var tvingDisplay3: UIFont {
-        return UIFont(name: "Pretendard-SemiBold", size: 14)!
+    class var tvingToastMessage: UIFont {
+        return UIFont(name: "Pretendard-SemiBold", size: 10)!
     }
 }
 

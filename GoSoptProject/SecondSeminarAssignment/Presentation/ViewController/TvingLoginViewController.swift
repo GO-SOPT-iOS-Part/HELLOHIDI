@@ -30,8 +30,8 @@ final class TvingLoginViewController: BaseViewController {
         
         rootView.passwordTextField.addTarget(self, action: #selector(updateLoginButton(textField:)), for: .editingChanged)
         rootView.idTextField.addTarget(self, action: #selector(updateLoginButton(textField:)), for: .editingChanged)
-
-
+        
+        
         rootView.securityButton.addTarget(self, action: #selector(securityButtonDidTap), for: .touchUpInside)
         rootView.clearButton.addTarget(self, action: #selector(clearButtonDidTap), for: .touchUpInside)
         rootView.loginButton.addTarget(self, action: #selector(loginButtonDidTap), for: .touchUpInside)
@@ -46,7 +46,7 @@ final class TvingLoginViewController: BaseViewController {
     }
     
     @objc private func loginButtonDidTap() {
-        pushToTvingWelcomeView()
+        validCheck()
     }
 }
 
@@ -97,5 +97,21 @@ private extension TvingLoginViewController {
     func pushToTvingWelcomeView() {
         let tvingWelcomeViewController = TvingWelcomeViewController()
         self.navigationController?.pushViewController(tvingWelcomeViewController, animated: true)
+    }
+    
+    
+    func validCheck() {
+        guard let id = rootView.idTextField.text else { return }
+        guard let password = rootView.passwordTextField.text else { return }
+        
+        if !id.isValidEmail() {
+            showToast(message: "아이디의 형식이 일치하지 않습니다", font: .tvingToastMessage)
+        } else if !password.isContainNumberAndAlphabet() {
+            showToast(message: "비밀번호의 형식이 일치하지 않습니다", font: .tvingToastMessage)
+        } else {
+            showToast(message: "로그인 성공!", font: .tvingToastMessage)
+            pushToTvingWelcomeView()
+        }
+        
     }
 }

@@ -105,17 +105,22 @@ final class TvingLoginView: UIView {
         findPasswordButton.do {
             $0.setTitle("비밀번호 찾기", for: .normal)
             $0.setTitleColor(.tvingGray2, for: .normal)
+            $0.titleLabel?.font = .tvingDisplay2
+            $0.titleLabel?.textAlignment = .center
         }
         
         describeSignUpLabel.do {
             $0.text = "아직 계정이 없으신가요?"
-            $0.font = .tvingDisplay3
+            $0.font = .tvingDisplay2
             $0.textColor = .tvingGray3
+            $0.textAlignment = .center
         }
         
         signUpButton.do {
             $0.setTitle("닉네임 만들러 가기", for: .normal)
             $0.setTitleColor(.tvingGray2, for: .normal)
+            $0.titleLabel?.font = .tvingDisplay2
+            $0.titleLabel?.textAlignment = .center
         }
     }
     
@@ -149,8 +154,6 @@ final class TvingLoginView: UIView {
         titleLabel.snp.makeConstraints {
             $0.centerX.equalToSuperview()
             $0.top.equalToSuperview().offset(94)
-            $0.width.equalTo(156)
-            $0.height.equalTo(37)
         }
         
         idTextField.snp.makeConstraints {
@@ -177,21 +180,21 @@ final class TvingLoginView: UIView {
         findIDButton.snp.makeConstraints {
             $0.leading.equalToSuperview().offset(85)
             $0.top.equalTo(self.loginButton.snp.bottom).offset(31)
-            $0.width.equalTo(62)
+            $0.width.equalTo(75)
             $0.height.equalTo(22)
         }
         
         findPasswordButton.snp.makeConstraints {
             $0.trailing.equalToSuperview().inset(86)
             $0.top.equalTo(self.loginButton.snp.bottom).offset(31)
-            $0.width.equalTo(73)
+            $0.width.equalTo(90)
             $0.height.equalTo(22)
         }
         
         describeSignUpLabel.snp.makeConstraints {
             $0.leading.equalToSuperview().offset(51)
             $0.top.equalTo(self.findPasswordButton.snp.bottom).offset(28)
-            $0.width.equalTo(129)
+            $0.width.equalTo(140)
             $0.height.equalTo(22)
         }
         
