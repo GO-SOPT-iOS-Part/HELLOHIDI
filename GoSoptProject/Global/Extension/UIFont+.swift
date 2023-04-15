@@ -12,7 +12,7 @@ import UIKit
 extension UIFont{
 
     class var tvingTitle: UIFont {
-        return UIFont(name: "Pretendard-Medium", size: 23)!
+        return UIFont(name: "Pretendard-Bold", size: 23)!
     }
     
     class var tvingDisplay1: UIFont {
@@ -25,6 +25,10 @@ extension UIFont{
     
     class var tvingToastMessage: UIFont {
         return UIFont(name: "Pretendard-SemiBold", size: 10)!
+    }
+    
+    class var tvingSubTitle: UIFont {
+        return UIFont(name: "Pretendard-Medium", size: 23)!
     }
 }
 

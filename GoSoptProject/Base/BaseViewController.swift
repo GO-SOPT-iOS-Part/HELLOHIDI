@@ -28,6 +28,7 @@ class BaseViewController : UIViewController{
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.navigationItem.hidesBackButton = true
     }
     
     override func viewWillDisappear(_ animated: Bool) {

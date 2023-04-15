@@ -12,7 +12,11 @@ import Then
 
 final class TvingLoginViewController: BaseViewController {
     
+    //MARK: - Properties
+    
     private let rootView = TvingLoginView()
+    
+    //MARK: - Life Cycles
     
     override func loadView() {
         self.view = rootView
@@ -23,6 +27,8 @@ final class TvingLoginViewController: BaseViewController {
         
         target()
     }
+    
+    //MARK: - Custom Method
     
     private func target() {
         rootView.passwordTextField.delegate = self
@@ -36,6 +42,8 @@ final class TvingLoginViewController: BaseViewController {
         rootView.clearButton.addTarget(self, action: #selector(clearButtonDidTap), for: .touchUpInside)
         rootView.loginButton.addTarget(self, action: #selector(loginButtonDidTap), for: .touchUpInside)
     }
+    
+    //MARK: - Action Method
     
     @objc private func securityButtonDidTap() {
         disableSecureEntry()
@@ -94,8 +102,10 @@ private extension TvingLoginViewController {
         }
     }
     
-    func pushToTvingWelcomeView() {
+    func pushToTvingWelcomeView(id: String) {
         let tvingWelcomeViewController = TvingWelcomeViewController()
+        tvingWelcomeViewController.dataBind(id: id)
+        
         self.navigationController?.pushViewController(tvingWelcomeViewController, animated: true)
     }
     
@@ -110,8 +120,7 @@ private extension TvingLoginViewController {
             showToast(message: "비밀번호의 형식이 일치하지 않습니다", font: .tvingToastMessage)
         } else {
             showToast(message: "로그인 성공!", font: .tvingToastMessage)
-            pushToTvingWelcomeView()
+            pushToTvingWelcomeView(id: id)
         }
-        
     }
 }

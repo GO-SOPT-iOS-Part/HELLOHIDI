@@ -47,7 +47,7 @@ final class TvingLoginView: UIView {
         titleLabel.do {
             $0.text = "TVING ID 로그인"
             $0.textColor = .tvingGray1
-            $0.font = .tvingTitle
+            $0.font = .tvingSubTitle
             $0.textAlignment = .center
         }
         

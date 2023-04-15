@@ -13,6 +13,7 @@
 		D232569C29E2528800D3B988 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D232569B29E2528800D3B988 /* Pretendard-SemiBold.otf */; };
 		D232569E29E2540C00D3B988 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = D232569D29E2540C00D3B988 /* Pretendard-Medium.otf */; };
 		D28E831229E8FD5D00002EB4 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28E831129E8FD5D00002EB4 /* String.swift */; };
+		D28E831429EAAEB000002EB4 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D28E831329EAAEB000002EB4 /* Pretendard-Bold.otf */; };
 		D2A7F31E29E23FA000BFA4E9 /* TvingLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7F31D29E23FA000BFA4E9 /* TvingLoginView.swift */; };
 		D2A7F32029E23FC500BFA4E9 /* TvingWelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7F31F29E23FC500BFA4E9 /* TvingWelcomeView.swift */; };
 		D2A7F32229E23FD200BFA4E9 /* TvingLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7F32129E23FD200BFA4E9 /* TvingLoginViewController.swift */; };
@@ -56,6 +57,7 @@
 		D232569B29E2528800D3B988 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		D232569D29E2540C00D3B988 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
 		D28E831129E8FD5D00002EB4 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		D28E831329EAAEB000002EB4 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
 		D2A7F31D29E23FA000BFA4E9 /* TvingLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingLoginView.swift; sourceTree = "<group>"; };
 		D2A7F31F29E23FC500BFA4E9 /* TvingWelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingWelcomeView.swift; sourceTree = "<group>"; };
 		D2A7F32129E23FD200BFA4E9 /* TvingLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingLoginViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 		D232569629E2517E00D3B988 /* Font */ = {
 			isa = PBXGroup;
 			children = (
+				D28E831329EAAEB000002EB4 /* Pretendard-Bold.otf */,
 				D232569D29E2540C00D3B988 /* Pretendard-Medium.otf */,
 				D232569B29E2528800D3B988 /* Pretendard-SemiBold.otf */,
 			);
@@ -301,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2D2194529E2356500C7B126 /* LaunchScreen.storyboard in Resources */,
+				D28E831429EAAEB000002EB4 /* Pretendard-Bold.otf in Resources */,
 				D232569C29E2528800D3B988 /* Pretendard-SemiBold.otf in Resources */,
 				D2D2194229E2356500C7B126 /* Assets.xcassets in Resources */,
 				D2D2194029E2356400C7B126 /* Main.storyboard in Resources */,

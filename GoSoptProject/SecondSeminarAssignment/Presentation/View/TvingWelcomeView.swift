@@ -13,8 +13,8 @@ import Then
 final class TvingWelcomeView: UIView {
     
     private let adImage = UIImageView()
-    private let welcomeLabel = UILabel()
-    private lazy var goMainButton = UIButton()
+    public let welcomeLabel = UILabel()
+    public lazy var mainButton = UIButton()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -37,9 +37,11 @@ final class TvingWelcomeView: UIView {
         welcomeLabel.do {
             $0.textColor = .tvingGray1
             $0.textAlignment = .center
+            $0.font = .tvingTitle
+            $0.numberOfLines = 2
         }
         
-        goMainButton.do {
+        mainButton.do {
             $0.makeCornerRadius(ratio: 3)
             $0.backgroundColor = .tvingRed
             $0.setTitle("메인으로", for: .normal)
@@ -49,7 +51,7 @@ final class TvingWelcomeView: UIView {
     }
     
     private func hierarchy() {
-        self.addSubviews(adImage, welcomeLabel, goMainButton)
+        self.addSubviews(adImage, welcomeLabel, mainButton)
     }
     
     private func layout() {
@@ -62,18 +64,15 @@ final class TvingWelcomeView: UIView {
         welcomeLabel.snp.makeConstraints {
             $0.top.equalTo(self.adImage.snp.bottom).offset(67)
             $0.centerX.equalToSuperview()
-            $0.width.equalTo(226)
             $0.height.equalTo(74)
         }
         
-        goMainButton.snp.makeConstraints {
+        mainButton.snp.makeConstraints {
             $0.top.equalTo(self.welcomeLabel.snp.bottom).offset(284)
             $0.centerX.equalToSuperview()
             $0.width.equalTo(335)
             $0.height.equalTo(52)
         }
     }
-    
-    
 }
 
