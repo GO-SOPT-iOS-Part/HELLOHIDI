@@ -14,13 +14,14 @@ final class TvingLoginView: UIView {
     
     private lazy var backButton = UIButton()
     private let titleLabel = UILabel()
-    public lazy var idTextField = UITextField()
-    public lazy var passwordTextField = UITextField()
+    public lazy var idTextField = TvingAuthTextField.init(viewType: .id)
+    public lazy var passwordTextField = TvingAuthTextField.init(viewType: .password)
     public lazy var clearButton = UIButton()
     public lazy var securityButton = UIButton()
     public lazy var loginButton = UIButton()
     public lazy var findIDButton = UIButton()
     public lazy var findPasswordButton = UIButton()
+    private var separatorBar = UIView()
     private let describeSignUpLabel = UILabel()
     public lazy var signUpButton = UIButton()
     
@@ -52,7 +53,6 @@ final class TvingLoginView: UIView {
         }
         
         idTextField.do {
-            $0.placeholder = "아이디"
             $0.attributedPlaceholder = NSAttributedString(string: "아이디", attributes: [NSAttributedString.Key.foregroundColor : UIColor.tvingGray2])
             $0.textColor = .tvingGray2
             $0.font = .tvingDisplay1
@@ -63,7 +63,6 @@ final class TvingLoginView: UIView {
         }
         
         passwordTextField.do{
-            $0.placeholder = "비밀번호"
             $0.isSecureTextEntry = true
             $0.attributedPlaceholder = NSAttributedString(string: "비밀번호", attributes: [NSAttributedString.Key.foregroundColor : UIColor.tvingGray2])
             $0.textColor = .tvingGray2
@@ -102,6 +101,10 @@ final class TvingLoginView: UIView {
             $0.titleLabel?.textAlignment = .center
         }
         
+        separatorBar.do {
+            $0.backgroundColor = .tvingGray4
+        }
+        
         findPasswordButton.do {
             $0.setTitle("비밀번호 찾기", for: .normal)
             $0.setTitleColor(.tvingGray2, for: .normal)
@@ -121,6 +124,7 @@ final class TvingLoginView: UIView {
             $0.setTitleColor(.tvingGray2, for: .normal)
             $0.titleLabel?.font = .tvingDisplay2
             $0.titleLabel?.textAlignment = .center
+            $0.setUnderline()
         }
     }
     
@@ -132,6 +136,7 @@ final class TvingLoginView: UIView {
             passwordTextField,
             loginButton,
             findIDButton,
+            separatorBar,
             findPasswordButton,
             describeSignUpLabel,
             signUpButton
@@ -182,6 +187,13 @@ final class TvingLoginView: UIView {
             $0.top.equalTo(self.loginButton.snp.bottom).offset(31)
             $0.width.equalTo(75)
             $0.height.equalTo(22)
+        }
+        
+        separatorBar.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.top.equalTo(self.loginButton.snp.bottom).offset(36)
+            $0.width.equalTo(1)
+            $0.height.equalTo(12)
         }
         
         findPasswordButton.snp.makeConstraints {

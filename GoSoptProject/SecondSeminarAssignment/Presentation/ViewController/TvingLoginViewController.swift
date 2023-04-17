@@ -60,15 +60,15 @@ final class TvingLoginViewController: BaseViewController {
 
 extension TvingLoginViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        switch textField.placeholder! {
-        case "아이디":
+        guard let authTextField = textField as? TvingAuthTextField else { return }
+        
+        switch authTextField.textFieldType {
+        case .id:
             rootView.idTextField.layer.borderColor = UIColor.tvingGray2.cgColor
-        case "비밀번호":
+        case .password:
             rootView.clearButton.isHidden = false
             rootView.securityButton.isHidden = false
             rootView.passwordTextField.layer.borderColor = UIColor.tvingGray2.cgColor
-        default:
-            break
         }
     }
     
@@ -76,7 +76,6 @@ extension TvingLoginViewController: UITextFieldDelegate {
         rootView.idTextField.layer.borderColor = UIColor.tvingGray4.cgColor
         rootView.passwordTextField.layer.borderColor = UIColor.tvingGray4.cgColor
     }
-    
 }
 
 private extension TvingLoginViewController {
@@ -95,11 +94,11 @@ private extension TvingLoginViewController {
     }
     
     func clearTextField() {
-        if !rootView.passwordTextField.isEmpty() {
-            rootView.passwordTextField.text = ""
-            rootView.loginButton.isEnabled = false
-            rootView.loginButton.backgroundColor = .tvingBlack
-        }
+        rootView.passwordTextField.text = ""
+        rootView.loginButton.isEnabled = false
+        rootView.loginButton.backgroundColor = .tvingBlack
+        rootView.clearButton.isHidden = true
+        rootView.securityButton.isHidden = true
     }
     
     func pushToTvingWelcomeView(id: String) {
