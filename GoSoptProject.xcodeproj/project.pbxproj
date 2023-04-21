@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D232569029E242DD00D3B988 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D232568F29E242DD00D3B988 /* SnapKit */; };
+		D232569329E242FC00D3B988 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = D232569229E242FC00D3B988 /* Then */; };
+		D232569529E24A7100D3B988 /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D232569429E24A7100D3B988 /* UIFont+.swift */; };
+		D232569C29E2528800D3B988 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D232569B29E2528800D3B988 /* Pretendard-SemiBold.otf */; };
+		D232569E29E2540C00D3B988 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = D232569D29E2540C00D3B988 /* Pretendard-Medium.otf */; };
+		D24A047329ED8AD4006835EF /* TvingAuthTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24A047229ED8AD4006835EF /* TvingAuthTextField.swift */; };
+		D28E831229E8FD5D00002EB4 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28E831129E8FD5D00002EB4 /* String.swift */; };
+		D28E831429EAAEB000002EB4 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D28E831329EAAEB000002EB4 /* Pretendard-Bold.otf */; };
+		D2A7F31E29E23FA000BFA4E9 /* TvingLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7F31D29E23FA000BFA4E9 /* TvingLoginView.swift */; };
+		D2A7F32029E23FC500BFA4E9 /* TvingWelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7F31F29E23FC500BFA4E9 /* TvingWelcomeView.swift */; };
+		D2A7F32229E23FD200BFA4E9 /* TvingLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7F32129E23FD200BFA4E9 /* TvingLoginViewController.swift */; };
+		D2A7F32429E23FE400BFA4E9 /* TvingWelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7F32329E23FE400BFA4E9 /* TvingWelcomeViewController.swift */; };
 		D2D2193929E2356400C7B126 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2193829E2356400C7B126 /* AppDelegate.swift */; };
 		D2D2193B29E2356400C7B126 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2193A29E2356400C7B126 /* SceneDelegate.swift */; };
 		D2D2193D29E2356400C7B126 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2193C29E2356400C7B126 /* ViewController.swift */; };
@@ -27,7 +39,31 @@
 		D2D2196929E23ABB00C7B126 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2196829E23ABB00C7B126 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXBuildRule section */
+		D2A7F32529E23FF300BFA4E9 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = pattern.proxy;
+			inputFiles = (
+			);
+			isEditable = 1;
+			outputFiles = (
+			);
+			script = "# Type a script or drag a script file from your workspace to insert its path.\n";
+		};
+/* End PBXBuildRule section */
+
 /* Begin PBXFileReference section */
+		D232569429E24A7100D3B988 /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
+		D232569B29E2528800D3B988 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
+		D232569D29E2540C00D3B988 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
+		D24A047229ED8AD4006835EF /* TvingAuthTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingAuthTextField.swift; sourceTree = "<group>"; };
+		D28E831129E8FD5D00002EB4 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		D28E831329EAAEB000002EB4 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
+		D2A7F31D29E23FA000BFA4E9 /* TvingLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingLoginView.swift; sourceTree = "<group>"; };
+		D2A7F31F29E23FC500BFA4E9 /* TvingWelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingWelcomeView.swift; sourceTree = "<group>"; };
+		D2A7F32129E23FD200BFA4E9 /* TvingLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingLoginViewController.swift; sourceTree = "<group>"; };
+		D2A7F32329E23FE400BFA4E9 /* TvingWelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingWelcomeViewController.swift; sourceTree = "<group>"; };
 		D2D2193529E2356400C7B126 /* GoSoptProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoSoptProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2D2193829E2356400C7B126 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2D2193A29E2356400C7B126 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,12 +91,60 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D232569029E242DD00D3B988 /* SnapKit in Frameworks */,
+				D232569329E242FC00D3B988 /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D232569629E2517E00D3B988 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				D28E831329EAAEB000002EB4 /* Pretendard-Bold.otf */,
+				D232569D29E2540C00D3B988 /* Pretendard-Medium.otf */,
+				D232569B29E2528800D3B988 /* Pretendard-SemiBold.otf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		D2A7F31929E23C5500BFA4E9 /* SecondSeminarAssignment */ = {
+			isa = PBXGroup;
+			children = (
+				D2A7F31A29E23C6400BFA4E9 /* Presentation */,
+			);
+			path = SecondSeminarAssignment;
+			sourceTree = "<group>";
+		};
+		D2A7F31A29E23C6400BFA4E9 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				D2A7F31C29E23C7F00BFA4E9 /* View */,
+				D2A7F31B29E23C7A00BFA4E9 /* ViewController */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		D2A7F31B29E23C7A00BFA4E9 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D2A7F32129E23FD200BFA4E9 /* TvingLoginViewController.swift */,
+				D2A7F32329E23FE400BFA4E9 /* TvingWelcomeViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		D2A7F31C29E23C7F00BFA4E9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D2A7F31D29E23FA000BFA4E9 /* TvingLoginView.swift */,
+				D2A7F31F29E23FC500BFA4E9 /* TvingWelcomeView.swift */,
+				D24A047229ED8AD4006835EF /* TvingAuthTextField.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		D2D2192C29E2356400C7B126 = {
 			isa = PBXGroup;
 			children = (
@@ -80,12 +164,14 @@
 		D2D2193729E2356400C7B126 /* GoSoptProject */ = {
 			isa = PBXGroup;
 			children = (
+				D2A7F31929E23C5500BFA4E9 /* SecondSeminarAssignment */,
 				D2D2196729E23AAB00C7B126 /* Base */,
 				D2D2195029E2397700C7B126 /* Resource */,
 				D2D2194D29E2395300C7B126 /* Global */,
 				D2D2194C29E2392300C7B126 /* Application */,
 				D2D2193C29E2356400C7B126 /* ViewController.swift */,
 				D2D2193E29E2356400C7B126 /* Main.storyboard */,
+				D2D2194629E2356500C7B126 /* Info.plist */,
 				D2D2194329E2356500C7B126 /* LaunchScreen.storyboard */,
 			);
 			path = GoSoptProject;
@@ -94,7 +180,6 @@
 		D2D2194C29E2392300C7B126 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				D2D2194629E2356500C7B126 /* Info.plist */,
 				D2D2193A29E2356400C7B126 /* SceneDelegate.swift */,
 				D2D2193829E2356400C7B126 /* AppDelegate.swift */,
 			);
@@ -116,6 +201,7 @@
 				D2D2195129E2398D00C7B126 /* Device.swift */,
 				D2D2195329E2399500C7B126 /* Image.swift */,
 				D2D2195529E2399F00C7B126 /* URLs.swift */,
+				D28E831129E8FD5D00002EB4 /* String.swift */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -131,6 +217,7 @@
 				D2D2196129E23A3D00C7B126 /* UILabel+.swift */,
 				D2D2196329E23A4B00C7B126 /* UIButton+.swift */,
 				D2D2196529E23A6900C7B126 /* UIImageView+.swift */,
+				D232569429E24A7100D3B988 /* UIFont+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -138,6 +225,7 @@
 		D2D2195029E2397700C7B126 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				D232569629E2517E00D3B988 /* Font */,
 				D2D2194129E2356500C7B126 /* Assets.xcassets */,
 			);
 			path = Resource;
@@ -163,10 +251,15 @@
 				D2D2193329E2356400C7B126 /* Resources */,
 			);
 			buildRules = (
+				D2A7F32529E23FF300BFA4E9 /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
 			name = GoSoptProject;
+			packageProductDependencies = (
+				D232568F29E242DD00D3B988 /* SnapKit */,
+				D232569229E242FC00D3B988 /* Then */,
+			);
 			productName = GoSoptProject;
 			productReference = D2D2193529E2356400C7B126 /* GoSoptProject.app */;
 			productType = "com.apple.product-type.application";
@@ -195,6 +288,10 @@
 				Base,
 			);
 			mainGroup = D2D2192C29E2356400C7B126;
+			packageReferences = (
+				D232568E29E242DD00D3B988 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				D232569129E242FC00D3B988 /* XCRemoteSwiftPackageReference "Then" */,
+			);
 			productRefGroup = D2D2193629E2356400C7B126 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -210,8 +307,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2D2194529E2356500C7B126 /* LaunchScreen.storyboard in Resources */,
+				D28E831429EAAEB000002EB4 /* Pretendard-Bold.otf in Resources */,
+				D232569C29E2528800D3B988 /* Pretendard-SemiBold.otf in Resources */,
 				D2D2194229E2356500C7B126 /* Assets.xcassets in Resources */,
 				D2D2194029E2356400C7B126 /* Main.storyboard in Resources */,
+				D232569E29E2540C00D3B988 /* Pretendard-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,9 +333,16 @@
 				D2D2196229E23A3D00C7B126 /* UILabel+.swift in Sources */,
 				D2D2196429E23A4B00C7B126 /* UIButton+.swift in Sources */,
 				D2D2195829E239D100C7B126 /* UIView+.swift in Sources */,
+				D2A7F32229E23FD200BFA4E9 /* TvingLoginViewController.swift in Sources */,
+				D232569529E24A7100D3B988 /* UIFont+.swift in Sources */,
 				D2D2193929E2356400C7B126 /* AppDelegate.swift in Sources */,
 				D2D2193B29E2356400C7B126 /* SceneDelegate.swift in Sources */,
+				D2A7F32429E23FE400BFA4E9 /* TvingWelcomeViewController.swift in Sources */,
 				D2D2195229E2398D00C7B126 /* Device.swift in Sources */,
+				D2A7F31E29E23FA000BFA4E9 /* TvingLoginView.swift in Sources */,
+				D24A047329ED8AD4006835EF /* TvingAuthTextField.swift in Sources */,
+				D28E831229E8FD5D00002EB4 /* String.swift in Sources */,
+				D2A7F32029E23FC500BFA4E9 /* TvingWelcomeView.swift in Sources */,
 				D2D2195429E2399500C7B126 /* Image.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -454,6 +561,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D232568E29E242DD00D3B988 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+		D232569129E242FC00D3B988 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D232568F29E242DD00D3B988 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D232568E29E242DD00D3B988 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		D232569229E242FC00D3B988 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D232569129E242FC00D3B988 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D2D2192D29E2356400C7B126 /* Project object */;
 }

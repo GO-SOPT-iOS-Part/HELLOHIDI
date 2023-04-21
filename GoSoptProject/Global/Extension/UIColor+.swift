@@ -18,73 +18,32 @@ extension UIColor {
 
 extension UIColor{
     
-    //MARK: Brand Colors
-    class var zoocMainGreen: UIColor {
-        return UIColor(r: 94, g: 203, b: 144)
-    }
-    
-    class var zoocSubGreen: UIColor {
-        return UIColor(r: 104, g: 212, b: 154)
-    }
-    
-    class var zoocGradientGreen: UIColor {
-        return UIColor(r: 104, g: 212, b: 154)  //TODO: 그라데이션 기능 구현하기
-    }
-    
-    //MARK: Gray Scale Colors
-    
-    class var zoocWhite1: UIColor {
+    class var tvingWhite: UIColor {
         return UIColor(r: 255, g: 255, b: 255)
     }
     
-    class var zoocWhite2: UIColor {
-        return UIColor(r: 248, g: 248, b: 248)
+    class var tvingBlack: UIColor {
+        return UIColor(r: 0, g: 0, b: 0)
     }
     
-    class var zoocWhite3: UIColor {
-        return UIColor(r: 242, g: 242, b: 242)
+    class var tvingRed: UIColor {
+        return UIColor(r: 255, g: 20, b: 60)
     }
     
-    class var zoocLightGray: UIColor {
-        return UIColor(r: 224, g: 224, b: 224)
+    class var tvingGray1: UIColor {
+        return UIColor(r: 214, g: 214, b: 214)
     }
     
-    class var zoocGray1: UIColor {
-        return UIColor(r: 189, g: 189, b: 189)
+    class var tvingGray2: UIColor {
+        return UIColor(r: 156, g: 156, b: 156)
     }
     
-    class var zoocGray2: UIColor {
-        return UIColor(r: 130, g: 130, b: 130)
+    class var tvingGray3: UIColor {
+        return UIColor(r: 98, g: 98, b: 98)
     }
     
-    class var zoocGray3: UIColor {
-        return UIColor(r: 85, g: 85, b: 85)
-    }
-    
-    class var zoocDarkGray1: UIColor {
-        return UIColor(r: 79, g: 79, b: 79)
-    }
-    
-    class var zoocDarkGray2: UIColor {
-        return UIColor(r: 51, g: 51, b: 51)
-    }
-    
-    //MARK: Green Scale Colors
-    
-    class var zoocBackgroundGreen: UIColor {
-        return UIColor(r: 240, g: 242, b: 239)
-    }
-    
-    class var zoocLightGreen: UIColor {
-        return UIColor(r: 222, g: 227, b: 219)
-    }
-    
-    class var zoocDarkGreen: UIColor {
-        return UIColor(r: 136, g: 140, b: 134)
-    }
-    
-    class var zoocShadowGreenColor: UIColor {
-        return UIColor(r: 119, g: 184, b: 149)
+    class var tvingGray4: UIColor {
+        return UIColor(r: 46, g: 46, b: 46)
     }
     
 }
