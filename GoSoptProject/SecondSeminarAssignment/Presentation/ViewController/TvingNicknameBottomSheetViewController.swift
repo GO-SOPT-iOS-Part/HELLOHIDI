@@ -10,15 +10,20 @@ import UIKit
 import SnapKit
 import Then
 
+//MARK: NickNameButtonDidTap
+
 protocol NickNameButtonDidTap: AnyObject {
     func dataBind(nickName: String)
 }
 
 final class TvingNicknameBottomSheetViewController: BaseViewController {
     
-    private let rootView = TvingNicknameBottomSheetView()
+    //MARK: - Properties
     
+    private let rootView = TvingNicknameBottomSheetView()
     weak var delegate: NickNameButtonDidTap?
+    
+    //MARK: - Life Cycle
     
     override func loadView() {
         self.view = rootView
@@ -39,6 +44,8 @@ final class TvingNicknameBottomSheetViewController: BaseViewController {
         setUI()
     }
     
+    //MARK: - Custom Method
+    
     private func setUI() {
         view.backgroundColor = UIColor(white: 0.1, alpha: 0.5)
     }
@@ -47,10 +54,14 @@ final class TvingNicknameBottomSheetViewController: BaseViewController {
         rootView.nickNameButton.addTarget(self, action: #selector(nickNameButtonDidTap), for: .touchUpInside)
     }
     
+    //MARK: - Action Method
+    
     @objc func nickNameButtonDidTap() {
         dismissTvingNicknameBottomSheetViewController()
     }
 }
+
+//MARK: - TvingNicknameBottomSheetViewController
 
 extension TvingNicknameBottomSheetViewController {
     func presentBottomSheet(height: CGFloat) {

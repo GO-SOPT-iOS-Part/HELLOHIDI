@@ -12,10 +12,14 @@ import Then
 
 final class TvingNicknameBottomSheetView: UIView {
     
+    //MARK: - UI Components
+    
     public let bottomSheetView = UIView()
     private let nickNameTitleLabel = UILabel()
     public let nickNameTextField = UITextField()
     public lazy var nickNameButton = UIButton()
+    
+    //MARK: - Life Cycle
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -29,6 +33,7 @@ final class TvingNicknameBottomSheetView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: - Custom Method
     
     private func style() {
         
@@ -68,7 +73,6 @@ final class TvingNicknameBottomSheetView: UIView {
     }
     
     private func layout() {
-        
         bottomSheetView.snp.makeConstraints {
             $0.height.equalTo(0)
             $0.leading.trailing.equalToSuperview()

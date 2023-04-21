@@ -65,6 +65,16 @@ final class TvingLoginViewController: BaseViewController {
     }
 }
 
+//MARK: - NickNameButtonDidTap
+
+extension TvingLoginViewController: NickNameButtonDidTap {
+    func dataBind(nickName: String) {
+        self.nickName = nickName
+    }
+}
+
+//MARK: - UITextFieldDelegate
+
 extension TvingLoginViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         guard let authTextField = textField as? TvingAuthTextField else { return }
@@ -84,6 +94,8 @@ extension TvingLoginViewController: UITextFieldDelegate {
         rootView.passwordTextField.layer.borderColor = UIColor.tvingGray4.cgColor
     }
 }
+
+//MARK: - Extension
 
 private extension TvingLoginViewController {
     func disableSecureEntry() {
@@ -113,8 +125,6 @@ private extension TvingLoginViewController {
         let id = self.nickName == "" ? email : nickName
         tvingWelcomeViewController.dataBind(id: id)
         
-        
-        
         self.navigationController?.pushViewController(tvingWelcomeViewController, animated: true)
     }
     
@@ -140,11 +150,5 @@ private extension TvingLoginViewController {
             showToast(message: "로그인 성공!", font: .tvingToastMessage)
             pushToTvingWelcomeView(email: id)
         }
-    }
-}
-
-extension TvingLoginViewController: NickNameButtonDidTap {
-    func dataBind(nickName: String) {
-        self.nickName = nickName
     }
 }

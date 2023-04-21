@@ -11,7 +11,12 @@ import SnapKit
 import Then
 
 final class TvingWelcomeViewController: BaseViewController {
+    
+    //MARK: - Properties
+    
     private let rootView = TvingWelcomeView()
+    
+    //MARK: - Life Cycle
     
     override func loadView() {
         self.view = rootView
@@ -23,14 +28,20 @@ final class TvingWelcomeViewController: BaseViewController {
         target()
     }
     
+    //MARK: - Custom Method
+    
     private func target() {
         rootView.mainButton.addTarget(self, action: #selector(mainButtonDidTap), for: .touchUpInside)
     }
+    
+    //MARK: - Action Method
     
     @objc func mainButtonDidTap() {
         self.navigationController?.popViewController(animated: true)
     }
 }
+
+//MARK: - TvingWelcomeViewController
 
 extension TvingWelcomeViewController {
     func dataBind(id: String) {
