@@ -108,9 +108,12 @@ private extension TvingLoginViewController {
         rootView.securityButton.isHidden = true
     }
     
-    func pushToTvingWelcomeView(id: String) {
+    func pushToTvingWelcomeView(email: String) {
         let tvingWelcomeViewController = TvingWelcomeViewController()
+        let id = self.nickName == "" ? email : nickName
         tvingWelcomeViewController.dataBind(id: id)
+        
+        
         
         self.navigationController?.pushViewController(tvingWelcomeViewController, animated: true)
     }
@@ -135,7 +138,7 @@ private extension TvingLoginViewController {
             showToast(message: "비밀번호의 형식이 일치하지 않습니다", font: .tvingToastMessage)
         } else {
             showToast(message: "로그인 성공!", font: .tvingToastMessage)
-            pushToTvingWelcomeView(id: id)
+            pushToTvingWelcomeView(email: id)
         }
     }
 }

@@ -24,8 +24,6 @@ final class TvingWelcomeViewController: BaseViewController {
     }
     
     private func target() {
-        let loginViewController = TvingLoginViewController()
-        
         rootView.mainButton.addTarget(self, action: #selector(mainButtonDidTap), for: .touchUpInside)
     }
     
