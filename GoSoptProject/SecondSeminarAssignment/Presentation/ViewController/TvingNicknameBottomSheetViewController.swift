@@ -18,6 +18,13 @@ final class TvingNicknameBottomSheetViewController: BaseViewController {
         self.view = rootView
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if let touch = touches.first,
+           touch.view == self.view {
+            self.dismiss(animated: true)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,14 +33,28 @@ final class TvingNicknameBottomSheetViewController: BaseViewController {
     }
     
     private func setUI() {
-        view.backgroundColor = .clear
-//        view.alpha = 0.45
+        view.backgroundColor = UIColor(white: 0.1, alpha: 0.5)
     }
     
     private func target() {
         
     }
     
+}
+
+extension TvingNicknameBottomSheetViewController {
+    func presentBottomSheet(height: CGFloat) {
+        
+        UIView.animate(withDuration: 0.3) { [weak self] in
+
+            guard let self else { return }
+            self.rootView.bottomSheetView.snp.updateConstraints {
+                $0.height.equalTo(height)
+                $0.leading.trailing.bottom.equalToSuperview()
+            }
+            self.view.layoutIfNeeded()
+        }
+    }
 }
 
 

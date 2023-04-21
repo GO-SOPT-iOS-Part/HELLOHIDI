@@ -115,9 +115,11 @@ private extension TvingLoginViewController {
     
     func pushToTvingNickNameBottomSheetView() {
         let tvingNicknameBottomSheetViewController = TvingNicknameBottomSheetViewController()
-        tvingNicknameBottomSheetViewController.modalPresentationStyle = .formSheet
+        tvingNicknameBottomSheetViewController.modalPresentationStyle = .overCurrentContext
         
-        self.present(tvingNicknameBottomSheetViewController, animated: true)
+        self.present(tvingNicknameBottomSheetViewController, animated: true) {
+            tvingNicknameBottomSheetViewController.presentBottomSheet(height: UIScreen.main.bounds.height * 0.5)
+        }
     }
     
     

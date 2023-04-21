@@ -12,8 +12,7 @@ import Then
 
 final class TvingNicknameBottomSheetView: UIView {
     
-    private let bottomSheetView = UIView()
-    private let contentView = UIView()
+    public let bottomSheetView = UIView()
     private let nickNameTitleLabel = UILabel()
     private let nickNameTextField = UITextField()
     private let nickNameButton = UIButton()
@@ -33,13 +32,9 @@ final class TvingNicknameBottomSheetView: UIView {
     
     private func style() {
         
-        contentView.do {
-            $0.backgroundColor = .black
-            $0.alpha = 0.45
-        }
-        
         bottomSheetView.do {
             $0.backgroundColor = .tvingWhite
+            $0.makeCornerRadius(ratio: 20)
         }
         
         nickNameTitleLabel.do {
@@ -64,20 +59,16 @@ final class TvingNicknameBottomSheetView: UIView {
     }
     
     private func hierarchy() {
-        self.addSubviews(contentView, bottomSheetView)
+        self.addSubview(bottomSheetView)
         bottomSheetView.addSubviews(nickNameTitleLabel, nickNameTextField, nickNameButton)
     }
     
     private func layout() {
         
-        contentView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
-        }
-        
         bottomSheetView.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(384)
-            $0.width.equalToSuperview()
-            $0.height.equalTo(438)
+            $0.height.equalTo(0)
+            $0.leading.trailing.equalToSuperview()
+            $0.bottom.equalTo(self.safeAreaInsets)
         }
         
         nickNameTitleLabel.snp.makeConstraints {
