@@ -10,9 +10,15 @@ import UIKit
 import SnapKit
 import Then
 
+protocol NickNameButtonDidTap: AnyObject {
+    func dataBind(nickName: String)
+}
+
 final class TvingNicknameBottomSheetViewController: BaseViewController {
     
     private let rootView = TvingNicknameBottomSheetView()
+    
+    weak var delegate: NickNameButtonDidTap?
     
     override func loadView() {
         self.view = rootView
@@ -37,6 +43,17 @@ final class TvingNicknameBottomSheetViewController: BaseViewController {
     }
     
     private func target() {
+        rootView.nickNameButton.addTarget(self, action: #selector(nickNameButtonDidTap), for: .touchUpInside)
+    }
+    
+    @objc func nickNameButtonDidTap() {
+        if !rootView.nickNameTextField.isEmpty() {
+            guard let nickName = rootView.nickNameTextField.text else { return }
+            delegate?.dataBind(nickName: nickName)
+            self.dismiss(animated: true)
+        } else {
+            showToast(message: "닉네임을 입력해주세여!", font: .tvingToastMessage)
+        }
         
     }
     

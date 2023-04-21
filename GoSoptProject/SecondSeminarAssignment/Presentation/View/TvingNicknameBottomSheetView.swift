@@ -14,8 +14,8 @@ final class TvingNicknameBottomSheetView: UIView {
     
     public let bottomSheetView = UIView()
     private let nickNameTitleLabel = UILabel()
-    private let nickNameTextField = UITextField()
-    private let nickNameButton = UIButton()
+    public let nickNameTextField = UITextField()
+    public lazy var nickNameButton = UIButton()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
