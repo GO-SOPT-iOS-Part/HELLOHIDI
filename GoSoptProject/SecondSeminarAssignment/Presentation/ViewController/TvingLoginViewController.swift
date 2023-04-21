@@ -12,8 +12,10 @@ import Then
 
 final class TvingLoginViewController: BaseViewController {
     
+    
     //MARK: - Properties
     
+    private var nickName: String = ""
     private let rootView = TvingLoginView()
     
     //MARK: - Life Cycles
@@ -117,11 +119,11 @@ private extension TvingLoginViewController {
         let tvingNicknameBottomSheetViewController = TvingNicknameBottomSheetViewController()
         tvingNicknameBottomSheetViewController.modalPresentationStyle = .overCurrentContext
         
+        tvingNicknameBottomSheetViewController.delegate = self
         self.present(tvingNicknameBottomSheetViewController, animated: true) {
             tvingNicknameBottomSheetViewController.presentBottomSheet(height: UIScreen.main.bounds.height * 0.5)
         }
     }
-    
     
     func validCheck() {
         guard let id = rootView.idTextField.text else { return }
@@ -135,5 +137,11 @@ private extension TvingLoginViewController {
             showToast(message: "로그인 성공!", font: .tvingToastMessage)
             pushToTvingWelcomeView(id: id)
         }
+    }
+}
+
+extension TvingLoginViewController: NickNameButtonDidTap {
+    func dataBind(nickName: String) {
+        self.nickName = nickName
     }
 }

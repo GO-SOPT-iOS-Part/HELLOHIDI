@@ -34,8 +34,9 @@ final class TvingNicknameBottomSheetViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setUI()
         target()
+        
+        setUI()
     }
     
     private func setUI() {
@@ -47,21 +48,12 @@ final class TvingNicknameBottomSheetViewController: BaseViewController {
     }
     
     @objc func nickNameButtonDidTap() {
-        if !rootView.nickNameTextField.isEmpty() {
-            guard let nickName = rootView.nickNameTextField.text else { return }
-            delegate?.dataBind(nickName: nickName)
-            self.dismiss(animated: true)
-        } else {
-            showToast(message: "닉네임을 입력해주세여!", font: .tvingToastMessage)
-        }
-        
+        dismissTvingNicknameBottomSheetViewController()
     }
-    
 }
 
 extension TvingNicknameBottomSheetViewController {
     func presentBottomSheet(height: CGFloat) {
-        
         UIView.animate(withDuration: 0.3) { [weak self] in
 
             guard let self else { return }
@@ -71,6 +63,26 @@ extension TvingNicknameBottomSheetViewController {
             }
             self.view.layoutIfNeeded()
         }
+    }
+    
+    func dismissTvingNicknameBottomSheetViewController() {
+        if !rootView.nickNameTextField.isEmpty() {
+            guard let nickName = rootView.nickNameTextField.text else { return }
+            if validCheck(nickName: nickName) {
+                delegate?.dataBind(nickName: nickName)
+                self.dismiss(animated: true)
+            }
+        } else {
+            showToast(message: "닉네임을 입력해주세여!", font: .tvingToastMessage)
+        }
+    }
+    
+    func validCheck(nickName: String) -> Bool{
+        if !nickName.isOnlyKorean() {
+            showToast(message: "닉네임은 한글만 입력이 가능합니다!", font: .tvingToastMessage)
+            return false
+        }
+        return true
     }
 }
 

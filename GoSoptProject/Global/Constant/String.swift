@@ -31,4 +31,12 @@ extension String {
         guard let isContain = self.range(of: pattern, options: .regularExpression) else { return false}
         return true
     }
+    
+    func isOnlyKorean() -> Bool {
+            let pattern = "[가-힣]"
+            guard self.range(of: pattern, options: .regularExpression) != nil else {
+                return false
+            }
+            return true
+     }
 }

@@ -15,6 +15,7 @@
 		D24A047329ED8AD4006835EF /* TvingAuthTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24A047229ED8AD4006835EF /* TvingAuthTextField.swift */; };
 		D2601EEF29F229AB00320516 /* TvingNicknameBottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2601EEE29F229AB00320516 /* TvingNicknameBottomSheetView.swift */; };
 		D2601EF129F229B500320516 /* TvingNicknameBottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2601EF029F229B500320516 /* TvingNicknameBottomSheetViewController.swift */; };
+		D2601EF329F26B2A00320516 /* BaseToastMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2601EF229F26B2A00320516 /* BaseToastMessage.swift */; };
 		D28E831229E8FD5D00002EB4 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28E831129E8FD5D00002EB4 /* String.swift */; };
 		D28E831429EAAEB000002EB4 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D28E831329EAAEB000002EB4 /* Pretendard-Bold.otf */; };
 		D2A7F31E29E23FA000BFA4E9 /* TvingLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7F31D29E23FA000BFA4E9 /* TvingLoginView.swift */; };
@@ -62,6 +63,7 @@
 		D24A047229ED8AD4006835EF /* TvingAuthTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingAuthTextField.swift; sourceTree = "<group>"; };
 		D2601EEE29F229AB00320516 /* TvingNicknameBottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingNicknameBottomSheetView.swift; sourceTree = "<group>"; };
 		D2601EF029F229B500320516 /* TvingNicknameBottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingNicknameBottomSheetViewController.swift; sourceTree = "<group>"; };
+		D2601EF229F26B2A00320516 /* BaseToastMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseToastMessage.swift; sourceTree = "<group>"; };
 		D28E831129E8FD5D00002EB4 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		D28E831329EAAEB000002EB4 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
 		D2A7F31D29E23FA000BFA4E9 /* TvingLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingLoginView.swift; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				D2D2196829E23ABB00C7B126 /* BaseViewController.swift */,
+				D2601EF229F26B2A00320516 /* BaseToastMessage.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 				D2A7F31E29E23FA000BFA4E9 /* TvingLoginView.swift in Sources */,
 				D24A047329ED8AD4006835EF /* TvingAuthTextField.swift in Sources */,
 				D28E831229E8FD5D00002EB4 /* String.swift in Sources */,
+				D2601EF329F26B2A00320516 /* BaseToastMessage.swift in Sources */,
 				D2A7F32029E23FC500BFA4E9 /* TvingWelcomeView.swift in Sources */,
 				D2D2195429E2399500C7B126 /* Image.swift in Sources */,
 			);
