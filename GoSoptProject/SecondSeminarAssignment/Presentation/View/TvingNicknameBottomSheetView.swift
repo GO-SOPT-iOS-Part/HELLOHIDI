@@ -44,6 +44,9 @@ final class TvingNicknameBottomSheetView: UIView {
         }
         
         nickNameTextField.do {
+            $0.placeholder = "아요짱!"
+            $0.attributedPlaceholder = NSAttributedString(string:  "아요짱!", attributes: [NSAttributedString.Key.foregroundColor : UIColor.tvingGray4])
+            $0.textColor = .tvingBlack
             $0.backgroundColor = .tvingGray2
             $0.makeCornerRadius(ratio: 3)
             $0.addLeftPadding(inset: 25)
@@ -55,6 +58,7 @@ final class TvingNicknameBottomSheetView: UIView {
             $0.setTitleColor(.tvingWhite, for: .normal)
             $0.titleLabel?.textAlignment = .center
             $0.titleLabel?.font = .tvingDisplay2
+            $0.makeCornerRadius(ratio: 12)
         }
     }
     
@@ -73,7 +77,7 @@ final class TvingNicknameBottomSheetView: UIView {
         
         nickNameTitleLabel.snp.makeConstraints {
             $0.top.equalToSuperview().offset(50)
-            $0.leading.equalToSuperview().offset(25)
+            $0.leading.equalToSuperview().offset(30)
         }
         
         nickNameTextField.snp.makeConstraints {
@@ -84,7 +88,7 @@ final class TvingNicknameBottomSheetView: UIView {
         }
         
         nickNameButton.snp.makeConstraints {
-            $0.top.equalTo(self.nickNameTextField.snp.bottom).offset(214)
+            $0.bottom.equalTo(self.nickNameTextField.snp.bottom).offset(214)
             $0.centerX.equalToSuperview()
             $0.width.equalTo(332)
             $0.height.equalTo(52)
