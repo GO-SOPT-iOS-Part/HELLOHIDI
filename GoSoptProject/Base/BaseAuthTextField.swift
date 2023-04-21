@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class TvingAuthTextField: UITextField {
+final class BaseAuthTextField: UITextField {
     
     enum TextFieldType {
         case id
@@ -41,6 +41,6 @@ final class TvingAuthTextField: UITextField {
     }
 }
 
-extension TvingAuthTextField: UITextFieldDelegate {
+extension BaseAuthTextField: UITextFieldDelegate {
     
 }

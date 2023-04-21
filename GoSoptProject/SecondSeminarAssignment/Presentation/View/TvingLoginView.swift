@@ -16,8 +16,8 @@ final class TvingLoginView: UIView {
     
     private lazy var backButton = UIButton()
     private let titleLabel = UILabel()
-    public lazy var idTextField = TvingAuthTextField.init(viewType: .id)
-    public lazy var passwordTextField = TvingAuthTextField.init(viewType: .password)
+    public lazy var idTextField = BaseAuthTextField.init(viewType: .id)
+    public lazy var passwordTextField = BaseAuthTextField.init(viewType: .password)
     public lazy var clearButton = UIButton()
     public lazy var securityButton = UIButton()
     public lazy var loginButton = UIButton()

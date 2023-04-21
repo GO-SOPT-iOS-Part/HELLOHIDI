@@ -84,13 +84,15 @@ extension TvingNicknameBottomSheetViewController {
                 self.dismiss(animated: true)
             }
         } else {
-            showToast(message: "닉네임을 입력해주세여!", font: .tvingToastMessage)
+            toastMessage.type = .isEmptyNickName
+            showToast(message: toastMessage.message, font: .tvingToastMessage)
         }
     }
     
     func validCheck(nickName: String) -> Bool{
-        if !nickName.isOnlyKorean() {
-            showToast(message: "닉네임은 한글만 입력이 가능합니다!", font: .tvingToastMessage)
+        if !nickName.ContainsKorean() {
+            toastMessage.type = .unContainsKorean
+            showToast(message: toastMessage.message, font: .tvingToastMessage)
             return false
         }
         return true
