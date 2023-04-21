@@ -41,6 +41,7 @@ final class TvingLoginViewController: BaseViewController {
         rootView.securityButton.addTarget(self, action: #selector(securityButtonDidTap), for: .touchUpInside)
         rootView.clearButton.addTarget(self, action: #selector(clearButtonDidTap), for: .touchUpInside)
         rootView.loginButton.addTarget(self, action: #selector(loginButtonDidTap), for: .touchUpInside)
+        rootView.signUpButton.addTarget(self, action: #selector(signUpButtonDidTap), for: .touchUpInside)
     }
     
     //MARK: - Action Method
@@ -55,6 +56,10 @@ final class TvingLoginViewController: BaseViewController {
     
     @objc private func loginButtonDidTap() {
         validCheck()
+    }
+    
+    @objc private func signUpButtonDidTap() {
+        pushToTvingNickNameBottomSheetView()
     }
 }
 
@@ -106,6 +111,13 @@ private extension TvingLoginViewController {
         tvingWelcomeViewController.dataBind(id: id)
         
         self.navigationController?.pushViewController(tvingWelcomeViewController, animated: true)
+    }
+    
+    func pushToTvingNickNameBottomSheetView() {
+        let tvingNicknameBottomSheetViewController = TvingNicknameBottomSheetViewController()
+        tvingNicknameBottomSheetViewController.modalPresentationStyle = .formSheet
+        
+        self.present(tvingNicknameBottomSheetViewController, animated: true)
     }
     
     
