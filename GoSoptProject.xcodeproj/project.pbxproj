@@ -16,7 +16,6 @@
 		D238C59C29F63D7200B4B8A9 /* SecondSeminarSecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D238C59B29F63D7200B4B8A9 /* SecondSeminarSecondView.swift */; };
 		D238C59E29F63D7B00B4B8A9 /* SecondSeminarFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D238C59D29F63D7B00B4B8A9 /* SecondSeminarFirstViewController.swift */; };
 		D238C5A029F63D8900B4B8A9 /* SecondSeminarSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D238C59F29F63D8900B4B8A9 /* SecondSeminarSecondViewController.swift */; };
-		D24A047329ED8AD4006835EF /* TvingAuthTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24A047229ED8AD4006835EF /* TvingAuthTextField.swift */; };
 		D24A047329ED8AD4006835EF /* BaseAuthTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24A047229ED8AD4006835EF /* BaseAuthTextField.swift */; };
 		D2601EEF29F229AB00320516 /* TvingNicknameBottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2601EEE29F229AB00320516 /* TvingNicknameBottomSheetView.swift */; };
 		D2601EF129F229B500320516 /* TvingNicknameBottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2601EF029F229B500320516 /* TvingNicknameBottomSheetViewController.swift */; };
@@ -69,7 +68,6 @@
 		D238C59B29F63D7200B4B8A9 /* SecondSeminarSecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSeminarSecondView.swift; sourceTree = "<group>"; };
 		D238C59D29F63D7B00B4B8A9 /* SecondSeminarFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSeminarFirstViewController.swift; sourceTree = "<group>"; };
 		D238C59F29F63D8900B4B8A9 /* SecondSeminarSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSeminarSecondViewController.swift; sourceTree = "<group>"; };
-		D24A047229ED8AD4006835EF /* TvingAuthTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingAuthTextField.swift; sourceTree = "<group>"; };
 		D24A047229ED8AD4006835EF /* BaseAuthTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAuthTextField.swift; sourceTree = "<group>"; };
 		D2601EEE29F229AB00320516 /* TvingNicknameBottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingNicknameBottomSheetView.swift; sourceTree = "<group>"; };
 		D2601EF029F229B500320516 /* TvingNicknameBottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingNicknameBottomSheetViewController.swift; sourceTree = "<group>"; };
@@ -160,6 +158,38 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		D238C5A629F6409E00B4B8A9 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				D2A7F31B29E23C7A00BFA4E9 /* ViewController */,
+				D2A7F31C29E23C7F00BFA4E9 /* View */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		D238C5A729F640AF00B4B8A9 /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+				D238C5A929F640C100B4B8A9 /* ViewController */,
+				D238C5A829F640B800B4B8A9 /* View */,
+			);
+			path = MyPage;
+			sourceTree = "<group>";
+		};
+		D238C5A829F640B800B4B8A9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D238C5A929F640C100B4B8A9 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		D2A7F31929E23C5500BFA4E9 /* SecondSeminarAssignment */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,8 +201,8 @@
 		D2A7F31A29E23C6400BFA4E9 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				D2A7F31C29E23C7F00BFA4E9 /* View */,
-				D2A7F31B29E23C7A00BFA4E9 /* ViewController */,
+				D238C5A729F640AF00B4B8A9 /* MyPage */,
+				D238C5A629F6409E00B4B8A9 /* Onboarding */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
