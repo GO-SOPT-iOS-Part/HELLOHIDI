@@ -17,9 +17,7 @@ final class TvingMyPageView: UIScrollView {
     private let tvingNavigationView = TvingNavigationView()
     private let tvingProfileView = TvingProfileView()
     private let tvingTicketView = TvingTicketView()
-    public let tvingSettingTableView = TvingSettingTableView()
-    private let separtor = UIView()
-    public let tvingInfoTableView = TvingInfoTableView()
+    public let tvingTableView = TvingTableView()
     
     //MARK: - Life Cycle
     
@@ -38,8 +36,8 @@ final class TvingMyPageView: UIScrollView {
     //MARK: - Custom Method
     
     private func style() {
-        separtor.do {
-            $0.backgroundColor = .tvingGray1
+        self.do {
+            $0.isScrollEnabled = true
         }
     }
     
@@ -48,15 +46,13 @@ final class TvingMyPageView: UIScrollView {
             tvingNavigationView,
             tvingProfileView,
             tvingTicketView,
-            tvingSettingTableView,
-            separtor,
-            tvingInfoTableView
+            tvingTableView
         )
     }
     
     private func layout() {
         tvingNavigationView.snp.makeConstraints {
-            $0.top.equalTo(self.safeAreaLayoutGuide)
+            $0.top.equalToSuperview()
             $0.width.equalToSuperview()
             $0.height.equalTo(80)
         }
@@ -74,25 +70,12 @@ final class TvingMyPageView: UIScrollView {
             $0.height.equalTo(164)
         }
         
-        tvingSettingTableView.snp.makeConstraints {
+        tvingTableView.snp.makeConstraints {
             $0.top.equalTo(self.tvingTicketView.snp.bottom).offset(24)
             $0.width.equalToSuperview()
-            $0.height.equalTo(270)
+            $0.height.equalTo(730)
+            $0.bottom.equalToSuperview().inset(10)
         }
-        
-        separtor.snp.makeConstraints {
-            $0.top.equalTo(self.tvingSettingTableView.snp.bottom).offset(17)
-            $0.centerX.equalToSuperview()
-            $0.width.equalTo(359)
-            $0.height.equalTo(1)
-        }
-        
-        tvingInfoTableView.snp.makeConstraints {
-            $0.top.equalTo(self.separtor.snp.bottom).offset(16)
-            $0.width.equalToSuperview()
-            $0.bottom.equalTo(self.safeAreaLayoutGuide)
-        }
-        
     }
 }
     

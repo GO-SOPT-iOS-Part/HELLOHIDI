@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 import Then
 
-final class TvingSettingTableView: UIView {
+final class TvingTableView: UIView {
     
     //MARK: - UI Components
     
@@ -39,11 +39,24 @@ final class TvingSettingTableView: UIView {
             TvingSettingTableViewCell.self,
             forCellReuseIdentifier: TvingSettingTableViewCell.cellIdentifier
         )
+        
+        tableView.register(
+            TvingInfoTableViewCell.self,
+            forCellReuseIdentifier: TvingInfoTableViewCell.cellIdentifier)
+        
+        tableView.register(
+            TvingSettingTableFooterView.self,
+            forHeaderFooterViewReuseIdentifier: TvingSettingTableFooterView.cellIdentifier)
+        
+        tableView.register(
+            TvingInfoTableFooterView.self,
+            forHeaderFooterViewReuseIdentifier: TvingInfoTableFooterView.cellIdentifier
+        )
     }
     
     private func style() {
         tableView.do {
-            $0.backgroundColor = .tvingRed
+            $0.backgroundColor = .tvingBlack
             $0.isScrollEnabled = false
             $0.showsVerticalScrollIndicator = false
         }

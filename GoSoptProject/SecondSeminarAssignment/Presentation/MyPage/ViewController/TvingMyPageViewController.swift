@@ -15,7 +15,9 @@ final class TvingMyPageViewController: BaseViewController {
     //MARK: - Properties
     
     private let settingDummy = Setting.dummy()
-    private let rootView = TvingMyPageView()
+    private let infoDummy = Info.dummy()
+    
+    private lazy var rootView = TvingMyPageView()
     
     //MARK: - Life Cycle
     
@@ -32,12 +34,9 @@ final class TvingMyPageViewController: BaseViewController {
     //MARK: - Custom Method
     
     private func target() {
-        rootView.tvingSettingTableView.tableView.delegate = self
-        rootView.tvingSettingTableView.tableView.dataSource = self
+        rootView.tvingTableView.tableView.delegate = self
+        rootView.tvingTableView.tableView.dataSource = self
     }
-    
-    //MARK: - Action Method
-    
 }
 
 extension TvingMyPageViewController: UITableViewDelegate {
@@ -46,7 +45,18 @@ extension TvingMyPageViewController: UITableViewDelegate {
         case 0:
             return 54
         case 1:
+            return 54
+        default:
             return 0
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        switch section {
+        case 0:
+            return 32
+        case 1:
+            return 205
         default:
             return 0
         }
@@ -61,7 +71,7 @@ extension TvingMyPageViewController: UITableViewDataSource {
         case 0:
             return settingDummy.count
         case 1:
-            return 0
+            return infoDummy.count
         default:
             return 0
         }
@@ -74,9 +84,24 @@ extension TvingMyPageViewController: UITableViewDataSource {
             cell.configureCell(settingDummy[indexPath.row])
             return cell
         case 1:
-            return UITableViewCell()
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: TvingInfoTableViewCell.cellIdentifier, for: indexPath) as? TvingInfoTableViewCell else { return UITableViewCell()}
+            cell.configureCell(infoDummy[indexPath.row])
+            return cell
         default:
             return UITableViewCell()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        switch section {
+        case 0:
+            guard let footer = tableView.dequeueReusableHeaderFooterView(withIdentifier: TvingSettingTableFooterView.cellIdentifier) as? TvingSettingTableFooterView else { return UIView()}
+            return footer
+        case 1:
+            guard let footer = tableView.dequeueReusableHeaderFooterView(withIdentifier: TvingInfoTableFooterView.cellIdentifier) as? TvingInfoTableFooterView else { return UIView()}
+            return footer
+        default:
+            return UIView()
         }
     }
 }
