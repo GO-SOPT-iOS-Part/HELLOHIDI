@@ -16,6 +16,11 @@
 		D238C59C29F63D7200B4B8A9 /* SecondSeminarSecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D238C59B29F63D7200B4B8A9 /* SecondSeminarSecondView.swift */; };
 		D238C59E29F63D7B00B4B8A9 /* SecondSeminarFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D238C59D29F63D7B00B4B8A9 /* SecondSeminarFirstViewController.swift */; };
 		D238C5A029F63D8900B4B8A9 /* SecondSeminarSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D238C59F29F63D8900B4B8A9 /* SecondSeminarSecondViewController.swift */; };
+		D238C5AB29F640E800B4B8A9 /* TvingNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D238C5AA29F640E800B4B8A9 /* TvingNavigationView.swift */; };
+		D238C5AD29F640F500B4B8A9 /* TvingProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D238C5AC29F640F500B4B8A9 /* TvingProfileView.swift */; };
+		D238C5AF29F6411A00B4B8A9 /* TvingTicketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D238C5AE29F6411A00B4B8A9 /* TvingTicketView.swift */; };
+		D238C5B129F641C800B4B8A9 /* TvingSettingTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D238C5B029F641C800B4B8A9 /* TvingSettingTableView.swift */; };
+		D238C5B329F641D600B4B8A9 /* TvingInfoTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D238C5B229F641D600B4B8A9 /* TvingInfoTableView.swift */; };
 		D24A047329ED8AD4006835EF /* BaseAuthTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24A047229ED8AD4006835EF /* BaseAuthTextField.swift */; };
 		D2601EEF29F229AB00320516 /* TvingNicknameBottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2601EEE29F229AB00320516 /* TvingNicknameBottomSheetView.swift */; };
 		D2601EF129F229B500320516 /* TvingNicknameBottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2601EF029F229B500320516 /* TvingNicknameBottomSheetViewController.swift */; };
@@ -68,6 +73,11 @@
 		D238C59B29F63D7200B4B8A9 /* SecondSeminarSecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSeminarSecondView.swift; sourceTree = "<group>"; };
 		D238C59D29F63D7B00B4B8A9 /* SecondSeminarFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSeminarFirstViewController.swift; sourceTree = "<group>"; };
 		D238C59F29F63D8900B4B8A9 /* SecondSeminarSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSeminarSecondViewController.swift; sourceTree = "<group>"; };
+		D238C5AA29F640E800B4B8A9 /* TvingNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingNavigationView.swift; sourceTree = "<group>"; };
+		D238C5AC29F640F500B4B8A9 /* TvingProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingProfileView.swift; sourceTree = "<group>"; };
+		D238C5AE29F6411A00B4B8A9 /* TvingTicketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingTicketView.swift; sourceTree = "<group>"; };
+		D238C5B029F641C800B4B8A9 /* TvingSettingTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingSettingTableView.swift; sourceTree = "<group>"; };
+		D238C5B229F641D600B4B8A9 /* TvingInfoTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingInfoTableView.swift; sourceTree = "<group>"; };
 		D24A047229ED8AD4006835EF /* BaseAuthTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAuthTextField.swift; sourceTree = "<group>"; };
 		D2601EEE29F229AB00320516 /* TvingNicknameBottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingNicknameBottomSheetView.swift; sourceTree = "<group>"; };
 		D2601EF029F229B500320516 /* TvingNicknameBottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingNicknameBottomSheetViewController.swift; sourceTree = "<group>"; };
@@ -179,6 +189,11 @@
 		D238C5A829F640B800B4B8A9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D238C5AA29F640E800B4B8A9 /* TvingNavigationView.swift */,
+				D238C5AC29F640F500B4B8A9 /* TvingProfileView.swift */,
+				D238C5AE29F6411A00B4B8A9 /* TvingTicketView.swift */,
+				D238C5B029F641C800B4B8A9 /* TvingSettingTableView.swift */,
+				D238C5B229F641D600B4B8A9 /* TvingInfoTableView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -408,6 +423,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2D2195C29E23A0000C7B126 /* UITableViewCell+.swift in Sources */,
+				D238C5AD29F640F500B4B8A9 /* TvingProfileView.swift in Sources */,
 				D238C59E29F63D7B00B4B8A9 /* SecondSeminarFirstViewController.swift in Sources */,
 				D2D2195E29E23A1000C7B126 /* UITextField+.swift in Sources */,
 				D238C59A29F63D6700B4B8A9 /* SecondSeminarFirstView.swift in Sources */,
@@ -417,17 +433,21 @@
 				D2D2195629E2399F00C7B126 /* URLs.swift in Sources */,
 				D2D2196929E23ABB00C7B126 /* BaseViewController.swift in Sources */,
 				D2D2196029E23A2A00C7B126 /* UIColor+.swift in Sources */,
+				D238C5B129F641C800B4B8A9 /* TvingSettingTableView.swift in Sources */,
 				D2D2195A29E239E700C7B126 /* UIViewController+.swift in Sources */,
+				D238C5AB29F640E800B4B8A9 /* TvingNavigationView.swift in Sources */,
 				D2D2196229E23A3D00C7B126 /* UILabel+.swift in Sources */,
 				D2601EF129F229B500320516 /* TvingNicknameBottomSheetViewController.swift in Sources */,
 				D2D2196429E23A4B00C7B126 /* UIButton+.swift in Sources */,
 				D2D2195829E239D100C7B126 /* UIView+.swift in Sources */,
+				D238C5B329F641D600B4B8A9 /* TvingInfoTableView.swift in Sources */,
 				D2A7F32229E23FD200BFA4E9 /* TvingLoginViewController.swift in Sources */,
 				D232569529E24A7100D3B988 /* UIFont+.swift in Sources */,
 				D2D2193929E2356400C7B126 /* AppDelegate.swift in Sources */,
 				D238C5A029F63D8900B4B8A9 /* SecondSeminarSecondViewController.swift in Sources */,
 				D2D2193B29E2356400C7B126 /* SceneDelegate.swift in Sources */,
 				D2A7F32429E23FE400BFA4E9 /* TvingWelcomeViewController.swift in Sources */,
+				D238C5AF29F6411A00B4B8A9 /* TvingTicketView.swift in Sources */,
 				D2D2195229E2398D00C7B126 /* Device.swift in Sources */,
 				D238C59C29F63D7200B4B8A9 /* SecondSeminarSecondView.swift in Sources */,
 				D2A7F31E29E23FA000BFA4E9 /* TvingLoginView.swift in Sources */,
