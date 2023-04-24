@@ -14,6 +14,7 @@ final class TvingLoginViewController: BaseViewController {
     
     //MARK: - Properties
     
+    private var nickName: String = ""
     private let rootView = TvingLoginView()
     
     //MARK: - Life Cycles
@@ -41,6 +42,7 @@ final class TvingLoginViewController: BaseViewController {
         rootView.securityButton.addTarget(self, action: #selector(securityButtonDidTap), for: .touchUpInside)
         rootView.clearButton.addTarget(self, action: #selector(clearButtonDidTap), for: .touchUpInside)
         rootView.loginButton.addTarget(self, action: #selector(loginButtonDidTap), for: .touchUpInside)
+        rootView.signUpButton.addTarget(self, action: #selector(signUpButtonDidTap), for: .touchUpInside)
     }
     
     //MARK: - Action Method
@@ -56,11 +58,25 @@ final class TvingLoginViewController: BaseViewController {
     @objc private func loginButtonDidTap() {
         validCheck()
     }
+    
+    @objc private func signUpButtonDidTap() {
+        pushToTvingNickNameBottomSheetView()
+    }
 }
+
+//MARK: - NickNameButtonDidTap
+
+extension TvingLoginViewController: NickNameButtonDidTap {
+    func dataBind(nickName: String) {
+        self.nickName = nickName
+    }
+}
+
+//MARK: - UITextFieldDelegate
 
 extension TvingLoginViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        guard let authTextField = textField as? TvingAuthTextField else { return }
+        guard let authTextField = textField as? BaseAuthTextField else { return }
         
         switch authTextField.textFieldType {
         case .id:
@@ -77,6 +93,8 @@ extension TvingLoginViewController: UITextFieldDelegate {
         rootView.passwordTextField.layer.borderColor = UIColor.tvingGray4.cgColor
     }
 }
+
+//MARK: - Extension
 
 private extension TvingLoginViewController {
     func disableSecureEntry() {
@@ -101,25 +119,36 @@ private extension TvingLoginViewController {
         rootView.securityButton.isHidden = true
     }
     
-    func pushToTvingWelcomeView(id: String) {
+    func pushToTvingWelcomeView(email: String) {
         let tvingWelcomeViewController = TvingWelcomeViewController()
+        let id = self.nickName == "" ? email : nickName
         tvingWelcomeViewController.dataBind(id: id)
         
         self.navigationController?.pushViewController(tvingWelcomeViewController, animated: true)
     }
     
+    func pushToTvingNickNameBottomSheetView() {
+        let tvingNicknameBottomSheetViewController = TvingNicknameBottomSheetViewController()
+        tvingNicknameBottomSheetViewController.modalPresentationStyle = .overCurrentContext
+        
+        tvingNicknameBottomSheetViewController.delegate = self
+        self.present(tvingNicknameBottomSheetViewController, animated: true) {
+            tvingNicknameBottomSheetViewController.presentBottomSheet(height: UIScreen.main.bounds.height * 0.5)
+        }
+    }
     
     func validCheck() {
         guard let id = rootView.idTextField.text else { return }
         guard let password = rootView.passwordTextField.text else { return }
         
         if !id.isValidEmail() {
-            showToast(message: "아이디의 형식이 일치하지 않습니다", font: .tvingToastMessage)
-        } else if !password.isContainNumberAndAlphabet() {
-            showToast(message: "비밀번호의 형식이 일치하지 않습니다", font: .tvingToastMessage)
+            toastMessage.type = .inValidEmail
+            showToast(message: toastMessage.message, font: .tvingToastMessage)
+        } else if !password.ContainsNumberAndAlphabet() {
+            toastMessage.type = .inValidPassword
+            showToast(message: toastMessage.message, font: .tvingToastMessage)
         } else {
-            showToast(message: "로그인 성공!", font: .tvingToastMessage)
-            pushToTvingWelcomeView(id: id)
+            pushToTvingWelcomeView(email: id)
         }
     }
 }

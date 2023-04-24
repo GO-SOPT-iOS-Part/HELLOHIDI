@@ -14,6 +14,8 @@ class BaseViewController : UIViewController{
     
     //MARK: - Properties
     
+    public var toastMessage: ToastMessage = .init(toastMessage: .isEmptyNickName)
+    
     //MARK: - UI Components
     
     //MARK: - Life Cycle
@@ -46,8 +48,8 @@ class BaseViewController : UIViewController{
     }
     
     func showToast(message : String, font: UIFont) {
-        let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2 - 75, y: self.view.frame.size.height-100, width: 150, height: 35))
-        toastLabel.backgroundColor = UIColor.black.withAlphaComponent(0.6)
+        let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2 - 120, y: self.view.frame.size.height-200, width: 250, height: 60))
+        toastLabel.backgroundColor = .tvingGray3
         toastLabel.textColor = UIColor.white
         toastLabel.font = font
         toastLabel.textAlignment = .center;
@@ -56,7 +58,7 @@ class BaseViewController : UIViewController{
         toastLabel.layer.cornerRadius = 10;
         toastLabel.clipsToBounds  =  true
         self.view.addSubview(toastLabel)
-        UIView.animate(withDuration: 4.0, delay: 0.1, options: .curveEaseOut, animations: {
+        UIView.animate(withDuration: 10, delay: 0.1, options: .curveEaseOut, animations: {
              toastLabel.alpha = 0.0
         }, completion: {(isCompleted) in
             toastLabel.removeFromSuperview()

@@ -12,9 +12,13 @@ import Then
 
 final class TvingWelcomeView: UIView {
     
+    //MARK: - UI Components
+    
     private let adImage = UIImageView()
     public let welcomeLabel = UILabel()
     public lazy var mainButton = UIButton()
+    
+    //MARK: - Life Cycle
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -28,6 +32,7 @@ final class TvingWelcomeView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: - Custom Method
     
     private func style() {
         adImage.do{
