@@ -35,6 +35,18 @@
 		D2601EF329F26B2A00320516 /* BaseToastMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2601EF229F26B2A00320516 /* BaseToastMessage.swift */; };
 		D28E831229E8FD5D00002EB4 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28E831129E8FD5D00002EB4 /* String.swift */; };
 		D28E831429EAAEB000002EB4 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D28E831329EAAEB000002EB4 /* Pretendard-Bold.otf */; };
+		D28EBB2729F6E999008CF532 /* TvingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28EBB2629F6E999008CF532 /* TvingPageViewController.swift */; };
+		D28EBB2929F6EA0B008CF532 /* TvingHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28EBB2829F6EA0B008CF532 /* TvingHomeViewController.swift */; };
+		D28EBB2B29F6EA2C008CF532 /* TvingStreamingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28EBB2A29F6EA2C008CF532 /* TvingStreamingViewController.swift */; };
+		D28EBB2D29F6EA47008CF532 /* TvingTVProgramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28EBB2C29F6EA47008CF532 /* TvingTVProgramViewController.swift */; };
+		D28EBB2F29F6EA77008CF532 /* TvingMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28EBB2E29F6EA77008CF532 /* TvingMovieViewController.swift */; };
+		D28EBB3129F6EA8D008CF532 /* TvingParamountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28EBB3029F6EA8D008CF532 /* TvingParamountViewController.swift */; };
+		D28EBB3329F6EAB2008CF532 /* TvingTopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28EBB3229F6EAB1008CF532 /* TvingTopBarView.swift */; };
+		D28EBB3529F6ED47008CF532 /* TvingHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28EBB3429F6ED47008CF532 /* TvingHomeView.swift */; };
+		D28EBB3729F6ED5C008CF532 /* TvingTVProgramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28EBB3629F6ED5C008CF532 /* TvingTVProgramView.swift */; };
+		D28EBB3929F6ED68008CF532 /* TvingStreamingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28EBB3829F6ED68008CF532 /* TvingStreamingView.swift */; };
+		D28EBB3B29F6ED75008CF532 /* TvingMovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28EBB3A29F6ED75008CF532 /* TvingMovieView.swift */; };
+		D28EBB3D29F6ED81008CF532 /* TvingParamountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28EBB3C29F6ED81008CF532 /* TvingParamountView.swift */; };
 		D2A7F31E29E23FA000BFA4E9 /* TvingLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7F31D29E23FA000BFA4E9 /* TvingLoginView.swift */; };
 		D2A7F32029E23FC500BFA4E9 /* TvingWelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7F31F29E23FC500BFA4E9 /* TvingWelcomeView.swift */; };
 		D2A7F32229E23FD200BFA4E9 /* TvingLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7F32129E23FD200BFA4E9 /* TvingLoginViewController.swift */; };
@@ -100,6 +112,18 @@
 		D2601EF229F26B2A00320516 /* BaseToastMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseToastMessage.swift; sourceTree = "<group>"; };
 		D28E831129E8FD5D00002EB4 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		D28E831329EAAEB000002EB4 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
+		D28EBB2629F6E999008CF532 /* TvingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingPageViewController.swift; sourceTree = "<group>"; };
+		D28EBB2829F6EA0B008CF532 /* TvingHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingHomeViewController.swift; sourceTree = "<group>"; };
+		D28EBB2A29F6EA2C008CF532 /* TvingStreamingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingStreamingViewController.swift; sourceTree = "<group>"; };
+		D28EBB2C29F6EA47008CF532 /* TvingTVProgramViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingTVProgramViewController.swift; sourceTree = "<group>"; };
+		D28EBB2E29F6EA77008CF532 /* TvingMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingMovieViewController.swift; sourceTree = "<group>"; };
+		D28EBB3029F6EA8D008CF532 /* TvingParamountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingParamountViewController.swift; sourceTree = "<group>"; };
+		D28EBB3229F6EAB1008CF532 /* TvingTopBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingTopBarView.swift; sourceTree = "<group>"; };
+		D28EBB3429F6ED47008CF532 /* TvingHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingHomeView.swift; sourceTree = "<group>"; };
+		D28EBB3629F6ED5C008CF532 /* TvingTVProgramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingTVProgramView.swift; sourceTree = "<group>"; };
+		D28EBB3829F6ED68008CF532 /* TvingStreamingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingStreamingView.swift; sourceTree = "<group>"; };
+		D28EBB3A29F6ED75008CF532 /* TvingMovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingMovieView.swift; sourceTree = "<group>"; };
+		D28EBB3C29F6ED81008CF532 /* TvingParamountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingParamountView.swift; sourceTree = "<group>"; };
 		D2A7F31D29E23FA000BFA4E9 /* TvingLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingLoginView.swift; sourceTree = "<group>"; };
 		D2A7F31F29E23FC500BFA4E9 /* TvingWelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingWelcomeView.swift; sourceTree = "<group>"; };
 		D2A7F32129E23FD200BFA4E9 /* TvingLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingLoginViewController.swift; sourceTree = "<group>"; };
@@ -244,6 +268,49 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		D28EBB2229F6DF43008CF532 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D28EBB2529F6DF58008CF532 /* ViewController */,
+				D28EBB2429F6DF53008CF532 /* View */,
+				D28EBB2329F6DF4D008CF532 /* Model */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D28EBB2329F6DF4D008CF532 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D28EBB2429F6DF53008CF532 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D28EBB3229F6EAB1008CF532 /* TvingTopBarView.swift */,
+				D28EBB3429F6ED47008CF532 /* TvingHomeView.swift */,
+				D28EBB3629F6ED5C008CF532 /* TvingTVProgramView.swift */,
+				D28EBB3829F6ED68008CF532 /* TvingStreamingView.swift */,
+				D28EBB3A29F6ED75008CF532 /* TvingMovieView.swift */,
+				D28EBB3C29F6ED81008CF532 /* TvingParamountView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D28EBB2529F6DF58008CF532 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D28EBB2629F6E999008CF532 /* TvingPageViewController.swift */,
+				D28EBB2829F6EA0B008CF532 /* TvingHomeViewController.swift */,
+				D28EBB2A29F6EA2C008CF532 /* TvingStreamingViewController.swift */,
+				D28EBB2C29F6EA47008CF532 /* TvingTVProgramViewController.swift */,
+				D28EBB2E29F6EA77008CF532 /* TvingMovieViewController.swift */,
+				D28EBB3029F6EA8D008CF532 /* TvingParamountViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		D2A7F31929E23C5500BFA4E9 /* SecondSeminarAssignment */ = {
 			isa = PBXGroup;
 			children = (
@@ -255,6 +322,7 @@
 		D2A7F31A29E23C6400BFA4E9 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				D28EBB2229F6DF43008CF532 /* Home */,
 				D238C5A729F640AF00B4B8A9 /* MyPage */,
 				D238C5A629F6409E00B4B8A9 /* Onboarding */,
 			);
@@ -469,16 +537,23 @@
 				D2D2195E29E23A1000C7B126 /* UITextField+.swift in Sources */,
 				D238C59A29F63D6700B4B8A9 /* SecondSeminarFirstView.swift in Sources */,
 				D2D2196629E23A6900C7B126 /* UIImageView+.swift in Sources */,
+				D28EBB3129F6EA8D008CF532 /* TvingParamountViewController.swift in Sources */,
 				D2D2193D29E2356400C7B126 /* ViewController.swift in Sources */,
+				D28EBB2929F6EA0B008CF532 /* TvingHomeViewController.swift in Sources */,
 				D2601EEF29F229AB00320516 /* TvingNicknameBottomSheetView.swift in Sources */,
 				D2D2195629E2399F00C7B126 /* URLs.swift in Sources */,
 				D238C5C229F662E700B4B8A9 /* TvingSettingModel.swift in Sources */,
 				D2D2196929E23ABB00C7B126 /* BaseViewController.swift in Sources */,
+				D28EBB3529F6ED47008CF532 /* TvingHomeView.swift in Sources */,
 				D2D2196029E23A2A00C7B126 /* UIColor+.swift in Sources */,
 				D238C5B129F641C800B4B8A9 /* TvingTableView.swift in Sources */,
 				D238C5B729F6463900B4B8A9 /* TvingMyPageViewController.swift in Sources */,
+				D28EBB2729F6E999008CF532 /* TvingPageViewController.swift in Sources */,
+				D28EBB2F29F6EA77008CF532 /* TvingMovieViewController.swift in Sources */,
 				D2D2195A29E239E700C7B126 /* UIViewController+.swift in Sources */,
+				D28EBB3729F6ED5C008CF532 /* TvingTVProgramView.swift in Sources */,
 				D238C5AB29F640E800B4B8A9 /* TvingNavigationView.swift in Sources */,
+				D28EBB2B29F6EA2C008CF532 /* TvingStreamingViewController.swift in Sources */,
 				D2D2196229E23A3D00C7B126 /* UILabel+.swift in Sources */,
 				D2601EF129F229B500320516 /* TvingNicknameBottomSheetViewController.swift in Sources */,
 				D238C5CC29F6968D00B4B8A9 /* TvingInfoTableFooterView.swift in Sources */,
@@ -487,6 +562,7 @@
 				D2D2196429E23A4B00C7B126 /* UIButton+.swift in Sources */,
 				D2D2195829E239D100C7B126 /* UIView+.swift in Sources */,
 				D238C5B529F645AB00B4B8A9 /* TvingMyPageView.swift in Sources */,
+				D28EBB3929F6ED68008CF532 /* TvingStreamingView.swift in Sources */,
 				D2A7F32229E23FD200BFA4E9 /* TvingLoginViewController.swift in Sources */,
 				D232569529E24A7100D3B988 /* UIFont+.swift in Sources */,
 				D2D2193929E2356400C7B126 /* AppDelegate.swift in Sources */,
@@ -497,12 +573,16 @@
 				D238C5AF29F6411A00B4B8A9 /* TvingTicketView.swift in Sources */,
 				D2D2195229E2398D00C7B126 /* Device.swift in Sources */,
 				D238C59C29F63D7200B4B8A9 /* SecondSeminarSecondView.swift in Sources */,
+				D28EBB2D29F6EA47008CF532 /* TvingTVProgramViewController.swift in Sources */,
+				D28EBB3B29F6ED75008CF532 /* TvingMovieView.swift in Sources */,
+				D28EBB3D29F6ED81008CF532 /* TvingParamountView.swift in Sources */,
 				D2A7F31E29E23FA000BFA4E9 /* TvingLoginView.swift in Sources */,
 				D24A047329ED8AD4006835EF /* BaseAuthTextField.swift in Sources */,
 				D28E831229E8FD5D00002EB4 /* String.swift in Sources */,
 				D238C5C829F6791700B4B8A9 /* TvingInfoModel.swift in Sources */,
 				D2601EF329F26B2A00320516 /* BaseToastMessage.swift in Sources */,
 				D2A7F32029E23FC500BFA4E9 /* TvingWelcomeView.swift in Sources */,
+				D28EBB3329F6EAB2008CF532 /* TvingTopBarView.swift in Sources */,
 				D2D2195429E2399500C7B126 /* Image.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
