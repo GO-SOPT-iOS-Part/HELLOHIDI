@@ -41,6 +41,7 @@ class BaseViewController : UIViewController{
     
     private func setUI(){
         view.backgroundColor = .tvingBlack
+        self.navigationController?.isNavigationBarHidden = true
     }
     
     private func setLayout(){
