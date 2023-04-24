@@ -12,10 +12,12 @@ import Then
 
 final class TvingLoginView: UIView {
     
+    //MARK: - UI Components
+    
     private lazy var backButton = UIButton()
     private let titleLabel = UILabel()
-    public lazy var idTextField = TvingAuthTextField.init(viewType: .id)
-    public lazy var passwordTextField = TvingAuthTextField.init(viewType: .password)
+    public lazy var idTextField = BaseAuthTextField.init(viewType: .id)
+    public lazy var passwordTextField = BaseAuthTextField.init(viewType: .password)
     public lazy var clearButton = UIButton()
     public lazy var securityButton = UIButton()
     public lazy var loginButton = UIButton()
@@ -24,6 +26,8 @@ final class TvingLoginView: UIView {
     private var separatorBar = UIView()
     private let describeSignUpLabel = UILabel()
     public lazy var signUpButton = UIButton()
+    
+    //MARK: - Life Cycle
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -37,8 +41,7 @@ final class TvingLoginView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func target() {}
-    
+    //MARK: - Custom Method
     
     private func style() {
         backButton.do {
