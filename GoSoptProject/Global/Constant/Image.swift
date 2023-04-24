@@ -23,4 +23,5 @@ public enum Image {
     static let setting = UIImage(named: "tving_setting")!
     static let cash = UIImage(named: "tving_cash")!
     static let ticket = UIImage(named: "tving_ticket")!
+    static let next = UIImage(named: "tving_next")!
 }

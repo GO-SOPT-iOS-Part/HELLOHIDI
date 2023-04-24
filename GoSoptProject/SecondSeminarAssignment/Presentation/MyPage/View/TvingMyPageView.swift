@@ -17,9 +17,9 @@ final class TvingMyPageView: UIScrollView {
     private let tvingNavigationView = TvingNavigationView()
     private let tvingProfileView = TvingProfileView()
     private let tvingTicketView = TvingTicketView()
-    private let tvingSettingTableView = TvingSettingTableView()
+    public let tvingSettingTableView = TvingSettingTableView()
     private let separtor = UIView()
-    private let tvingInfoTableView = TvingInfoTableView()
+    public let tvingInfoTableView = TvingInfoTableView()
     
     //MARK: - Life Cycle
     
@@ -71,13 +71,13 @@ final class TvingMyPageView: UIScrollView {
             $0.top.equalTo(self.tvingProfileView.snp.bottom)
             $0.centerX.equalToSuperview()
             $0.width.equalTo(355)
-            $0.height.equalTo(92)
+            $0.height.equalTo(164)
         }
         
         tvingSettingTableView.snp.makeConstraints {
-            $0.top.equalTo(self.tvingTicketView.snp.bottom).offset(12)
+            $0.top.equalTo(self.tvingTicketView.snp.bottom).offset(24)
             $0.width.equalToSuperview()
-            $0.height.equalTo(354)
+            $0.height.equalTo(270)
         }
         
         separtor.snp.makeConstraints {

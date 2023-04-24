@@ -14,10 +14,14 @@ final class TvingSettingTableView: UIView {
     
     //MARK: - UI Components
     
+    public let tableView = UITableView()
+    
     //MARK: - Life Cycle
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
+        register()
         
         style()
         hierarchy()
@@ -30,16 +34,29 @@ final class TvingSettingTableView: UIView {
     
     //MARK: - Custom Method
     
+    private func register() {
+        tableView.register(
+            TvingSettingTableViewCell.self,
+            forCellReuseIdentifier: TvingSettingTableViewCell.cellIdentifier
+        )
+    }
+    
     private func style() {
-        
+        tableView.do {
+            $0.backgroundColor = .tvingRed
+            $0.isScrollEnabled = false
+            $0.showsVerticalScrollIndicator = false
+        }
     }
     
     private func hierarchy() {
-        
+        self.addSubview(tableView)
     }
     
     private func layout() {
-        
+        tableView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
     }
 }
     
