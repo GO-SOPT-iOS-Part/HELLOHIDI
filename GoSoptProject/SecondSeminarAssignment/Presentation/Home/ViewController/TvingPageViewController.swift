@@ -10,17 +10,11 @@ import UIKit
 import SnapKit
 import Then
 
-class TvingPageViewController: UIPageViewController {
+class TvingPageViewController: BaseViewController {
     
     //MARK: - Properties
     
-    private var topBarDummy = TopBar.dummy() {
-        didSet {
-            tvingTopBar.topBarCollectionView.reloadData()
-        }
-    }
-    private var preIndex = 0
-    private var direction: UIPageViewController.NavigationDirection = .forward
+    private let tvingMainViewModel: TvingMainViewModel
     
     //MARK: - UI Components
     
@@ -41,6 +35,17 @@ class TvingPageViewController: UIPageViewController {
         tvingParamountViewController
     ]
     
+    //MARK: - Life Cycle
+    
+    init(tvingMainViewModel: TvingMainViewModel) {
+        self.tvingMainViewModel = tvingMainViewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -50,6 +55,8 @@ class TvingPageViewController: UIPageViewController {
         layout()
         setControllers()
     }
+    
+    //MARK: - Custom Method
     
     func target() {
         tvingPageViewController.delegate = self
@@ -99,6 +106,7 @@ extension TvingPageViewController: UIPageViewControllerDataSource {
         if previousIndex < 0 {
             return nil
         }
+        
         return tvingMainViewControllers[previousIndex]
     }
     
@@ -109,37 +117,37 @@ extension TvingPageViewController: UIPageViewControllerDataSource {
         if nextIndex == tvingMainViewControllers.count {
             return nil
         }
+        
         return tvingMainViewControllers[nextIndex]
+    }
+    
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        if completed {
+            guard let index =  tvingMainViewControllers.firstIndex(of: tvingPageViewController.viewControllers?.first as! BaseViewController) else { return }
+            self.tvingMainViewModel.updatePageTabbarViewState(index: index)
+            self.tvingTopBar.topBarCollectionView.reloadData()
+        }
     }
 }
 
 extension TvingPageViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return topBarDummy.count
+        return tvingMainViewModel.mainPageTabbarList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TvingTopBarCollectionViewCell.cellIdentifier, for: indexPath) as? TvingTopBarCollectionViewCell else { return UICollectionViewCell() }
-        cell.dataBind(topBarDummy[indexPath.item])
+        
+        cell.dataBind(tvingMainViewModel.mainPageTabbarList[indexPath.item])
         
         cell.handler = { [weak self] in
             guard let self else { return }
             
-            for i in 0..<5 {
-                if i == indexPath.item {
-                    self.topBarDummy[i].isTapped = true
-                } else {
-                    self.topBarDummy[i].isTapped = false
-                }
-            }
-            
-            if indexPath.item < self.preIndex {
-                self.direction = .reverse
-            } else {
-                self.direction = .forward
-            }
-            self.preIndex = indexPath.item
-            self.setControllers(index: indexPath.item, direction:  self.direction)
+            self.tvingMainViewModel.updatePageTabbarViewState(index: indexPath.item)
+            self.setControllers(
+                index: self.tvingMainViewModel.tabbarIndex,
+                direction:  self.tvingMainViewModel.direction
+            )
             self.tvingTopBar.topBarCollectionView.reloadData()
         }
 
