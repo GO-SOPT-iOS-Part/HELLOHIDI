@@ -9,8 +9,17 @@ import UIKit
 
 final class TvingTopBarCollectionViewCell: UICollectionViewCell {
     
+    //MARK: - Properties
+    
+    var handler: (() -> (Void))?
+    
+    //MARK: - UI Components
+    
     lazy var titleButton = UIButton()
     lazy var underLineView = UIView()
+    
+    
+    //MARK: - Life Cycle
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -21,16 +30,19 @@ final class TvingTopBarCollectionViewCell: UICollectionViewCell {
         hierarchy()
         layout()
     }
-
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    //MARK: - Custom Method
     
     override func prepareForReuse() {
         configCellUI()
     }
     
     func target() {
+        titleButton.addTarget(self, action: #selector(titleButtonDidTap), for: .touchUpInside)
     }
     
     func cellStyle() {
@@ -53,7 +65,8 @@ final class TvingTopBarCollectionViewCell: UICollectionViewCell {
         titleButton.snp.makeConstraints {
             $0.top.equalToSuperview()
             $0.centerX.equalToSuperview()
-            $0.bottom.equalToSuperview().inset(3)
+            $0.width.equalToSuperview()
+            $0.bottom.equalToSuperview().inset(10)
         }
         
         underLineView.snp.makeConstraints {
@@ -61,6 +74,10 @@ final class TvingTopBarCollectionViewCell: UICollectionViewCell {
             $0.centerX.equalToSuperview()
             $0.height.equalTo(5)
         }
+    }
+    
+    @objc func titleButtonDidTap() {
+        handler?()
     }
 }
 
@@ -72,7 +89,9 @@ extension TvingTopBarCollectionViewCell {
     
     func dataBind(_ topBar: TopBar) {
         titleButton.setTitle(topBar.title, for: .normal)
-        underLineView.isHidden = !topBar.isTapped
+        if topBar.isTapped {
+            titleButton.setTitleColor(.white, for: .normal)
+        }
     }
 }
 

@@ -13,8 +13,7 @@ import Then
 final class TvingTopBarView: UIView {
     
     //MARK: - UI Components
-    
-    public let topBarCollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+    public lazy var topBarCollectionView = UICollectionView(frame: .zero, collectionViewLayout: createLayout())
     
     //MARK: - Life Cycle
     
@@ -59,5 +58,22 @@ final class TvingTopBarView: UIView {
         topBarCollectionView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
+    }
+    
+    private func createLayout() -> UICollectionViewCompositionalLayout {
+        // item
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.2), heightDimension: .fractionalHeight(1.0))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+
+        // group
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(85))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+
+        // section
+        let section = NSCollectionLayoutSection(group: group)
+        
+        let layout = UICollectionViewCompositionalLayout(section: section)
+        
+        return layout
     }
 }

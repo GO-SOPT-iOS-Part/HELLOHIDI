@@ -6,18 +6,18 @@
 //
 
 struct TopBar {
-    let title: String
-    let isTapped: Bool
+    var title: String
+    var isTapped: Bool
 }
 
 extension TopBar {
     static func dummy() -> [TopBar] {
         return [
             TopBar(title: "홈", isTapped: true),
-            TopBar(title: "실시간", isTapped: true),
-            TopBar(title: "TV프로그램", isTapped: true),
-            TopBar(title: "영화", isTapped: true),
-            TopBar(title: "파라마운트", isTapped: true),
+            TopBar(title: "실시간", isTapped: false),
+            TopBar(title: "TV프로그램", isTapped: false),
+            TopBar(title: "영화", isTapped: false),
+            TopBar(title: "파라마운트", isTapped: false),
         ]
     }
 }

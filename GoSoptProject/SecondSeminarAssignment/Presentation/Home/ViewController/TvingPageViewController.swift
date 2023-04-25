@@ -14,7 +14,13 @@ class TvingPageViewController: UIPageViewController {
     
     //MARK: - Properties
     
-    private let topBarDummy = TopBar.dummy()
+    private var topBarDummy = TopBar.dummy() {
+        didSet {
+            tvingTopBar.topBarCollectionView.reloadData()
+        }
+    }
+    private var preIndex = 0
+    private var direction: UIPageViewController.NavigationDirection = .forward
     
     //MARK: - UI Components
     
@@ -49,7 +55,6 @@ class TvingPageViewController: UIPageViewController {
         tvingPageViewController.delegate = self
         tvingPageViewController.dataSource = self
         
-        tvingTopBar.topBarCollectionView.delegate = self
         tvingTopBar.topBarCollectionView.dataSource = self
     }
     
@@ -64,7 +69,7 @@ class TvingPageViewController: UIPageViewController {
         tvingTopBar.snp.makeConstraints {
             $0.top.equalToSuperview()
             $0.width.equalToSuperview()
-            $0.height.equalTo(100)
+            $0.height.equalTo(120)
         }
         
         tvingPageViewController.view.snp.makeConstraints {
@@ -74,12 +79,12 @@ class TvingPageViewController: UIPageViewController {
         }
     }
     
-    func setControllers() {
-        guard let firstTvingPageViewController = tvingMainViewControllers.first else { return }
+    func setControllers(index: Int = 0, direction: UIPageViewController.NavigationDirection = .forward) {
+        let firstTvingPageViewController = tvingMainViewControllers[index]
         
         tvingPageViewController.setViewControllers(
             [firstTvingPageViewController],
-            direction: .forward,
+            direction: direction,
             animated: true,
             completion: nil
         )
@@ -108,26 +113,36 @@ extension TvingPageViewController: UIPageViewControllerDataSource {
     }
 }
 
-
-extension TvingPageViewController: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        print(#function)
-        return CGSize(width: 75, height: 100)
-    }
-}
-
 extension TvingPageViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print(#function)
         return topBarDummy.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        print(#function)
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TvingTopBarCollectionViewCell.cellIdentifier, for: indexPath) as? TvingTopBarCollectionViewCell else { return UICollectionViewCell() }
         cell.dataBind(topBarDummy[indexPath.item])
+        
+        cell.handler = { [weak self] in
+            guard let self else { return }
+            
+            for i in 0..<5 {
+                if i == indexPath.item {
+                    self.topBarDummy[i].isTapped = true
+                } else {
+                    self.topBarDummy[i].isTapped = false
+                }
+            }
+            
+            if indexPath.item < self.preIndex {
+                self.direction = .reverse
+            } else {
+                self.direction = .forward
+            }
+            self.preIndex = indexPath.item
+            self.setControllers(index: indexPath.item, direction:  self.direction)
+            self.tvingTopBar.topBarCollectionView.reloadData()
+        }
+
         return cell
     }
-    
-    
 }
