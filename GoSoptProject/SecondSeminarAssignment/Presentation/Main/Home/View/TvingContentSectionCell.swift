@@ -42,6 +42,7 @@ final class TvingContentSectionCell: UICollectionViewCell {
     
     private func register() {
         tvingContentCollectionView.register(TvingContentViewCell.self, forCellWithReuseIdentifier: TvingContentViewCell.cellIdentifier)
+        tvingContentCollectionView.register(TvingContentHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: TvingContentHeaderView.identifier)
     }
     
     private func target() {
@@ -83,6 +84,16 @@ final class TvingContentSectionCell: UICollectionViewCell {
         let section = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior = .continuous
         
+        let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(30))
+        let headerSupplementary = NSCollectionLayoutBoundarySupplementaryItem(
+          layoutSize: headerSize,
+          elementKind: UICollectionView.elementKindSectionHeader,
+          alignment: .top)
+        section.boundarySupplementaryItems = [headerSupplementary]
+        section.supplementariesFollowContentInsets = false
+        
+        
+        
         let layout = UICollectionViewCompositionalLayout(section: section)
         
         return layout
@@ -98,5 +109,12 @@ extension TvingContentSectionCell: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TvingContentViewCell.cellIdentifier, for: indexPath) as? TvingContentViewCell else { return UICollectionViewCell() }
         cell.dataBind(contentDummy[indexPath.item])
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        guard kind == UICollectionView.elementKindSectionHeader,
+              let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: TvingContentHeaderView.identifier, for: indexPath)
+                as? TvingContentHeaderView else { return UICollectionReusableView() }
+        return header
     }
 }

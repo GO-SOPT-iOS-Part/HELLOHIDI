@@ -30,12 +30,17 @@ extension UIFont{
     class var tvingDisplay3: UIFont {
         return UIFont(name: "Pretendard-SemiBold", size: 12)!
     }
+    
     class var tvingToastMessage: UIFont {
         return UIFont(name: "Pretendard-SemiBold", size: 10)!
     }
     
     class var tvingSubTitle: UIFont {
         return UIFont(name: "Pretendard-Medium", size: 23)!
+    }
+    
+    class var tvingSubTitle2: UIFont {
+        return UIFont(name: "Pretendard-Medium", size: 11)!
     }
     
     class var tvingTopBarDisplay: UIFont {
