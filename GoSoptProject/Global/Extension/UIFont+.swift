@@ -37,5 +37,9 @@ extension UIFont{
     class var tvingSubTitle: UIFont {
         return UIFont(name: "Pretendard-Medium", size: 23)!
     }
+    
+    class var tvingTopBarDisplay: UIFont {
+        return UIFont(name: "Pretendard-Regular", size: 17)!
+    }
 }
 

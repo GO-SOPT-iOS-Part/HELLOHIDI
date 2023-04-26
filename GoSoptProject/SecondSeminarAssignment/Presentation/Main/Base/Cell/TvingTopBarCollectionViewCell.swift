@@ -49,7 +49,8 @@ final class TvingTopBarCollectionViewCell: UICollectionViewCell {
         titleButton.do {
             $0.setTitleColor(.black, for: .normal)
             $0.titleLabel?.textAlignment = .center
-            $0.backgroundColor = .green
+            $0.backgroundColor = .clear
+            $0.titleLabel?.font = .tvingTopBarDisplay
         }
         
         underLineView.do {

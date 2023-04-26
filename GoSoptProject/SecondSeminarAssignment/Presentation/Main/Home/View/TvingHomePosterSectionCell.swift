@@ -1,8 +1,8 @@
 //
-//  TvingHomeView.swift
+//  TvingHomePosterView.swift
 //  GoSoptProject
 //
-//  Created by 류희재 on 2023/04/25.
+//  Created by 류희재 on 2023/04/26.
 //
 
 import UIKit
@@ -10,7 +10,9 @@ import UIKit
 import SnapKit
 import Then
 
-final class TvingHomeView: UIView {
+final class TvingHomePosterSectionCell: UICollectionViewCell {
+    
+    //MARK: - Properties
     
     //MARK: - UI Components
     
@@ -20,6 +22,8 @@ final class TvingHomeView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
+        target()
         
         style()
         hierarchy()
@@ -32,9 +36,13 @@ final class TvingHomeView: UIView {
     
     //MARK: - Custom Method
     
+    private func target() {
+        
+    }
+    
     private func style() {
         view.do{
-            $0.backgroundColor = .blue
+            $0.backgroundColor = .systemPink
         }
     }
     
@@ -48,5 +56,6 @@ final class TvingHomeView: UIView {
         }
     }
 }
+
 
 
