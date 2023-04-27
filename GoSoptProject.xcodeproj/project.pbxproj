@@ -29,6 +29,7 @@
 		D238C5CA29F6967F00B4B8A9 /* TvingSettingTableFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D238C5C929F6967F00B4B8A9 /* TvingSettingTableFooterView.swift */; };
 		D238C5CC29F6968D00B4B8A9 /* TvingInfoTableFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D238C5CB29F6968D00B4B8A9 /* TvingInfoTableFooterView.swift */; };
 		D238C5CE29F69A1600B4B8A9 /* UITableHeaderFooterView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D238C5CD29F69A1600B4B8A9 /* UITableHeaderFooterView+.swift */; };
+		D2467F2E29FAD42B00246269 /* TvingPopularChannelHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2467F2D29FAD42B00246269 /* TvingPopularChannelHeaderView.swift */; };
 		D24A047329ED8AD4006835EF /* BaseAuthTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24A047229ED8AD4006835EF /* BaseAuthTextField.swift */; };
 		D2601EEF29F229AB00320516 /* TvingNicknameBottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2601EEE29F229AB00320516 /* TvingNicknameBottomSheetView.swift */; };
 		D2601EF129F229B500320516 /* TvingNicknameBottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2601EF029F229B500320516 /* TvingNicknameBottomSheetViewController.swift */; };
@@ -85,6 +86,7 @@
 		D2D2196629E23A6900C7B126 /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2196529E23A6900C7B126 /* UIImageView+.swift */; };
 		D2D2196929E23ABB00C7B126 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2196829E23ABB00C7B126 /* BaseViewController.swift */; };
 		D2D2A5DF29FA38F5003C9A97 /* TvingPopularChannelViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2A5DE29FA38F5003C9A97 /* TvingPopularChannelViewCell.swift */; };
+		D2D2A5E129FAD0F2003C9A97 /* ChannelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2A5E029FAD0F2003C9A97 /* ChannelModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -122,6 +124,7 @@
 		D238C5C929F6967F00B4B8A9 /* TvingSettingTableFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingSettingTableFooterView.swift; sourceTree = "<group>"; };
 		D238C5CB29F6968D00B4B8A9 /* TvingInfoTableFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingInfoTableFooterView.swift; sourceTree = "<group>"; };
 		D238C5CD29F69A1600B4B8A9 /* UITableHeaderFooterView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableHeaderFooterView+.swift"; sourceTree = "<group>"; };
+		D2467F2D29FAD42B00246269 /* TvingPopularChannelHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingPopularChannelHeaderView.swift; sourceTree = "<group>"; };
 		D24A047229ED8AD4006835EF /* BaseAuthTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAuthTextField.swift; sourceTree = "<group>"; };
 		D2601EEE29F229AB00320516 /* TvingNicknameBottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingNicknameBottomSheetView.swift; sourceTree = "<group>"; };
 		D2601EF029F229B500320516 /* TvingNicknameBottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingNicknameBottomSheetViewController.swift; sourceTree = "<group>"; };
@@ -180,6 +183,7 @@
 		D2D2196529E23A6900C7B126 /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
 		D2D2196829E23ABB00C7B126 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D2D2A5DE29FA38F5003C9A97 /* TvingPopularChannelViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingPopularChannelViewCell.swift; sourceTree = "<group>"; };
+		D2D2A5E029FAD0F2003C9A97 /* ChannelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -427,6 +431,7 @@
 			children = (
 				D28EBB5E29F835DD008CF532 /* ContentModel.swift */,
 				D28EBB6A29FA0293008CF532 /* PosterModel.swift */,
+				D2D2A5E029FAD0F2003C9A97 /* ChannelModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -434,10 +439,10 @@
 		D28EBB5B29F82A15008CF532 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				D2D2A5E229FAD3C2003C9A97 /* ReusableView */,
 				D28EBB6C29FA04F4008CF532 /* SectionCell */,
 				D28EBB6829FA0244008CF532 /* TvingHomePosterCell.swift */,
 				D28EBB5C29F83368008CF532 /* TvingContentViewCell.swift */,
-				D28EBB6029F8C5BD008CF532 /* TvingContentHeaderView.swift */,
 				D2D2A5DE29FA38F5003C9A97 /* TvingPopularChannelViewCell.swift */,
 			);
 			path = Cell;
@@ -591,6 +596,15 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		D2D2A5E229FAD3C2003C9A97 /* ReusableView */ = {
+			isa = PBXGroup;
+			children = (
+				D28EBB6029F8C5BD008CF532 /* TvingContentHeaderView.swift */,
+				D2467F2D29FAD42B00246269 /* TvingPopularChannelHeaderView.swift */,
+			);
+			path = ReusableView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -691,6 +705,7 @@
 				D28EBB4629F7AF7C008CF532 /* TvingMainViewModel.swift in Sources */,
 				D2D2195629E2399F00C7B126 /* URLs.swift in Sources */,
 				D238C5C229F662E700B4B8A9 /* TvingSettingModel.swift in Sources */,
+				D2467F2E29FAD42B00246269 /* TvingPopularChannelHeaderView.swift in Sources */,
 				D2D2196929E23ABB00C7B126 /* BaseViewController.swift in Sources */,
 				D28EBB3529F6ED47008CF532 /* TvingHomeView.swift in Sources */,
 				D28EBB6B29FA0293008CF532 /* PosterModel.swift in Sources */,
@@ -702,6 +717,7 @@
 				D28EBB5F29F835DD008CF532 /* ContentModel.swift in Sources */,
 				D28EBB2F29F6EA77008CF532 /* TvingMovieViewController.swift in Sources */,
 				D2D2195A29E239E700C7B126 /* UIViewController+.swift in Sources */,
+				D2D2A5E129FAD0F2003C9A97 /* ChannelModel.swift in Sources */,
 				D28EBB3729F6ED5C008CF532 /* TvingTVProgramView.swift in Sources */,
 				D28EBB4229F6F3EF008CF532 /* UICollectionViewCell+.swift in Sources */,
 				D238C5AB29F640E800B4B8A9 /* TvingNavigationView.swift in Sources */,

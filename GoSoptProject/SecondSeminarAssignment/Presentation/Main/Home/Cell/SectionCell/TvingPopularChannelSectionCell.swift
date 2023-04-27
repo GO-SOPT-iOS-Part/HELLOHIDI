@@ -12,14 +12,22 @@ import Then
 
 final class TvingPopularChannelSectionCell: UICollectionViewCell {
     
+    //MARK: - Properties
+    
+    private let channelDummy = Channel.dummy()
+    
     //MARK: - UI Components
     
-    private var view = UIView()
+    public lazy var tvingPopularChannelCollectionView = UICollectionView(frame: .zero, collectionViewLayout: createLayout())
     
     //MARK: - Life Cycle
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
+        
+        register()
+        target()
         
         style()
         hierarchy()
@@ -32,22 +40,80 @@ final class TvingPopularChannelSectionCell: UICollectionViewCell {
     
     //MARK: - Custom Method
     
+    private func register() {
+        tvingPopularChannelCollectionView.register(TvingPopularChannelViewCell.self, forCellWithReuseIdentifier: TvingPopularChannelViewCell.cellIdentifier)
+        tvingPopularChannelCollectionView.register(TvingPopularChannelHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: TvingPopularChannelHeaderView.identifier)
+    }
+    
+    private func target() {
+        tvingPopularChannelCollectionView.dataSource = self
+    }
+    
     private func style() {
-        view.do{
+        tvingPopularChannelCollectionView.do{
             $0.backgroundColor = .yellow
+            $0.isScrollEnabled = false
         }
     }
     
     private func hierarchy() {
-        self.addSubview(view)
+        self.addSubview(tvingPopularChannelCollectionView)
     }
     
     private func layout() {
-        view.snp.makeConstraints {
+        tvingPopularChannelCollectionView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
     }
+    
+    private func createLayout() ->  UICollectionViewCompositionalLayout {
+        let itemSize = NSCollectionLayoutSize(
+            widthDimension: .absolute(160),
+            heightDimension:.absolute(138)
+        )
+        
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 7)
+        
+        let groupSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1.0),
+            heightDimension: .fractionalWidth(1.0)
+        )
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+        group.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 12, bottom: 18, trailing: 0)
+        
+        let section = NSCollectionLayoutSection(group: group)
+        section.orthogonalScrollingBehavior = .continuous
+        
+        let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(31))
+        let headerSupplementary = NSCollectionLayoutBoundarySupplementaryItem(
+          layoutSize: headerSize,
+          elementKind: UICollectionView.elementKindSectionHeader,
+          alignment: .top)
+        section.boundarySupplementaryItems = [headerSupplementary]
+        section.supplementariesFollowContentInsets = false
+        
+        let layout = UICollectionViewCompositionalLayout(section: section)
+        
+        return layout
+    }
 }
 
-
-
+extension TvingPopularChannelSectionCell: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return channelDummy.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TvingPopularChannelViewCell.cellIdentifier, for: indexPath) as? TvingPopularChannelViewCell else { return UICollectionViewCell() }
+        cell.dataBind(channelDummy[indexPath.item])
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        guard kind == UICollectionView.elementKindSectionHeader,
+              let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: TvingPopularChannelHeaderView.identifier, for: indexPath)
+                as? TvingPopularChannelHeaderView else { return UICollectionReusableView() }
+        return header
+    }
+}

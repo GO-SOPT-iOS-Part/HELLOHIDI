@@ -51,6 +51,7 @@ final class TvingHomeView: UIView {
             $0.translatesAutoresizingMaskIntoConstraints = false
             $0.showsHorizontalScrollIndicator = true
             $0.collectionViewLayout = layout
+            $0.contentInsetAdjustmentBehavior = .never
         }
     }
     

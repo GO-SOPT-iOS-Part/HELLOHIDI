@@ -47,8 +47,8 @@ extension TvingHomeViewController: UICollectionViewDelegateFlowLayout {
             return CGSize(width: UIScreen.main.bounds.width, height: 498)
         case 1:
             return CGSize(width: UIScreen.main.bounds.width, height: 202)
-//        case 2:
-//            return CGSize(width: 0, height: 0)
+        case 2:
+            return CGSize(width: UIScreen.main.bounds.width, height: 169)
         default:
             return CGSize(width: 0, height: 0)
         }
@@ -57,7 +57,7 @@ extension TvingHomeViewController: UICollectionViewDelegateFlowLayout {
 extension TvingHomeViewController: UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 2
+        return 3
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -66,8 +66,8 @@ extension TvingHomeViewController: UICollectionViewDataSource {
             return 1
         case 1:
             return 1
-            //        case 2:
-            //            return 1
+        case 2:
+            return 1
         default:
             return 0
         }
@@ -81,8 +81,9 @@ extension TvingHomeViewController: UICollectionViewDataSource {
         case 1:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TvingContentSectionCell.cellIdentifier, for: indexPath) as? TvingContentSectionCell else { return UICollectionViewCell() }
             return cell
-            //        case 2:
-            //            return UICollectionViewCell()
+        case 2:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TvingPopularChannelSectionCell.cellIdentifier, for: indexPath) as? TvingPopularChannelSectionCell else { return UICollectionViewCell() }
+            return cell
         default:
             return UICollectionViewCell()
         }
