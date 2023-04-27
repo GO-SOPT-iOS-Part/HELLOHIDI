@@ -43,11 +43,10 @@ final class TvingHomeViewController: BaseViewController {
 extension TvingHomeViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         switch indexPath.section {
-            
         case 0:
+            return CGSize(width: UIScreen.main.bounds.width, height: 498)
+        case 1:
             return CGSize(width: UIScreen.main.bounds.width, height: 202)
-//        case 1:
-//            return CGSize(width: UIScreen.main.bounds.width, height: 168)
 //        case 2:
 //            return CGSize(width: 0, height: 0)
         default:
@@ -58,15 +57,15 @@ extension TvingHomeViewController: UICollectionViewDelegateFlowLayout {
 extension TvingHomeViewController: UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
+        return 2
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch section {
         case 0:
             return 1
-            //        case 1:
-            //            return 1
+        case 1:
+            return 1
             //        case 2:
             //            return 1
         default:
@@ -77,10 +76,11 @@ extension TvingHomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch indexPath.section {
         case 0:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TvingHomePosterSectionCell.cellIdentifier, for: indexPath) as? TvingHomePosterSectionCell else { return UICollectionViewCell() }
+            return cell
+        case 1:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TvingContentSectionCell.cellIdentifier, for: indexPath) as? TvingContentSectionCell else { return UICollectionViewCell() }
             return cell
-            //        case 1:
-            //            return UICollectionViewCell()
             //        case 2:
             //            return UICollectionViewCell()
         default:

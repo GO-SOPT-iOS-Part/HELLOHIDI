@@ -52,13 +52,16 @@
 		D28EBB4429F6F579008CF532 /* TvingTopbarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28EBB4329F6F579008CF532 /* TvingTopbarModel.swift */; };
 		D28EBB4629F7AF7C008CF532 /* TvingMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28EBB4529F7AF7C008CF532 /* TvingMainViewModel.swift */; };
 		D28EBB4829F81E9C008CF532 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D28EBB4729F81E9C008CF532 /* Pretendard-Regular.otf */; };
-		D28EBB5629F82599008CF532 /* TvingHomePosterSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28EBB5529F82599008CF532 /* TvingHomePosterSectionCell.swift */; };
 		D28EBB5829F825CB008CF532 /* TvingPopularChannelSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28EBB5729F825CB008CF532 /* TvingPopularChannelSectionCell.swift */; };
 		D28EBB5A29F825E1008CF532 /* TvingContentSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28EBB5929F825E1008CF532 /* TvingContentSectionCell.swift */; };
 		D28EBB5D29F83368008CF532 /* TvingContentViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28EBB5C29F83368008CF532 /* TvingContentViewCell.swift */; };
 		D28EBB5F29F835DD008CF532 /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28EBB5E29F835DD008CF532 /* ContentModel.swift */; };
 		D28EBB6129F8C5BD008CF532 /* TvingContentHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28EBB6029F8C5BD008CF532 /* TvingContentHeaderView.swift */; };
 		D28EBB6329F8D4BF008CF532 /* UICollectionReusableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28EBB6229F8D4BF008CF532 /* UICollectionReusableView+.swift */; };
+		D28EBB6529F9FA9F008CF532 /* TvingMainNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28EBB6429F9FA9F008CF532 /* TvingMainNavigationView.swift */; };
+		D28EBB6729FA0078008CF532 /* TvingHomePosterSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28EBB6629FA0078008CF532 /* TvingHomePosterSectionCell.swift */; };
+		D28EBB6929FA0244008CF532 /* TvingHomePosterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28EBB6829FA0244008CF532 /* TvingHomePosterCell.swift */; };
+		D28EBB6B29FA0293008CF532 /* PosterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28EBB6A29FA0293008CF532 /* PosterModel.swift */; };
 		D2A7F31E29E23FA000BFA4E9 /* TvingLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7F31D29E23FA000BFA4E9 /* TvingLoginView.swift */; };
 		D2A7F32029E23FC500BFA4E9 /* TvingWelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7F31F29E23FC500BFA4E9 /* TvingWelcomeView.swift */; };
 		D2A7F32229E23FD200BFA4E9 /* TvingLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7F32129E23FD200BFA4E9 /* TvingLoginViewController.swift */; };
@@ -81,6 +84,7 @@
 		D2D2196429E23A4B00C7B126 /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2196329E23A4B00C7B126 /* UIButton+.swift */; };
 		D2D2196629E23A6900C7B126 /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2196529E23A6900C7B126 /* UIImageView+.swift */; };
 		D2D2196929E23ABB00C7B126 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2196829E23ABB00C7B126 /* BaseViewController.swift */; };
+		D2D2A5DF29FA38F5003C9A97 /* TvingPopularChannelViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2A5DE29FA38F5003C9A97 /* TvingPopularChannelViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -141,13 +145,16 @@
 		D28EBB4329F6F579008CF532 /* TvingTopbarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingTopbarModel.swift; sourceTree = "<group>"; };
 		D28EBB4529F7AF7C008CF532 /* TvingMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingMainViewModel.swift; sourceTree = "<group>"; };
 		D28EBB4729F81E9C008CF532 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
-		D28EBB5529F82599008CF532 /* TvingHomePosterSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingHomePosterSectionCell.swift; sourceTree = "<group>"; };
 		D28EBB5729F825CB008CF532 /* TvingPopularChannelSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingPopularChannelSectionCell.swift; sourceTree = "<group>"; };
 		D28EBB5929F825E1008CF532 /* TvingContentSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingContentSectionCell.swift; sourceTree = "<group>"; };
 		D28EBB5C29F83368008CF532 /* TvingContentViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingContentViewCell.swift; sourceTree = "<group>"; };
 		D28EBB5E29F835DD008CF532 /* ContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentModel.swift; sourceTree = "<group>"; };
 		D28EBB6029F8C5BD008CF532 /* TvingContentHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingContentHeaderView.swift; sourceTree = "<group>"; };
 		D28EBB6229F8D4BF008CF532 /* UICollectionReusableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionReusableView+.swift"; sourceTree = "<group>"; };
+		D28EBB6429F9FA9F008CF532 /* TvingMainNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingMainNavigationView.swift; sourceTree = "<group>"; };
+		D28EBB6629FA0078008CF532 /* TvingHomePosterSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingHomePosterSectionCell.swift; sourceTree = "<group>"; };
+		D28EBB6829FA0244008CF532 /* TvingHomePosterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingHomePosterCell.swift; sourceTree = "<group>"; };
+		D28EBB6A29FA0293008CF532 /* PosterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterModel.swift; sourceTree = "<group>"; };
 		D2A7F31D29E23FA000BFA4E9 /* TvingLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingLoginView.swift; sourceTree = "<group>"; };
 		D2A7F31F29E23FC500BFA4E9 /* TvingWelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingWelcomeView.swift; sourceTree = "<group>"; };
 		D2A7F32129E23FD200BFA4E9 /* TvingLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingLoginViewController.swift; sourceTree = "<group>"; };
@@ -172,6 +179,7 @@
 		D2D2196329E23A4B00C7B126 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
 		D2D2196529E23A6900C7B126 /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
 		D2D2196829E23ABB00C7B126 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		D2D2A5DE29FA38F5003C9A97 /* TvingPopularChannelViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingPopularChannelViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -377,6 +385,7 @@
 			isa = PBXGroup;
 			children = (
 				D28EBB3229F6EAB1008CF532 /* TvingTopBarView.swift */,
+				D28EBB6429F9FA9F008CF532 /* TvingMainNavigationView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -409,9 +418,6 @@
 			isa = PBXGroup;
 			children = (
 				D28EBB3429F6ED47008CF532 /* TvingHomeView.swift */,
-				D28EBB5529F82599008CF532 /* TvingHomePosterSectionCell.swift */,
-				D28EBB5729F825CB008CF532 /* TvingPopularChannelSectionCell.swift */,
-				D28EBB5929F825E1008CF532 /* TvingContentSectionCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -420,6 +426,7 @@
 			isa = PBXGroup;
 			children = (
 				D28EBB5E29F835DD008CF532 /* ContentModel.swift */,
+				D28EBB6A29FA0293008CF532 /* PosterModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -427,10 +434,23 @@
 		D28EBB5B29F82A15008CF532 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				D28EBB6C29FA04F4008CF532 /* SectionCell */,
+				D28EBB6829FA0244008CF532 /* TvingHomePosterCell.swift */,
 				D28EBB5C29F83368008CF532 /* TvingContentViewCell.swift */,
 				D28EBB6029F8C5BD008CF532 /* TvingContentHeaderView.swift */,
+				D2D2A5DE29FA38F5003C9A97 /* TvingPopularChannelViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		D28EBB6C29FA04F4008CF532 /* SectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				D28EBB6629FA0078008CF532 /* TvingHomePosterSectionCell.swift */,
+				D28EBB5929F825E1008CF532 /* TvingContentSectionCell.swift */,
+				D28EBB5729F825CB008CF532 /* TvingPopularChannelSectionCell.swift */,
+			);
+			path = SectionCell;
 			sourceTree = "<group>";
 		};
 		D2A7F31929E23C5500BFA4E9 /* SecondSeminarAssignment */ = {
@@ -673,6 +693,7 @@
 				D238C5C229F662E700B4B8A9 /* TvingSettingModel.swift in Sources */,
 				D2D2196929E23ABB00C7B126 /* BaseViewController.swift in Sources */,
 				D28EBB3529F6ED47008CF532 /* TvingHomeView.swift in Sources */,
+				D28EBB6B29FA0293008CF532 /* PosterModel.swift in Sources */,
 				D28EBB5A29F825E1008CF532 /* TvingContentSectionCell.swift in Sources */,
 				D2D2196029E23A2A00C7B126 /* UIColor+.swift in Sources */,
 				D238C5B129F641C800B4B8A9 /* TvingTableView.swift in Sources */,
@@ -684,12 +705,14 @@
 				D28EBB3729F6ED5C008CF532 /* TvingTVProgramView.swift in Sources */,
 				D28EBB4229F6F3EF008CF532 /* UICollectionViewCell+.swift in Sources */,
 				D238C5AB29F640E800B4B8A9 /* TvingNavigationView.swift in Sources */,
+				D28EBB6529F9FA9F008CF532 /* TvingMainNavigationView.swift in Sources */,
 				D28EBB2B29F6EA2C008CF532 /* TvingStreamingViewController.swift in Sources */,
 				D28EBB4029F6F2D6008CF532 /* TvingTopBarCollectionViewCell.swift in Sources */,
-				D28EBB5629F82599008CF532 /* TvingHomePosterSectionCell.swift in Sources */,
+				D28EBB6729FA0078008CF532 /* TvingHomePosterSectionCell.swift in Sources */,
 				D2D2196229E23A3D00C7B126 /* UILabel+.swift in Sources */,
 				D2601EF129F229B500320516 /* TvingNicknameBottomSheetViewController.swift in Sources */,
 				D28EBB6329F8D4BF008CF532 /* UICollectionReusableView+.swift in Sources */,
+				D2D2A5DF29FA38F5003C9A97 /* TvingPopularChannelViewCell.swift in Sources */,
 				D238C5CC29F6968D00B4B8A9 /* TvingInfoTableFooterView.swift in Sources */,
 				D238C5BD29F65F9E00B4B8A9 /* TvingSettingTableViewCell.swift in Sources */,
 				D238C5C629F678D900B4B8A9 /* TvingInfoTableViewCell.swift in Sources */,
@@ -701,6 +724,7 @@
 				D232569529E24A7100D3B988 /* UIFont+.swift in Sources */,
 				D2D2193929E2356400C7B126 /* AppDelegate.swift in Sources */,
 				D238C5A029F63D8900B4B8A9 /* SecondSeminarSecondViewController.swift in Sources */,
+				D28EBB6929FA0244008CF532 /* TvingHomePosterCell.swift in Sources */,
 				D2D2193B29E2356400C7B126 /* SceneDelegate.swift in Sources */,
 				D2A7F32429E23FE400BFA4E9 /* TvingWelcomeViewController.swift in Sources */,
 				D238C5CE29F69A1600B4B8A9 /* UITableHeaderFooterView+.swift in Sources */,

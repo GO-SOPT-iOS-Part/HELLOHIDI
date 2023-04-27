@@ -18,7 +18,9 @@ class TvingPageViewController: BaseViewController {
     
     //MARK: - UI Components
     
+    private let tvingMainNavigationView = TvingMainNavigationView()
     private let tvingTopBar = TvingTopBarView()
+    
     private let tvingPageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal)
     private let tvingHomeViewController = TvingHomeViewController()
     private let tvingStreamingViewController = TvingStreamingViewController()
@@ -66,23 +68,27 @@ class TvingPageViewController: BaseViewController {
     }
     
     func hierarchy() {
-        view.addSubview(tvingTopBar)
         addChild(tvingPageViewController) // 홈 뷰컨에 child 뷰컨으로 페이지 뷰컨을 추가하고
         view.addSubview(tvingPageViewController.view) // 홈뷰에 페이지 뷰컨 뷰를 추가하고
         tvingPageViewController.didMove(toParent: self) // 페이지 뷰컨에게 알려준다
+        view.addSubviews(tvingMainNavigationView, tvingTopBar)
     }
     
     func layout() {
-        tvingTopBar.snp.makeConstraints {
-            $0.top.equalToSuperview()
-            $0.width.equalToSuperview()
-            $0.height.equalTo(120)
+        tvingPageViewController.view.snp.makeConstraints {
+            $0.edges.equalToSuperview()
         }
         
-        tvingPageViewController.view.snp.makeConstraints {
-            $0.top.equalTo(self.tvingTopBar.snp.bottom)
-            $0.bottom.equalToSuperview()
+        tvingMainNavigationView.snp.makeConstraints {
+            $0.top.equalToSuperview().offset(58)
             $0.width.equalToSuperview()
+            $0.height.equalTo(36)
+        }
+        
+        tvingTopBar.snp.makeConstraints {
+            $0.top.equalTo(self.tvingMainNavigationView.snp.bottom)
+            $0.width.equalToSuperview()
+            $0.height.equalTo(41)
         }
     }
     

@@ -1,8 +1,8 @@
 //
-//  TvingHomePosterView.swift
+//  TvingHomePosterCell.swift
 //  GoSoptProject
 //
-//  Created by 류희재 on 2023/04/26.
+//  Created by 류희재 on 2023/04/27.
 //
 
 import UIKit
@@ -10,20 +10,18 @@ import UIKit
 import SnapKit
 import Then
 
-final class TvingHomePosterSectionCell: UICollectionViewCell {
+final class TvingHomePosterCell: UICollectionViewCell {
     
     //MARK: - Properties
     
     //MARK: - UI Components
     
-    private var view = UIView()
+    private lazy var posterImage = UIImageView()
     
     //MARK: - Life Cycle
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        target()
         
         style()
         hierarchy()
@@ -36,26 +34,24 @@ final class TvingHomePosterSectionCell: UICollectionViewCell {
     
     //MARK: - Custom Method
     
-    private func target() {
-        
-    }
-    
-    private func style() {
-        view.do{
-            $0.backgroundColor = .systemPink
-        }
-    }
+    private func style() {}
     
     private func hierarchy() {
-        self.addSubview(view)
+        contentView.addSubview(posterImage)
     }
     
     private func layout() {
-        view.snp.makeConstraints {
-            $0.edges.equalToSuperview()
+        posterImage.snp.makeConstraints {
+            $0.top.equalToSuperview()
+            $0.width.equalToSuperview()
+            $0.height.equalTo(498)
         }
     }
+    
+    func dataBind(_ poster: Poster) {
+        posterImage.image = poster.image
+    }
+    //MARK: - Action Method
+    
 }
-
-
 

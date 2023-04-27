@@ -45,7 +45,6 @@ class BaseViewController : UIViewController{
     }
     
     private func setLayout(){
-        
     }
     
     func showToast(message : String, font: UIFont) {

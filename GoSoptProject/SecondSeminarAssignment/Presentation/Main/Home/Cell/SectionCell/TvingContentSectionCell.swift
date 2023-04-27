@@ -52,6 +52,7 @@ final class TvingContentSectionCell: UICollectionViewCell {
     private func style() {
         tvingContentCollectionView.do{
             $0.backgroundColor = .green
+            $0.isScrollEnabled = false
         }
     }
     

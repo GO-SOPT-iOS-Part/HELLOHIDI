@@ -13,6 +13,7 @@ import Then
 final class TvingTopBarView: UIView {
     
     //MARK: - UI Components
+    
     public lazy var topBarCollectionView = UICollectionView(frame: .zero, collectionViewLayout: createLayout())
     
     //MARK: - Life Cycle
@@ -46,7 +47,7 @@ final class TvingTopBarView: UIView {
             $0.isScrollEnabled = false
             $0.showsVerticalScrollIndicator = false
             $0.alwaysBounceVertical = true
-            $0.backgroundColor = .purple
+            $0.backgroundColor = .clear
         }
     }
     
@@ -66,7 +67,7 @@ final class TvingTopBarView: UIView {
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
 
         // group
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(85))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(41))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
 
         // section

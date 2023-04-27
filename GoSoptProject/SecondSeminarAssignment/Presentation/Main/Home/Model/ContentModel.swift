@@ -15,12 +15,12 @@ struct Content {
 extension Content {
     static func dummy() -> [Content] {
         return [
-            Content(image: Image.poster, title: "너의이름은"),
-            Content(image: Image.poster, title: "너의이름은"),
-            Content(image: Image.poster, title: "너의이름은"),
-            Content(image: Image.poster, title: "너의이름은"),
-            Content(image: Image.poster, title: "너의이름은"),
-            Content(image: Image.poster, title: "너의이름은")
+            Content(image: Image.poster1, title: "너의이름은"),
+            Content(image: Image.poster2, title: "너의이름은"),
+            Content(image: Image.poster3, title: "너의이름은"),
+            Content(image: Image.poster4, title: "너의이름은"),
+            Content(image: Image.poster1, title: "너의이름은"),
+            Content(image: Image.poster2, title: "너의이름은")
         ]
     }
 }

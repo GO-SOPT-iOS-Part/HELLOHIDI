@@ -37,12 +37,21 @@ final class TvingHomeView: UIView {
     //MARK: - Custom Method
     
     private func register() {
+        tvingHomeView.register(TvingHomePosterSectionCell.self, forCellWithReuseIdentifier: TvingHomePosterSectionCell.cellIdentifier)
         tvingHomeView.register(TvingContentSectionCell.self, forCellWithReuseIdentifier: TvingContentSectionCell.cellIdentifier)
         tvingHomeView.register(TvingPopularChannelSectionCell.self, forCellWithReuseIdentifier: TvingPopularChannelSectionCell.cellIdentifier)
-        tvingHomeView.register(TvingHomePosterSectionCell.self, forCellWithReuseIdentifier: TvingHomePosterSectionCell.cellIdentifier)
     }
     
     private func style() {
+        tvingHomeView.do{
+            let layout = UICollectionViewFlowLayout()
+            layout.minimumLineSpacing = 0 // 상하간격
+            layout.scrollDirection = .vertical
+            
+            $0.translatesAutoresizingMaskIntoConstraints = false
+            $0.showsHorizontalScrollIndicator = true
+            $0.collectionViewLayout = layout
+        }
     }
     
     private func hierarchy() {
