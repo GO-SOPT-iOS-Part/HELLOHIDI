@@ -67,7 +67,7 @@ final class TvingPopularChannelHeaderView: UICollectionReusableView {
         fullButton.snp.makeConstraints {
             $0.top.equalToSuperview()
             $0.trailing.equalToSuperview().inset(5)
-            $0.width.equalTo(55)
+            $0.width.equalTo(54)
             $0.height.equalTo(25)
         }
     }

@@ -47,8 +47,8 @@ final class TvingContentHeaderView: UICollectionReusableView {
             $0.setTitle("전체보기", for: .normal)
             $0.setImage(Image.next, for: .normal)
             $0.setTitleColor(.tvingGray3, for: .normal)
-            $0.imageView?.contentMode = .scaleAspectFit
             $0.titleLabel?.font = .tvingSubTitle2
+            $0.imageView?.contentMode = .scaleAspectFit
             $0.semanticContentAttribute = .forceRightToLeft //<- 중요
         }
     }
@@ -68,7 +68,7 @@ final class TvingContentHeaderView: UICollectionReusableView {
         fullButton.snp.makeConstraints {
             $0.top.equalToSuperview()
             $0.trailing.equalToSuperview().inset(5)
-            $0.width.equalTo(55)
+            $0.width.equalTo(54)
             $0.height.equalTo(25)
         }
     }
