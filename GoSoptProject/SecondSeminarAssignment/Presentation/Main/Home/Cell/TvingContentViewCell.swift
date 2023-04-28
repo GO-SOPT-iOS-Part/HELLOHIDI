@@ -35,7 +35,12 @@ final class TvingContentViewCell: UICollectionViewCell {
     
     //MARK: - Custom Method
     
-    private func style() {}
+    private func style() {
+        contentTitleLabel.do {
+            $0.font = .tvingToastMessage
+            $0.textColor = .tvingGray3
+        }
+    }
     
     private func hierarchy() {
         contentView.addSubviews(

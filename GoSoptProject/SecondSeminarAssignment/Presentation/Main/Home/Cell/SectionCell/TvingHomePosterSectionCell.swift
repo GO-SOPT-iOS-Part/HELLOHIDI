@@ -58,6 +58,7 @@ final class TvingHomePosterSectionCell: UICollectionViewCell {
             $0.showsHorizontalScrollIndicator = false
             $0.collectionViewLayout = layout
             $0.isPagingEnabled = true
+            $0.backgroundColor = .tvingBlack
         }
     }
     

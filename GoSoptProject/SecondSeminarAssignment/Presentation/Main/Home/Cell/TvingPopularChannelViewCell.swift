@@ -40,7 +40,7 @@ final class TvingPopularChannelViewCell: UICollectionViewCell {
 
     private func style() {
         channelImageView.do {
-            $0.clipsToBounds = true
+            $0.backgroundColor = .blue
         }
         channelTitleLabel.do {
             $0.font = .tvingTopBarDisplay2
@@ -64,41 +64,44 @@ final class TvingPopularChannelViewCell: UICollectionViewCell {
     }
 
     private func hierarchy() {
-        contentView.addSubviews(
+        self.addSubviews(
             channelImageView,
             channelTitleLabel,
             contentTitleLabel,
-            ratingLabel
+            ratingLabel,
+            rankLabel
         )
     }
 
     private func layout() {
         channelImageView.snp.makeConstraints {
             $0.top.equalToSuperview()
-            $0.leading.equalToSuperview()
-            $0.width.equalTo(160)
+            $0.width.equalToSuperview()
             $0.height.equalTo(80)
         }
 
         channelTitleLabel.snp.makeConstraints {
             $0.top.equalTo(self.channelImageView.snp.bottom).offset(10)
             $0.leading.equalToSuperview().offset(24)
-            $0.width.equalTo(24)
             $0.height.equalTo(16)
         }
         
         contentTitleLabel.snp.makeConstraints {
-            $0.top.equalTo(self.channelTitleLabel.snp.bottom).offset(10)
+            $0.top.equalTo(self.channelTitleLabel.snp.bottom).offset(5)
             $0.leading.equalToSuperview().offset(24)
-            $0.width.equalTo(77)
             $0.height.equalTo(16)
         }
         
         ratingLabel.snp.makeConstraints {
-            $0.top.equalTo(self.contentTitleLabel.snp.bottom).offset(10)
+            $0.top.equalTo(self.contentTitleLabel.snp.bottom).offset(5)
             $0.leading.equalToSuperview().offset(24)
-            $0.width.equalTo(29)
             $0.height.equalTo(16)
+        }
+        
+        rankLabel.snp.makeConstraints {
+            $0.top.equalTo(self.channelImageView.snp.bottom).offset(5)
+            $0.leading.equalToSuperview().offset(6)
+            $0.height.equalTo(30)
         }
     }
 

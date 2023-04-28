@@ -46,14 +46,26 @@ extension TvingHomeViewController: UICollectionViewDelegateFlowLayout {
         case 0:
             return CGSize(width: UIScreen.main.bounds.width, height: 498)
         case 1:
-            return CGSize(width: UIScreen.main.bounds.width, height: 202)
+            return CGSize(width: UIScreen.main.bounds.width, height: 210)
         case 2:
-            return CGSize(width: UIScreen.main.bounds.width, height: 169)
+            return CGSize(width: UIScreen.main.bounds.width, height: 500)
         default:
             return CGSize(width: 0, height: 0)
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        switch section {
+        case 0:
+            return UIEdgeInsets(top: 0, left: 0, bottom: 49, right: 0)
+        case 1:
+            return UIEdgeInsets(top: 0, left: 0, bottom: 20, right: 0)
+        default:
+            return UIEdgeInsets()
+        }
+    }
 }
+
 extension TvingHomeViewController: UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {

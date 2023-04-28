@@ -52,6 +52,7 @@ final class TvingHomeView: UIView {
             $0.showsHorizontalScrollIndicator = true
             $0.collectionViewLayout = layout
             $0.contentInsetAdjustmentBehavior = .never
+            $0.backgroundColor = .tvingBlack
         }
     }
     

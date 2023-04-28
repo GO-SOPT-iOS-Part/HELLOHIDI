@@ -51,8 +51,10 @@ final class TvingContentSectionCell: UICollectionViewCell {
     
     private func style() {
         tvingContentCollectionView.do{
-            $0.backgroundColor = .green
+            $0.backgroundColor = .tvingBlack
             $0.isScrollEnabled = false
+            $0.translatesAutoresizingMaskIntoConstraints = false
+            $0.showsHorizontalScrollIndicator = false
         }
     }
     
@@ -68,32 +70,40 @@ final class TvingContentSectionCell: UICollectionViewCell {
     
     private func createLayout() ->  UICollectionViewCompositionalLayout {
         let itemSize = NSCollectionLayoutSize(
-            widthDimension: .absolute(98),
-            heightDimension:.absolute(146)
+            widthDimension: .fractionalWidth(1.0),
+            heightDimension: .fractionalHeight(1)
         )
         
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 8)
         
         let groupSize = NSCollectionLayoutSize(
-            widthDimension: .fractionalWidth(1.0),
-            heightDimension: .fractionalWidth(1.0)
+            widthDimension: .absolute(98),
+            heightDimension: .absolute(166)
         )
+        
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
         group.contentInsets = NSDirectionalEdgeInsets(top: 13, leading: 0, bottom: 0, trailing: 0)
         
         let section = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior = .continuous
         
-        let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(30))
+        let headerSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1.0),
+            heightDimension: .absolute(30)
+        )
+        
         let headerSupplementary = NSCollectionLayoutBoundarySupplementaryItem(
           layoutSize: headerSize,
           elementKind: UICollectionView.elementKindSectionHeader,
           alignment: .top)
+        
+        headerSupplementary.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 12, bottom: 0, trailing: 0)
+        
         section.boundarySupplementaryItems = [headerSupplementary]
         section.supplementariesFollowContentInsets = false
         
-        
+        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 12, bottom: 0, trailing: 0)
         
         let layout = UICollectionViewCompositionalLayout(section: section)
         

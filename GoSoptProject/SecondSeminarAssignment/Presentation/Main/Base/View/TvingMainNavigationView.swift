@@ -15,7 +15,7 @@ final class TvingMainNavigationView: UIView {
     //MARK: - UI Components
     
     private let logoImageView = UIImageView()
-    private lazy var mainPageButton = UIButton()
+    private lazy var myPageButton = UIButton()
     
     //MARK: - Life Cycle
     
@@ -40,13 +40,13 @@ final class TvingMainNavigationView: UIView {
             $0.image = Image.logo
         }
         
-        mainPageButton.do {
+        myPageButton.do {
             $0.setImage(Image.profile, for: .normal)
         }
     }
     
     private func hierarchy() {
-        self.addSubviews(logoImageView, mainPageButton)
+        self.addSubviews(logoImageView, myPageButton)
     }
     
     private func layout() {
@@ -57,7 +57,7 @@ final class TvingMainNavigationView: UIView {
             $0.height.equalTo(25)
         }
         
-        mainPageButton.snp.makeConstraints {
+        myPageButton.snp.makeConstraints {
             $0.top.equalToSuperview().offset(3)
             $0.trailing.equalToSuperview().inset(9)
             $0.width.equalTo(33)
