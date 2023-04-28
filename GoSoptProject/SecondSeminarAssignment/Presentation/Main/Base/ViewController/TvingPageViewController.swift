@@ -65,6 +65,8 @@ class TvingPageViewController: BaseViewController {
         tvingPageViewController.dataSource = self
         
         tvingTopBar.topBarCollectionView.dataSource = self
+        
+        tvingMainNavigationView.myPageButton.addTarget(self, action: #selector(myPageButtonDidTap), for: .touchUpInside)
     }
     
     func hierarchy() {
@@ -101,6 +103,12 @@ class TvingPageViewController: BaseViewController {
             animated: true,
             completion: nil
         )
+    }
+    
+    //MARK: - Action Method
+    
+    @objc func myPageButtonDidTap() {
+        pushToTvingMyPageView()
     }
 }
 
@@ -158,5 +166,12 @@ extension TvingPageViewController: UICollectionViewDataSource {
         }
 
         return cell
+    }
+}
+
+extension TvingPageViewController {
+    func pushToTvingMyPageView() {
+        let myPageViewController = TvingMyPageViewController()
+        self.navigationController?.pushViewController(myPageViewController, animated: true)
     }
 }

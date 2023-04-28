@@ -1,5 +1,5 @@
 //
-//  TvingNavigationView.swift
+//  TvingNavigationBar.swift
 //  GoSoptProject
 //
 //  Created by 류희재 on 2023/04/27.
@@ -15,7 +15,7 @@ final class TvingMainNavigationView: UIView {
     //MARK: - UI Components
     
     private let logoImageView = UIImageView()
-    private lazy var myPageButton = UIButton()
+    public lazy var myPageButton = UIButton()
     
     //MARK: - Life Cycle
     

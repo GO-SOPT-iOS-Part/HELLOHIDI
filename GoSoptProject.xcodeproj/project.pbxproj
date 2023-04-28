@@ -16,7 +16,7 @@
 		D238C59C29F63D7200B4B8A9 /* SecondSeminarSecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D238C59B29F63D7200B4B8A9 /* SecondSeminarSecondView.swift */; };
 		D238C59E29F63D7B00B4B8A9 /* SecondSeminarFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D238C59D29F63D7B00B4B8A9 /* SecondSeminarFirstViewController.swift */; };
 		D238C5A029F63D8900B4B8A9 /* SecondSeminarSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D238C59F29F63D8900B4B8A9 /* SecondSeminarSecondViewController.swift */; };
-		D238C5AB29F640E800B4B8A9 /* TvingNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D238C5AA29F640E800B4B8A9 /* TvingNavigationView.swift */; };
+		D238C5AB29F640E800B4B8A9 /* TvingNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D238C5AA29F640E800B4B8A9 /* TvingNavigationBar.swift */; };
 		D238C5AD29F640F500B4B8A9 /* TvingProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D238C5AC29F640F500B4B8A9 /* TvingProfileView.swift */; };
 		D238C5AF29F6411A00B4B8A9 /* TvingTicketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D238C5AE29F6411A00B4B8A9 /* TvingTicketView.swift */; };
 		D238C5B129F641C800B4B8A9 /* TvingTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D238C5B029F641C800B4B8A9 /* TvingTableView.swift */; };
@@ -111,7 +111,7 @@
 		D238C59B29F63D7200B4B8A9 /* SecondSeminarSecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSeminarSecondView.swift; sourceTree = "<group>"; };
 		D238C59D29F63D7B00B4B8A9 /* SecondSeminarFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSeminarFirstViewController.swift; sourceTree = "<group>"; };
 		D238C59F29F63D8900B4B8A9 /* SecondSeminarSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSeminarSecondViewController.swift; sourceTree = "<group>"; };
-		D238C5AA29F640E800B4B8A9 /* TvingNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingNavigationView.swift; sourceTree = "<group>"; };
+		D238C5AA29F640E800B4B8A9 /* TvingNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingNavigationBar.swift; sourceTree = "<group>"; };
 		D238C5AC29F640F500B4B8A9 /* TvingProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingProfileView.swift; sourceTree = "<group>"; };
 		D238C5AE29F6411A00B4B8A9 /* TvingTicketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingTicketView.swift; sourceTree = "<group>"; };
 		D238C5B029F641C800B4B8A9 /* TvingTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingTableView.swift; sourceTree = "<group>"; };
@@ -268,7 +268,7 @@
 		D238C5A829F640B800B4B8A9 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D238C5AA29F640E800B4B8A9 /* TvingNavigationView.swift */,
+				D238C5AA29F640E800B4B8A9 /* TvingNavigationBar.swift */,
 				D238C5AC29F640F500B4B8A9 /* TvingProfileView.swift */,
 				D238C5AE29F6411A00B4B8A9 /* TvingTicketView.swift */,
 				D238C5B029F641C800B4B8A9 /* TvingTableView.swift */,
@@ -720,7 +720,7 @@
 				D2D2A5E129FAD0F2003C9A97 /* ChannelModel.swift in Sources */,
 				D28EBB3729F6ED5C008CF532 /* TvingTVProgramView.swift in Sources */,
 				D28EBB4229F6F3EF008CF532 /* UICollectionViewCell+.swift in Sources */,
-				D238C5AB29F640E800B4B8A9 /* TvingNavigationView.swift in Sources */,
+				D238C5AB29F640E800B4B8A9 /* TvingNavigationBar.swift in Sources */,
 				D28EBB6529F9FA9F008CF532 /* TvingMainNavigationView.swift in Sources */,
 				D28EBB2B29F6EA2C008CF532 /* TvingStreamingViewController.swift in Sources */,
 				D28EBB4029F6F2D6008CF532 /* TvingTopBarCollectionViewCell.swift in Sources */,
