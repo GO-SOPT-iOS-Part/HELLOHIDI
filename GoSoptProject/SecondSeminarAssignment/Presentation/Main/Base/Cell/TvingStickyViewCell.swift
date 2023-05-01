@@ -1,13 +1,13 @@
 //
-//  TvingTopBarCollectionViewCell.swift
+//  TvingStickyViewCell.swift
 //  GoSoptProject
 //
-//  Created by 류희재 on 2023/04/25.
+//  Created by 류희재 on 2023/04/29.
 //
 
 import UIKit
 
-final class TvingTopBarCollectionViewCell: UICollectionViewCell {
+final class TvingStickyViewCell: UICollectionViewCell {
     
     //MARK: - Properties
     
@@ -82,7 +82,7 @@ final class TvingTopBarCollectionViewCell: UICollectionViewCell {
     }
 }
 
-extension TvingTopBarCollectionViewCell {
+extension TvingStickyViewCell {
     func configCellUI() {
         titleButton.setTitleColor(.tvingWhite, for: .normal)
         underLineView.backgroundColor = .clear
@@ -96,4 +96,5 @@ extension TvingTopBarCollectionViewCell {
         }
     }
 }
+
 

@@ -10,7 +10,8 @@ import UIKit
 import SnapKit
 import Then
 
-class TvingPageViewController: BaseViewController {
+final class TvingPageViewController: BaseViewController {
+    
     
     //MARK: - Properties
     
@@ -20,6 +21,7 @@ class TvingPageViewController: BaseViewController {
     
     private let tvingMainNavigationView = TvingMainNavigationView()
     private let tvingTopBar = TvingTopBarView()
+    private let tvingTopStickyView = TvingTopStickyView()
     
     private let tvingPageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal)
     private let tvingHomeViewController = TvingHomeViewController()
@@ -56,6 +58,7 @@ class TvingPageViewController: BaseViewController {
         hierarchy()
         layout()
         setControllers()
+        tvingTopStickyView.backgroundColor = .tvingBlack
     }
     
     //MARK: - Custom Method
@@ -63,21 +66,25 @@ class TvingPageViewController: BaseViewController {
     func target() {
         tvingPageViewController.delegate = self
         tvingPageViewController.dataSource = self
-        
         tvingTopBar.topBarCollectionView.dataSource = self
+        tvingTopStickyView.topBarStickyCollectionView.dataSource = self
         
         tvingMainNavigationView.myPageButton.addTarget(self, action: #selector(myPageButtonDidTap), for: .touchUpInside)
+        tvingHomeViewController.delegate = self
     }
     
     func hierarchy() {
         addChild(tvingPageViewController) // 홈 뷰컨에 child 뷰컨으로 페이지 뷰컨을 추가하고
         view.addSubview(tvingPageViewController.view) // 홈뷰에 페이지 뷰컨 뷰를 추가하고
         tvingPageViewController.didMove(toParent: self) // 페이지 뷰컨에게 알려준다
-        view.addSubviews(tvingMainNavigationView, tvingTopBar)
+        view.addSubviews(tvingMainNavigationView, tvingTopBar,tvingTopStickyView)
     }
     
     func layout() {
         tvingPageViewController.view.snp.makeConstraints {
+//            $0.top.equalToSuperview().offset(77)
+//            $0.width.equalToSuperview()
+//            $0.bottom.equalToSuperview()
             $0.edges.equalToSuperview()
         }
         
@@ -91,6 +98,12 @@ class TvingPageViewController: BaseViewController {
             $0.top.equalTo(self.tvingMainNavigationView.snp.bottom)
             $0.width.equalToSuperview()
             $0.height.equalTo(41)
+        }
+        
+        tvingTopStickyView.snp.makeConstraints {
+            $0.top.equalToSuperview()
+            $0.width.equalToSuperview()
+            $0.height.equalTo(100)
         }
     }
     
@@ -112,7 +125,9 @@ class TvingPageViewController: BaseViewController {
     }
 }
 
-extension TvingPageViewController: UIPageViewControllerDelegate {}
+extension TvingPageViewController: UIPageViewControllerDelegate {
+    
+}
 extension TvingPageViewController: UIPageViewControllerDataSource {
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         guard let index = tvingMainViewControllers.firstIndex(of: viewController as! BaseViewController) else { return nil }
@@ -124,7 +139,6 @@ extension TvingPageViewController: UIPageViewControllerDataSource {
         return tvingMainViewControllers[previousIndex]
     }
     
-    
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         guard let index = tvingMainViewControllers.firstIndex(of: viewController as! BaseViewController) else { return nil }
         let nextIndex = index + 1
@@ -134,15 +148,10 @@ extension TvingPageViewController: UIPageViewControllerDataSource {
         
         return tvingMainViewControllers[nextIndex]
     }
-    
-    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
-        if completed {
-            guard let index =  tvingMainViewControllers.firstIndex(of: tvingPageViewController.viewControllers?.first as! BaseViewController) else { return }
-            self.tvingMainViewModel.updatePageTabbarViewState(index: index)
-            self.tvingTopBar.topBarCollectionView.reloadData()
-        }
-    }
 }
+
+
+
 
 extension TvingPageViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -151,6 +160,7 @@ extension TvingPageViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TvingTopBarCollectionViewCell.cellIdentifier, for: indexPath) as? TvingTopBarCollectionViewCell else { return UICollectionViewCell() }
+        
         
         cell.dataBind(tvingMainViewModel.mainPageTabbarList[indexPath.item])
         
@@ -164,7 +174,7 @@ extension TvingPageViewController: UICollectionViewDataSource {
             )
             self.tvingTopBar.topBarCollectionView.reloadData()
         }
-
+        
         return cell
     }
 }
@@ -174,4 +184,33 @@ extension TvingPageViewController {
         let myPageViewController = TvingMyPageViewController()
         self.navigationController?.pushViewController(myPageViewController, animated: true)
     }
+}
+
+extension TvingPageViewController: HomeViewScroll {
+    func steakyHeader(_ part: Int) {
+        switch part {
+        case 0:
+            tvingMainNavigationView.isHidden = false
+            tvingTopBar.isHidden = false
+            tvingTopStickyView.isHidden = true
+        case 1:
+            tvingMainNavigationView.isHidden = true
+            tvingTopBar.isHidden = false
+            tvingTopStickyView.isHidden = true
+        case 2:
+            tvingMainNavigationView.isHidden = true
+            tvingTopBar.isHidden = true
+            tvingTopStickyView.isHidden = false
+            tvingTopStickyView.alpha = 0.5
+        case 3:
+            tvingMainNavigationView.isHidden = true
+            tvingTopBar.isHidden = true
+            tvingTopStickyView.isHidden = false
+            tvingTopStickyView.alpha = 1
+        default:
+            break
+        }
+    }
+    
+    
 }

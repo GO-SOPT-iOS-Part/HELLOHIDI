@@ -10,13 +10,19 @@ import UIKit
 import SnapKit
 import Then
 
+protocol HomeViewScroll: AnyObject {
+    func steakyHeader(_ part: Int)
+}
+
 final class TvingHomeViewController: BaseViewController {
     
     //MARK: - Properties
     
+    weak var delegate: HomeViewScroll?
+    
     //MARK: - UI Components
     
-    private let rootView = TvingHomeView()
+    public let rootView = TvingHomeView()
     
     //MARK: - Life Cycle
     
@@ -64,10 +70,27 @@ extension TvingHomeViewController: UICollectionViewDelegateFlowLayout {
             return UIEdgeInsets()
         }
     }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let scrollY = scrollView.contentOffset.y
+        print("현재 높이는 \(scrollY)")
+        switch scrollY {
+        case 0...25:
+            delegate?.steakyHeader(0)
+        case 25...68:
+            print(0)
+            delegate?.steakyHeader(1)
+        case 60...200:
+            delegate?.steakyHeader(2)
+        case 400...:
+            delegate?.steakyHeader(3)
+        default:
+            break
+        }
+    }
 }
 
 extension TvingHomeViewController: UICollectionViewDataSource {
-    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 3
     }
@@ -101,5 +124,3 @@ extension TvingHomeViewController: UICollectionViewDataSource {
         }
     }
 }
-
-

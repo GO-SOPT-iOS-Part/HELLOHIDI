@@ -64,5 +64,5 @@ final class TvingHomeView: UIView {
         tvingHomeView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
-    }
+    }    
 }

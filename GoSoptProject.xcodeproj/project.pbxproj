@@ -87,6 +87,8 @@
 		D2D2196929E23ABB00C7B126 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2196829E23ABB00C7B126 /* BaseViewController.swift */; };
 		D2D2A5DF29FA38F5003C9A97 /* TvingPopularChannelViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2A5DE29FA38F5003C9A97 /* TvingPopularChannelViewCell.swift */; };
 		D2D2A5E129FAD0F2003C9A97 /* ChannelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2A5E029FAD0F2003C9A97 /* ChannelModel.swift */; };
+		D2F3784F29FC352900D89C89 /* TvingTopStickyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F3784E29FC352800D89C89 /* TvingTopStickyView.swift */; };
+		D2F3785129FD591200D89C89 /* TvingStickyViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F3785029FD591200D89C89 /* TvingStickyViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -184,6 +186,8 @@
 		D2D2196829E23ABB00C7B126 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D2D2A5DE29FA38F5003C9A97 /* TvingPopularChannelViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingPopularChannelViewCell.swift; sourceTree = "<group>"; };
 		D2D2A5E029FAD0F2003C9A97 /* ChannelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelModel.swift; sourceTree = "<group>"; };
+		D2F3784E29FC352800D89C89 /* TvingTopStickyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingTopStickyView.swift; sourceTree = "<group>"; };
+		D2F3785029FD591200D89C89 /* TvingStickyViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingStickyViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -389,6 +393,7 @@
 			isa = PBXGroup;
 			children = (
 				D28EBB3229F6EAB1008CF532 /* TvingTopBarView.swift */,
+				D2F3784E29FC352800D89C89 /* TvingTopStickyView.swift */,
 				D28EBB6429F9FA9F008CF532 /* TvingMainNavigationView.swift */,
 			);
 			path = View;
@@ -406,6 +411,7 @@
 			isa = PBXGroup;
 			children = (
 				D28EBB3F29F6F2D6008CF532 /* TvingTopBarCollectionViewCell.swift */,
+				D2F3785029FD591200D89C89 /* TvingStickyViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -691,6 +697,7 @@
 			files = (
 				D28EBB4429F6F579008CF532 /* TvingTopbarModel.swift in Sources */,
 				D2D2195C29E23A0000C7B126 /* UITableViewCell+.swift in Sources */,
+				D2F3785129FD591200D89C89 /* TvingStickyViewCell.swift in Sources */,
 				D238C5AD29F640F500B4B8A9 /* TvingProfileView.swift in Sources */,
 				D238C5CA29F6967F00B4B8A9 /* TvingSettingTableFooterView.swift in Sources */,
 				D238C59E29F63D7B00B4B8A9 /* SecondSeminarFirstViewController.swift in Sources */,
@@ -739,6 +746,7 @@
 				D2A7F32229E23FD200BFA4E9 /* TvingLoginViewController.swift in Sources */,
 				D232569529E24A7100D3B988 /* UIFont+.swift in Sources */,
 				D2D2193929E2356400C7B126 /* AppDelegate.swift in Sources */,
+				D2F3784F29FC352900D89C89 /* TvingTopStickyView.swift in Sources */,
 				D238C5A029F63D8900B4B8A9 /* SecondSeminarSecondViewController.swift in Sources */,
 				D28EBB6929FA0244008CF532 /* TvingHomePosterCell.swift in Sources */,
 				D2D2193B29E2356400C7B126 /* SceneDelegate.swift in Sources */,
