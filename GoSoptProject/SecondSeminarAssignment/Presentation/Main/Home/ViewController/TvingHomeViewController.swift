@@ -75,9 +75,9 @@ extension TvingHomeViewController: UICollectionViewDelegateFlowLayout {
         let scrollY = scrollView.contentOffset.y
         print("현재 높이는 \(scrollY)")
         switch scrollY {
-        case 0...25:
+        case 0...20:
             delegate?.steakyHeader(0)
-        case 25...68:
+        case 20...68:
             print(0)
             delegate?.steakyHeader(1)
         case 60...200:

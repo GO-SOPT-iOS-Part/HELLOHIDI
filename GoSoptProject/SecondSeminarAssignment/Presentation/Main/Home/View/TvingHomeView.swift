@@ -15,7 +15,6 @@ final class TvingHomeView: UIView {
     //MARK: - UI Components
     
     public lazy var tvingHomeView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
-    
     private let tvingContentSectionCell = TvingContentSectionCell()
     
     //MARK: - Life Cycle
@@ -64,5 +63,5 @@ final class TvingHomeView: UIView {
         tvingHomeView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
-    }    
+    }
 }

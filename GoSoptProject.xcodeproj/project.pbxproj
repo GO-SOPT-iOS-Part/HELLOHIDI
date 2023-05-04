@@ -36,7 +36,7 @@
 		D2601EF329F26B2A00320516 /* BaseToastMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2601EF229F26B2A00320516 /* BaseToastMessage.swift */; };
 		D28E831229E8FD5D00002EB4 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28E831129E8FD5D00002EB4 /* String.swift */; };
 		D28E831429EAAEB000002EB4 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D28E831329EAAEB000002EB4 /* Pretendard-Bold.otf */; };
-		D28EBB2729F6E999008CF532 /* TvingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28EBB2629F6E999008CF532 /* TvingPageViewController.swift */; };
+		D28EBB2729F6E999008CF532 /* TvingMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28EBB2629F6E999008CF532 /* TvingMainViewController.swift */; };
 		D28EBB2929F6EA0B008CF532 /* TvingHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28EBB2829F6EA0B008CF532 /* TvingHomeViewController.swift */; };
 		D28EBB2B29F6EA2C008CF532 /* TvingStreamingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28EBB2A29F6EA2C008CF532 /* TvingStreamingViewController.swift */; };
 		D28EBB2D29F6EA47008CF532 /* TvingTVProgramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28EBB2C29F6EA47008CF532 /* TvingTVProgramViewController.swift */; };
@@ -89,6 +89,7 @@
 		D2D2A5E129FAD0F2003C9A97 /* ChannelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2A5E029FAD0F2003C9A97 /* ChannelModel.swift */; };
 		D2F3784F29FC352900D89C89 /* TvingTopStickyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F3784E29FC352800D89C89 /* TvingTopStickyView.swift */; };
 		D2F3785129FD591200D89C89 /* TvingStickyViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F3785029FD591200D89C89 /* TvingStickyViewCell.swift */; };
+		D2F378532A036DF500D89C89 /* TvingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F378522A036DF500D89C89 /* TvingPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -133,7 +134,7 @@
 		D2601EF229F26B2A00320516 /* BaseToastMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseToastMessage.swift; sourceTree = "<group>"; };
 		D28E831129E8FD5D00002EB4 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		D28E831329EAAEB000002EB4 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
-		D28EBB2629F6E999008CF532 /* TvingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingPageViewController.swift; sourceTree = "<group>"; };
+		D28EBB2629F6E999008CF532 /* TvingMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingMainViewController.swift; sourceTree = "<group>"; };
 		D28EBB2829F6EA0B008CF532 /* TvingHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingHomeViewController.swift; sourceTree = "<group>"; };
 		D28EBB2A29F6EA2C008CF532 /* TvingStreamingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingStreamingViewController.swift; sourceTree = "<group>"; };
 		D28EBB2C29F6EA47008CF532 /* TvingTVProgramViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingTVProgramViewController.swift; sourceTree = "<group>"; };
@@ -188,6 +189,7 @@
 		D2D2A5E029FAD0F2003C9A97 /* ChannelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelModel.swift; sourceTree = "<group>"; };
 		D2F3784E29FC352800D89C89 /* TvingTopStickyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingTopStickyView.swift; sourceTree = "<group>"; };
 		D2F3785029FD591200D89C89 /* TvingStickyViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingStickyViewCell.swift; sourceTree = "<group>"; };
+		D2F378522A036DF500D89C89 /* TvingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -402,7 +404,8 @@
 		D28EBB5029F82039008CF532 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				D28EBB2629F6E999008CF532 /* TvingPageViewController.swift */,
+				D28EBB2629F6E999008CF532 /* TvingMainViewController.swift */,
+				D2F378522A036DF500D89C89 /* TvingPageViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -720,7 +723,7 @@
 				D2D2196029E23A2A00C7B126 /* UIColor+.swift in Sources */,
 				D238C5B129F641C800B4B8A9 /* TvingTableView.swift in Sources */,
 				D238C5B729F6463900B4B8A9 /* TvingMyPageViewController.swift in Sources */,
-				D28EBB2729F6E999008CF532 /* TvingPageViewController.swift in Sources */,
+				D28EBB2729F6E999008CF532 /* TvingMainViewController.swift in Sources */,
 				D28EBB5F29F835DD008CF532 /* ContentModel.swift in Sources */,
 				D28EBB2F29F6EA77008CF532 /* TvingMovieViewController.swift in Sources */,
 				D2D2195A29E239E700C7B126 /* UIViewController+.swift in Sources */,
@@ -751,6 +754,7 @@
 				D28EBB6929FA0244008CF532 /* TvingHomePosterCell.swift in Sources */,
 				D2D2193B29E2356400C7B126 /* SceneDelegate.swift in Sources */,
 				D2A7F32429E23FE400BFA4E9 /* TvingWelcomeViewController.swift in Sources */,
+				D2F378532A036DF500D89C89 /* TvingPageViewController.swift in Sources */,
 				D238C5CE29F69A1600B4B8A9 /* UITableHeaderFooterView+.swift in Sources */,
 				D238C5AF29F6411A00B4B8A9 /* TvingTicketView.swift in Sources */,
 				D2D2195229E2398D00C7B126 /* Device.swift in Sources */,

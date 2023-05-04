@@ -49,8 +49,7 @@ final class TvingTopStickyView: UIView {
             $0.isScrollEnabled = false
             $0.showsVerticalScrollIndicator = false
             $0.alwaysBounceVertical = true
-            $0.backgroundColor = .tvingBlack
-            $0.isHidden = false
+            $0.backgroundColor = .clear
         }
     }
     
