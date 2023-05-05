@@ -72,7 +72,7 @@ final class TvingMainViewController: BaseViewController {
         tvingTopStickyView.snp.makeConstraints {
             $0.top.equalToSuperview()
             $0.width.equalToSuperview()
-            $0.height.equalTo(100)
+            $0.height.equalTo(135)
         }
     }
     
@@ -153,8 +153,8 @@ extension TvingMainViewController {
 }
 
 extension TvingMainViewController: HomeViewScroll {
-    func steakyHeader(_ part: Int) {
-        switch part {
+    func steakyHeader(_ alpha: Int) {
+        switch alpha {
         case 0:
             tvingMainNavigationView.isHidden = false
             tvingTopBar.isHidden = false
@@ -162,7 +162,7 @@ extension TvingMainViewController: HomeViewScroll {
         case 1:
             tvingMainNavigationView.isHidden = true
             tvingTopBar.isHidden = true
-            tvingTopStickyView.isHidden = true
+            tvingTopStickyView.isHidden = false
             tvingTopStickyView.backgroundColor = .clear
         case 2:
             tvingMainNavigationView.isHidden = true
@@ -178,5 +178,8 @@ extension TvingMainViewController: HomeViewScroll {
         default:
             break
         }
+
     }
 }
+
+

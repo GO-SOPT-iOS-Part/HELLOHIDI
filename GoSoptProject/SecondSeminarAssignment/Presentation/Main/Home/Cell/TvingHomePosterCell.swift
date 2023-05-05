@@ -34,7 +34,11 @@ final class TvingHomePosterCell: UICollectionViewCell {
     
     //MARK: - Custom Method
     
-    private func style() {}
+    private func style() {
+        posterImage.do {
+            $0.setGradient(color1: .tvingGrad1, color2: .tvingGrad2)
+        }
+    }
     
     private func hierarchy() {
         contentView.addSubview(posterImage)
@@ -51,7 +55,5 @@ final class TvingHomePosterCell: UICollectionViewCell {
     func dataBind(_ poster: Poster) {
         posterImage.image = poster.image
     }
-    //MARK: - Action Method
-    
 }
 

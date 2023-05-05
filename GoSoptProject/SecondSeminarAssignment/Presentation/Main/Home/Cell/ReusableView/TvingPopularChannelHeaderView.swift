@@ -71,7 +71,5 @@ final class TvingPopularChannelHeaderView: UICollectionReusableView {
             $0.height.equalTo(25)
         }
     }
-    
-    //MARK: - Action Method
 }
 

@@ -52,7 +52,7 @@ final class TvingHomePosterSectionCell: UICollectionViewCell {
         tvingHomePosterCollectionView.do{
             let layout = UICollectionViewFlowLayout()
             layout.scrollDirection = .horizontal
-            layout.minimumLineSpacing = 0 // 상하간격
+            layout.minimumLineSpacing = 0
             
             $0.translatesAutoresizingMaskIntoConstraints = false
             $0.showsHorizontalScrollIndicator = false
@@ -87,12 +87,12 @@ extension TvingHomePosterSectionCell: UICollectionViewDelegateFlowLayout {
 
 extension TvingHomePosterSectionCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return posterDummy.count
+        return 10000
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TvingHomePosterCell.cellIdentifier, for: indexPath) as? TvingHomePosterCell else { return UICollectionViewCell() }
-        cell.dataBind(posterDummy[indexPath.item])
+        cell.dataBind(posterDummy[indexPath.item % posterDummy.count])
         return cell
     }
 }

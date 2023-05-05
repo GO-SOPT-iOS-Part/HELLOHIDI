@@ -35,7 +35,6 @@ final class TvingTopStickyView: UIView {
     //MARK: - Custom Method
     
     private func register() {
-        print(#function)
         topBarStickyCollectionView.register(TvingTopBarCollectionViewCell.self, forCellWithReuseIdentifier: TvingTopBarCollectionViewCell.cellIdentifier)
     }
     
@@ -59,7 +58,7 @@ final class TvingTopStickyView: UIView {
     
     private func layout() {
         topBarStickyCollectionView.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(50)
+            $0.top.equalToSuperview().offset(94)
             $0.width.equalToSuperview()
             $0.bottom.equalToSuperview()
         }
