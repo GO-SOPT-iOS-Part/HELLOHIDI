@@ -15,6 +15,10 @@ extension UIFont{
         return UIFont(name: "Pretendard-Bold", size: 23)!
     }
     
+    class var tvingProfileDisplay1: UIFont {
+        return UIFont(name: "Pretendard-SemiBold", size: 17)!
+    }
+    
     class var tvingDisplay1: UIFont {
         return UIFont(name: "Pretendard-SemiBold", size: 15)!
     }
@@ -23,6 +27,9 @@ extension UIFont{
         return UIFont(name: "Pretendard-SemiBold", size: 14)!
     }
     
+    class var tvingDisplay3: UIFont {
+        return UIFont(name: "Pretendard-SemiBold", size: 12)!
+    }
     class var tvingToastMessage: UIFont {
         return UIFont(name: "Pretendard-SemiBold", size: 10)!
     }
