@@ -24,12 +24,4 @@ public enum Image {
     static let cash = UIImage(named: "tving_cash")!
     static let ticket = UIImage(named: "tving_ticket")!
     static let next = UIImage(named: "tving_next")!
-    
-    //MARK: - Main
-    static let poster1 = UIImage(named: "tving_poster1")!
-    static let poster2 = UIImage(named: "tving_poster2")!
-    static let poster3 = UIImage(named: "tving_poster3")!
-    static let poster4 = UIImage(named: "tving_poster4")!
-    static let profile = UIImage(named: "tving_profileImage")!
-    static let logo = UIImage(named: "tving_logo")!
 }
