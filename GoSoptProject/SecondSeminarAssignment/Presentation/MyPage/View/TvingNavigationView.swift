@@ -10,13 +10,13 @@ import UIKit
 import SnapKit
 import Then
 
-final class TvingNavigationBar: UINavigationBar {
+final class TvingNavigationView: UIView {
     
     //MARK: - UI Components
     
-    public lazy var backButton = UIButton()
-    public lazy var alarmButton = UIButton()
-    public lazy var settingButton = UIButton()
+    private lazy var backButton = UIButton()
+    private lazy var alarmButton = UIButton()
+    private lazy var settingButton = UIButton()
     
     //MARK: - Life Cycle
     
@@ -24,6 +24,7 @@ final class TvingNavigationBar: UINavigationBar {
         super.init(frame: frame)
         
         style()
+        hierarchy()
         layout()
     }
     
@@ -47,18 +48,28 @@ final class TvingNavigationBar: UINavigationBar {
         }
     }
     
+    private func hierarchy() {
+        self.addSubviews(backButton,alarmButton,settingButton)
+    }
+    
     private func layout() {
         backButton.snp.makeConstraints {
+            $0.top.equalToSuperview().offset(30)
+            $0.leading.equalToSuperview().offset(24)
             $0.width.equalTo(8)
             $0.height.equalTo(15)
         }
         
         alarmButton.snp.makeConstraints {
+            $0.top.equalToSuperview().offset(16)
+            $0.trailing.equalToSuperview().inset(67)
             $0.width.equalTo(30)
             $0.height.equalTo(42)
         }
         
         settingButton.snp.makeConstraints {
+            $0.top.equalTo(self.alarmButton).offset(7)
+            $0.trailing.equalToSuperview().inset(25)
             $0.width.equalTo(33)
             $0.height.equalTo(31)
         }
