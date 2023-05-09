@@ -40,11 +40,19 @@ extension UILabel {
         
         style.lineSpacing = spacing
         attributedString.addAttribute(.paragraphStyle,
-                                     value: style,
-                                     range: NSRange(location: 0, length: attributedString.length))
+                                      value: style,
+                                      range: NSRange(location: 0, length: attributedString.length))
         attributedText = attributedString
         
     }
-
+    
+    func labelWithImg(composition: NSAttributedString...) {
+        let attributedString = NSMutableAttributedString()
+        for i in composition {
+            attributedString.append(i)
+        }
+        self.attributedText = attributedString
+    }
+    
 }
 

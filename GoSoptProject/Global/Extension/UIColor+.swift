@@ -9,8 +9,8 @@ import UIKit
 
 extension UIColor {
     
-    convenience init(r: Int, g: Int, b: Int) {
-        self.init(red: CGFloat(r)/255,green: CGFloat(g)/255, blue: CGFloat(b)/255, alpha: 1)
+    convenience init(r: Int, g: Int, b: Int, alpha: Int = 1) {
+        self.init(red: CGFloat(r)/255,green: CGFloat(g)/255, blue: CGFloat(b)/255, alpha: CGFloat(alpha))
     }
 }
 
@@ -48,6 +48,14 @@ extension UIColor{
     
     class var tvingGray5: UIColor {
         return UIColor(r: 25, g: 25, b: 25)
+    }
+    
+    class var tvingGrad1: UIColor {
+        return UIColor(r: 72, g: 63, b: 63)
+    }
+    
+    class var tvingGrad2: UIColor {
+        return UIColor(r: 217, g: 217, b: 217, alpha: 0)
     }
     
 }
