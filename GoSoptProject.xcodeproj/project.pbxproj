@@ -73,6 +73,11 @@
 		D2A7F32029E23FC500BFA4E9 /* TvingWelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7F31F29E23FC500BFA4E9 /* TvingWelcomeView.swift */; };
 		D2A7F32229E23FD200BFA4E9 /* TvingLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7F32129E23FD200BFA4E9 /* TvingLoginViewController.swift */; };
 		D2A7F32429E23FE400BFA4E9 /* TvingWelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7F32329E23FE400BFA4E9 /* TvingWelcomeViewController.swift */; };
+		D2B6406E2A0A178100A11697 /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B6406D2A0A178100A11697 /* BaseAPI.swift */; };
+		D2B640702A0A179900A11697 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B6406F2A0A179900A11697 /* APIConstants.swift */; };
+		D2B640722A0A17A500A11697 /* SimpleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B640712A0A17A500A11697 /* SimpleResponse.swift */; };
+		D2B640742A0A17FF00A11697 /* GenericResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B640732A0A17FF00A11697 /* GenericResponse.swift */; };
+		D2B640762A0A1EF600A11697 /* VoidResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B640752A0A1EF600A11697 /* VoidResult.swift */; };
 		D2D2193929E2356400C7B126 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2193829E2356400C7B126 /* AppDelegate.swift */; };
 		D2D2193B29E2356400C7B126 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2193A29E2356400C7B126 /* SceneDelegate.swift */; };
 		D2D2193D29E2356400C7B126 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2193C29E2356400C7B126 /* ViewController.swift */; };
@@ -176,6 +181,11 @@
 		D2A7F31F29E23FC500BFA4E9 /* TvingWelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingWelcomeView.swift; sourceTree = "<group>"; };
 		D2A7F32129E23FD200BFA4E9 /* TvingLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingLoginViewController.swift; sourceTree = "<group>"; };
 		D2A7F32329E23FE400BFA4E9 /* TvingWelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingWelcomeViewController.swift; sourceTree = "<group>"; };
+		D2B6406D2A0A178100A11697 /* BaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
+		D2B6406F2A0A179900A11697 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		D2B640712A0A17A500A11697 /* SimpleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleResponse.swift; sourceTree = "<group>"; };
+		D2B640732A0A17FF00A11697 /* GenericResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericResponse.swift; sourceTree = "<group>"; };
+		D2B640752A0A1EF600A11697 /* VoidResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoidResult.swift; sourceTree = "<group>"; };
 		D2D2193529E2356400C7B126 /* GoSoptProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoSoptProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2D2193829E2356400C7B126 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2D2193A29E2356400C7B126 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -336,6 +346,11 @@
 			children = (
 				D25323092A0623F800562D92 /* Config.swift */,
 				D253230B2A06241500562D92 /* NetworkResult.swift */,
+				D2B6406D2A0A178100A11697 /* BaseAPI.swift */,
+				D2B6406F2A0A179900A11697 /* APIConstants.swift */,
+				D2B640712A0A17A500A11697 /* SimpleResponse.swift */,
+				D2B640732A0A17FF00A11697 /* GenericResponse.swift */,
+				D2B640752A0A1EF600A11697 /* VoidResult.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -764,19 +779,23 @@
 				D28EBB6B29FA0293008CF532 /* PosterModel.swift in Sources */,
 				D28EBB5A29F825E1008CF532 /* TvingContentSectionCell.swift in Sources */,
 				D2D2196029E23A2A00C7B126 /* UIColor+.swift in Sources */,
+				D2B640702A0A179900A11697 /* APIConstants.swift in Sources */,
 				D238C5B129F641C800B4B8A9 /* TvingTableView.swift in Sources */,
 				D238C5B729F6463900B4B8A9 /* TvingMyPageViewController.swift in Sources */,
 				D28EBB2729F6E999008CF532 /* TvingMainViewController.swift in Sources */,
 				D28EBB5F29F835DD008CF532 /* ContentModel.swift in Sources */,
 				D25323142A062AA300562D92 /* SignUpResponse.swift in Sources */,
 				D28EBB2F29F6EA77008CF532 /* TvingMovieViewController.swift in Sources */,
+				D2B6406E2A0A178100A11697 /* BaseAPI.swift in Sources */,
 				D2D2195A29E239E700C7B126 /* UIViewController+.swift in Sources */,
+				D2B640762A0A1EF600A11697 /* VoidResult.swift in Sources */,
 				D2D2A5E129FAD0F2003C9A97 /* ChannelModel.swift in Sources */,
 				D28EBB3729F6ED5C008CF532 /* TvingTVProgramView.swift in Sources */,
 				D28EBB4229F6F3EF008CF532 /* UICollectionViewCell+.swift in Sources */,
 				D238C5AB29F640E800B4B8A9 /* TvingNavigationBar.swift in Sources */,
 				D28EBB6529F9FA9F008CF532 /* TvingMainNavigationView.swift in Sources */,
 				D28EBB2B29F6EA2C008CF532 /* TvingStreamingViewController.swift in Sources */,
+				D2B640742A0A17FF00A11697 /* GenericResponse.swift in Sources */,
 				D28EBB4029F6F2D6008CF532 /* TvingTopBarCollectionViewCell.swift in Sources */,
 				D28EBB6729FA0078008CF532 /* TvingHomePosterSectionCell.swift in Sources */,
 				D2D2196229E23A3D00C7B126 /* UILabel+.swift in Sources */,
@@ -797,6 +816,7 @@
 				D238C5A029F63D8900B4B8A9 /* SecondSeminarSecondViewController.swift in Sources */,
 				D28EBB6929FA0244008CF532 /* TvingHomePosterCell.swift in Sources */,
 				D2D2193B29E2356400C7B126 /* SceneDelegate.swift in Sources */,
+				D2B640722A0A17A500A11697 /* SimpleResponse.swift in Sources */,
 				D2A7F32429E23FE400BFA4E9 /* TvingWelcomeViewController.swift in Sources */,
 				D2F378532A036DF500D89C89 /* TvingPageViewController.swift in Sources */,
 				D238C5CE29F69A1600B4B8A9 /* UITableHeaderFooterView+.swift in Sources */,
@@ -964,7 +984,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				BASE_URL = " http://54.180.123.11 ";
+				BASE_URL = "https://api.themoviedb.org/";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 27VUFHH5W2;
@@ -980,6 +1000,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				MOVIE_API = 61eeed26f6e3d3206113cb5ee02451b0;
 				PRODUCT_BUNDLE_IDENTIFIER = hellohidi.GoSoptProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -993,7 +1014,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				BASE_URL = " http://54.180.123.11 ";
+				BASE_URL = "https://api.themoviedb.org/";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 27VUFHH5W2;
@@ -1009,6 +1030,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				MOVIE_API = 61eeed26f6e3d3206113cb5ee02451b0;
 				PRODUCT_BUNDLE_IDENTIFIER = hellohidi.GoSoptProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

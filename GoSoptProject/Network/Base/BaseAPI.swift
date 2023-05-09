@@ -1,0 +1,77 @@
+//
+//  BaseAPI.swift
+//  GoSoptProject
+//
+//  Created by 류희재 on 2023/05/09.
+//
+
+import Foundation
+
+import Alamofire
+
+
+class BaseAPI{
+    private func judgeStatus<T: Codable>(by statusCode: Int, _ data: Data, _ object: T.Type) -> NetworkResult<Any> {
+        let decoder = JSONDecoder()
+        guard let decodedData = try? decoder.decode(GenericResponse<T>.self, from: data)
+        else {
+            return .pathErr
+        }
+        
+        switch statusCode {
+        case 200..<205:
+            guard decodedData.data != nil else {
+                print("⛔️ \(self)애서 디코딩 오류가 발생했습니다 ⛔️")
+                return .decodedErr
+            }
+            return .success(decodedData.data as Any)
+        case 400..<500:
+            return .requestErr(decodedData.message ?? "요청에러")
+        case 500:
+            return .serverErr
+        default:
+            return .networkFail
+        }
+    }
+    
+    private func judgeSimpleResponseStatus(by statusCode: Int, _ data: Data) -> NetworkResult<Any> {
+        let decoder = JSONDecoder()
+        guard let decodedData = try? decoder.decode(SimpleResponse.self, from: data)
+        else {
+            return .pathErr
+        }
+        
+        switch statusCode {
+        case 200..<205:
+            return .success(decodedData)
+        case 406:
+            return .authorizationFail((decodedData.message, decodedData.message))
+        case 400..<500:
+            return .requestErr(decodedData.message ?? "요청에러")
+        case 500:
+            return .serverErr
+        default:
+            return .networkFail
+        }
+    }
+    
+    public func disposeNetwork<T: Codable>(_ result: Result<AFDataResponse<T>,AFError>, dataModel: T.Type, completion: @escaping (NetworkResult<Any>) -> Void) {
+        switch result{
+        case .success(let response):
+            guard let statusCode = response.response?.statusCode else { return }
+            guard let data = response.data else { return }
+            
+            if dataModel != VoidResult.self{
+                let networkResult = self.judgeStatus(by: statusCode, data, dataModel.self)
+                completion(networkResult)
+            } else {
+                let networkResult = self.judgeSimpleResponseStatus(by: statusCode, data)
+                completion(networkResult)
+            }
+            
+        case .failure(let err):
+            print("여기서 에러나는 경우는 무슨경우?")
+            print(err)
+        }
+    }
+}
