@@ -18,6 +18,7 @@ final class TvingMyPageViewController: BaseViewController {
     private let infoDummy = Info.dummy()
     
     private lazy var rootView = TvingMyPageView()
+    private let tvingNavigationBar = TvingNavigationBar()
     
     //MARK: - Life Cycle
     
@@ -31,12 +32,34 @@ final class TvingMyPageViewController: BaseViewController {
         target()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        setNavigationBar()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        self.navigationController?.isNavigationBarHidden.toggle()
+    }
+    
     //MARK: - Custom Method
     
     private func target() {
         rootView.tvingTableView.tableView.delegate = self
         rootView.tvingTableView.tableView.dataSource = self
+        
+        tvingNavigationBar.backButton.addTarget(self, action: #selector(backButtonDidTap), for: .touchUpInside)
+        
     }
+    
+    //MARK: - Action Method
+    
+    @objc func backButtonDidTap() {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
 }
 
 extension TvingMyPageViewController: UITableViewDelegate {
@@ -106,3 +129,23 @@ extension TvingMyPageViewController: UITableViewDataSource {
     }
 }
 
+extension TvingMyPageViewController {
+    private func setNavigationBar() {
+        self.navigationController?.isNavigationBarHidden = false
+        self.navigationController?.navigationBar.isTranslucent = false
+        self.navigationController?.navigationBar.barTintColor = .black
+        self.navigationController?.navigationBar.isTranslucent = false
+        
+        
+        let rightButtonStackView = UIStackView.init(arrangedSubviews: [tvingNavigationBar.alarmButton, tvingNavigationBar.settingButton])
+        rightButtonStackView.do {
+            $0.distribution = .equalSpacing
+            $0.axis = .horizontal
+            $0.alignment = .center
+            $0.spacing = 17
+        }
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: tvingNavigationBar.backButton)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: rightButtonStackView)
+    }
+}
