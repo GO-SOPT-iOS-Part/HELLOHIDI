@@ -101,6 +101,10 @@
 		D2F3785129FD591200D89C89 /* TvingStickyViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F3785029FD591200D89C89 /* TvingStickyViewCell.swift */; };
 		D2F378532A036DF500D89C89 /* TvingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F378522A036DF500D89C89 /* TvingPageViewController.swift */; };
 		D2FA9D922A0A234D001C66F4 /* TvingSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FA9D912A0A234D001C66F4 /* TvingSettingTableViewCell.swift */; };
+		D2FA9D972A0A2823001C66F4 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FA9D962A0A2823001C66F4 /* HomeService.swift */; };
+		D2FA9D992A0A284B001C66F4 /* HomeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FA9D982A0A284B001C66F4 /* HomeAPI.swift */; };
+		D2FA9D9B2A0A286B001C66F4 /* BaseTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FA9D9A2A0A286B001C66F4 /* BaseTargetType.swift */; };
+		D2FA9D9F2A0A2A35001C66F4 /* AlamofireLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FA9D9E2A0A2A35001C66F4 /* AlamofireLogger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -211,6 +215,10 @@
 		D2F3785029FD591200D89C89 /* TvingStickyViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingStickyViewCell.swift; sourceTree = "<group>"; };
 		D2F378522A036DF500D89C89 /* TvingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingPageViewController.swift; sourceTree = "<group>"; };
 		D2FA9D912A0A234D001C66F4 /* TvingSettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingSettingTableViewCell.swift; sourceTree = "<group>"; };
+		D2FA9D962A0A2823001C66F4 /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
+		D2FA9D982A0A284B001C66F4 /* HomeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAPI.swift; sourceTree = "<group>"; };
+		D2FA9D9A2A0A286B001C66F4 /* BaseTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTargetType.swift; sourceTree = "<group>"; };
+		D2FA9D9E2A0A2A35001C66F4 /* AlamofireLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireLogger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -285,6 +293,7 @@
 		D25323082A0623EA00562D92 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				D2FA9D942A0A2806001C66F4 /* Main */,
 				D253230D2A06241C00562D92 /* Base */,
 			);
 			path = Network;
@@ -299,7 +308,8 @@
 				D2B6406F2A0A179900A11697 /* APIConstants.swift */,
 				D2B640712A0A17A500A11697 /* SimpleResponse.swift */,
 				D2B640732A0A17FF00A11697 /* GenericResponse.swift */,
-				D2B640752A0A1EF600A11697 /* VoidResult.swift */,
+				D2FA9D9A2A0A286B001C66F4 /* BaseTargetType.swift */,
+				D2FA9D9E2A0A2A35001C66F4 /* AlamofireLogger.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -482,6 +492,7 @@
 		D2B640772A0A206C00A11697 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				D2FA9D932A0A27F6001C66F4 /* Common */,
 				D2B6407B2A0A209700A11697 /* Onboarding */,
 				D2B6407A2A0A209000A11697 /* MyPage */,
 				D2B640782A0A207E00A11697 /* Main */,
@@ -702,6 +713,31 @@
 			path = ReusableView;
 			sourceTree = "<group>";
 		};
+		D2FA9D932A0A27F6001C66F4 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				D2B640752A0A1EF600A11697 /* VoidResult.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		D2FA9D942A0A2806001C66F4 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				D2FA9D952A0A2810001C66F4 /* Home */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		D2FA9D952A0A2810001C66F4 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D2FA9D962A0A2823001C66F4 /* HomeService.swift */,
+				D2FA9D982A0A284B001C66F4 /* HomeAPI.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -825,6 +861,7 @@
 				D2B640912A0A229500A11697 /* TvingInfoTableViewCell.swift in Sources */,
 				D2FA9D922A0A234D001C66F4 /* TvingSettingTableViewCell.swift in Sources */,
 				D28EBB4229F6F3EF008CF532 /* UICollectionViewCell+.swift in Sources */,
+				D2FA9D992A0A284B001C66F4 /* HomeAPI.swift in Sources */,
 				D28EBB6529F9FA9F008CF532 /* TvingMainNavigationView.swift in Sources */,
 				D28EBB2B29F6EA2C008CF532 /* TvingStreamingViewController.swift in Sources */,
 				D2B6408F2A0A229000A11697 /* TvingProfileView.swift in Sources */,
@@ -832,6 +869,7 @@
 				D28EBB4029F6F2D6008CF532 /* TvingTopBarCollectionViewCell.swift in Sources */,
 				D28EBB6729FA0078008CF532 /* TvingHomePosterSectionCell.swift in Sources */,
 				D2D2196229E23A3D00C7B126 /* UILabel+.swift in Sources */,
+				D2FA9D972A0A2823001C66F4 /* HomeService.swift in Sources */,
 				D2601EF129F229B500320516 /* TvingNicknameBottomSheetViewController.swift in Sources */,
 				D28EBB6329F8D4BF008CF532 /* UICollectionReusableView+.swift in Sources */,
 				D2D2A5DF29FA38F5003C9A97 /* TvingPopularChannelViewCell.swift in Sources */,
@@ -857,6 +895,8 @@
 				D28EBB3B29F6ED75008CF532 /* TvingMovieView.swift in Sources */,
 				D253230A2A0623F800562D92 /* Config.swift in Sources */,
 				D28EBB3D29F6ED81008CF532 /* TvingParamountView.swift in Sources */,
+				D2FA9D9B2A0A286B001C66F4 /* BaseTargetType.swift in Sources */,
+				D2FA9D9F2A0A2A35001C66F4 /* AlamofireLogger.swift in Sources */,
 				D25323102A062A0400562D92 /* SignUpService.swift in Sources */,
 				D2B640952A0A22A600A11697 /* TvingInfoTableFooterView.swift in Sources */,
 				D2B640872A0A227900A11697 /* TvingMyPageViewController.swift in Sources */,
