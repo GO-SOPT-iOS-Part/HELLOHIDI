@@ -17,10 +17,18 @@ class HomeAPI: BaseAPI {
 
 extension HomeAPI{
     
-    public func getNowPlaying(request: ContentRequest ,completion: @escaping (NetworkResult<Any>) -> Void) {
+    public func getNowPlaying(request: MovieRequest ,completion: @escaping (NetworkResult<Any>) -> Void) {
         AFManager.request(HomeService.getNowPlaying(request)).responseData { response in
             self.disposeNetwork(response,
-                                dataModel: ContentResponse.self,
+                                dataModel: MovieResponse.self,
+                                completion: completion)
+        }
+    }
+    
+    public func getPopular(request: PopularMovieRequest ,completion: @escaping (NetworkResult<Any>) -> Void) {
+        AFManager.request(HomeService.getPopular(request)).responseData { response in
+            self.disposeNetwork(response,
+                                dataModel: PopularMovieResponse.self,
                                 completion: completion)
         }
     }

@@ -14,7 +14,7 @@ final class TvingContentSectionCell: UICollectionViewCell {
     
     //MARK: - Properties
     
-    private var nowPlayingContents: ContentResponse?
+    private var nowPlayingContents: MovieResponse?
     
     //MARK: - UI Components
     
@@ -68,7 +68,7 @@ final class TvingContentSectionCell: UICollectionViewCell {
         }
     }
     
-    public func dataBind(_ nowPlayingContents: ContentResponse?) {
+    public func dataBind(_ nowPlayingContents: MovieResponse?) {
         self.nowPlayingContents = nowPlayingContents
         self.tvingContentCollectionView.reloadData()
     }

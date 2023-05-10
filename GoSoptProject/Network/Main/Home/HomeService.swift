@@ -10,8 +10,8 @@ import Foundation
 import Alamofire
 
 enum HomeService{
-    case getNowPlaying(ContentRequest)
-    case getPopular(ContentRequest)
+    case getNowPlaying(MovieRequest)
+    case getPopular(PopularMovieRequest)
 }
 
 extension HomeService: BaseTargetType {

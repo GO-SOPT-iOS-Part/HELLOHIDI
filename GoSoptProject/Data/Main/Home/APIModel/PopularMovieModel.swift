@@ -7,25 +7,57 @@
 
 import UIKit
 
-struct Channel {
-    var image: UIImage
-    var rank: String
-    var title: String
-    var subTitle: String
-    var rating: String
-    
+struct PopularMovieRequest: Codable {
+    let api_key: String
+    let language: String?
+    let page: Int?
 }
 
-extension Channel {
-    static func dummy() -> [Channel] {
-        return [
-            Channel(image: Image.poster1, rank: "1", title: "하트시그널", subTitle: "하트시그널", rating: "80.0%"),
-            Channel(image: Image.poster2, rank: "2", title: "하트시그널", subTitle: "하트시그널", rating: "80.0%"),
-            Channel(image: Image.poster3, rank: "3", title: "하트시그널", subTitle: "하트시그널", rating: "80.0%"),
-            Channel(image: Image.poster4, rank: "4", title: "하트시그널", subTitle: "하트시그널", rating: "80.0%"),
-            Channel(image: Image.poster1, rank: "5", title: "하트시그널", subTitle: "하트시그널", rating: "80.0%"),
-            Channel(image: Image.poster2, rank: "6", title: "하트시그널", subTitle: "하트시그널", rating: "80.0%"),
-        ]
+// MARK: - PopularMovieResponse
+struct PopularMovieResponse: Codable {
+    let page: Int
+    let results: [PopularResult]
+    let totalPages, totalResults: Int
+
+    enum CodingKeys: String, CodingKey {
+        case page, results
+        case totalPages = "total_pages"
+        case totalResults = "total_results"
     }
 }
 
+// MARK: - Result
+struct PopularResult: Codable {
+    let adult: Bool
+    let backdropPath: String
+    let genreIDS: [Int]
+    let id: Int
+    let originalLanguage: OriginalLanguage2
+    let originalTitle, overview: String
+    let popularity: Double
+    let posterPath, releaseDate, title: String
+    let video: Bool
+    let voteAverage: Double
+    let voteCount: Int
+
+    enum CodingKeys: String, CodingKey {
+        case adult
+        case backdropPath = "backdrop_path"
+        case genreIDS = "genre_ids"
+        case id
+        case originalLanguage = "original_language"
+        case originalTitle = "original_title"
+        case overview, popularity
+        case posterPath = "poster_path"
+        case releaseDate = "release_date"
+        case title, video
+        case voteAverage = "vote_average"
+        case voteCount = "vote_count"
+    }
+}
+
+enum OriginalLanguage2: String, Codable {
+    case en = "en"
+    case fr = "fr"
+    case nl = "nl"
+}

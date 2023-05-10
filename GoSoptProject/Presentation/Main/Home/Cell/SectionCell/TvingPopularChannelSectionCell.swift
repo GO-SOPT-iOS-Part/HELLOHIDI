@@ -14,7 +14,7 @@ final class TvingPopularChannelSectionCell: UICollectionViewCell {
     
     //MARK: - Properties
     
-    private let channelDummy = Channel.dummy()
+    private var popularContents: PopularMovieResponse?
     
     //MARK: - UI Components
     
@@ -68,6 +68,11 @@ final class TvingPopularChannelSectionCell: UICollectionViewCell {
         }
     }
     
+    public func dataBind(_ popularContents: PopularMovieResponse?) {
+        self.popularContents = popularContents
+        self.tvingPopularChannelCollectionView.reloadData()
+    }
+    
     private func createLayout() ->  UICollectionViewCompositionalLayout {
         let itemSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1),
@@ -113,12 +118,12 @@ final class TvingPopularChannelSectionCell: UICollectionViewCell {
 
 extension TvingPopularChannelSectionCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return channelDummy.count
+        return self.popularContents?.results.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TvingPopularChannelViewCell.cellIdentifier, for: indexPath) as? TvingPopularChannelViewCell else { return UICollectionViewCell() }
-        cell.dataBind(channelDummy[indexPath.item])
+        cell.dataBind(popularContents?.results[indexPath.item])
         return cell
     }
     

@@ -7,14 +7,14 @@
 
 import UIKit
 
-struct ContentRequest: Codable {
+struct MovieRequest: Codable {
     let api_key: String
     let language: String?
     let page: Int?
 }
 
 // MARK: - ContentResponse
-struct ContentResponse: Codable {
+struct MovieResponse: Codable {
     let dates: Dates
     let page: Int
     let results: [Result]

@@ -105,12 +105,10 @@ final class TvingPopularChannelViewCell: UICollectionViewCell {
         }
     }
 
-    func dataBind(_ channel: Channel) {
-        channelImageView.image = channel.image
-        rankLabel.text = channel.rank
-        channelTitleLabel.text = channel.title
-        contentTitleLabel.text = channel.subTitle
-        ratingLabel.text = channel.rating
+    func dataBind(_ content: PopularResult?) {
+        guard let postURL = content?.posterPath else { return }
+        channelImageView.kfSetImage(url: "https://image.tmdb.org/t/p/original/\(postURL)")
+        channelTitleLabel.text = content?.title
     }
     //MARK: - Action Method
 
