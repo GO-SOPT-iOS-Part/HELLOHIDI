@@ -14,8 +14,7 @@ final class TvingContentSectionCell: UICollectionViewCell {
     
     //MARK: - Properties
     
-    private var contentCount: Int?
-    private var contentImage: [UIImage]?
+    private var nowPlayingContents: ContentResponse?
     
     //MARK: - UI Components
     
@@ -70,9 +69,7 @@ final class TvingContentSectionCell: UICollectionViewCell {
     }
     
     public func dataBind(_ nowPlayingContents: ContentResponse?) {
-        print("🦁🦁🦁셀의 개수는 🦁🦁🦁🦁\(nowPlayingContents?.results.count)")
-        contentCount = nowPlayingContents?.results.count
-        print("🦁🦁🦁셀의 개수는 🦁🦁🦁🦁\(contentCount)")
+        self.nowPlayingContents = nowPlayingContents
         self.tvingContentCollectionView.reloadData()
     }
     
@@ -121,13 +118,12 @@ final class TvingContentSectionCell: UICollectionViewCell {
 
 extension TvingContentSectionCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print("🦁🦁🦁셀의 개수는 🦁🦁🦁🦁\(contentCount)")
-        return contentCount ?? 0
+        return self.nowPlayingContents?.results.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TvingContentViewCell.cellIdentifier, for: indexPath) as? TvingContentViewCell else { return UICollectionViewCell() }
-        //cell.dataBind(contentDummy[indexPath.item])
+        cell.dataBind(nowPlayingContents?.results[indexPath.item])
         return cell
     }
     

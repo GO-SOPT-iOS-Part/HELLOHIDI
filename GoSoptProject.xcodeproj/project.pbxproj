@@ -52,7 +52,7 @@
 		D28EBB5829F825CB008CF532 /* TvingPopularChannelSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28EBB5729F825CB008CF532 /* TvingPopularChannelSectionCell.swift */; };
 		D28EBB5A29F825E1008CF532 /* TvingContentSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28EBB5929F825E1008CF532 /* TvingContentSectionCell.swift */; };
 		D28EBB5D29F83368008CF532 /* TvingContentViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28EBB5C29F83368008CF532 /* TvingContentViewCell.swift */; };
-		D28EBB5F29F835DD008CF532 /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28EBB5E29F835DD008CF532 /* ContentModel.swift */; };
+		D28EBB5F29F835DD008CF532 /* NowPlayingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28EBB5E29F835DD008CF532 /* NowPlayingModel.swift */; };
 		D28EBB6129F8C5BD008CF532 /* TvingContentHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28EBB6029F8C5BD008CF532 /* TvingContentHeaderView.swift */; };
 		D28EBB6329F8D4BF008CF532 /* UICollectionReusableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28EBB6229F8D4BF008CF532 /* UICollectionReusableView+.swift */; };
 		D28EBB6529F9FA9F008CF532 /* TvingMainNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28EBB6429F9FA9F008CF532 /* TvingMainNavigationView.swift */; };
@@ -96,7 +96,7 @@
 		D2D2196629E23A6900C7B126 /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2196529E23A6900C7B126 /* UIImageView+.swift */; };
 		D2D2196929E23ABB00C7B126 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2196829E23ABB00C7B126 /* BaseViewController.swift */; };
 		D2D2A5DF29FA38F5003C9A97 /* TvingPopularChannelViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2A5DE29FA38F5003C9A97 /* TvingPopularChannelViewCell.swift */; };
-		D2D2A5E129FAD0F2003C9A97 /* ChannelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2A5E029FAD0F2003C9A97 /* ChannelModel.swift */; };
+		D2D2A5E129FAD0F2003C9A97 /* PopularMovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2A5E029FAD0F2003C9A97 /* PopularMovieModel.swift */; };
 		D2F3784F29FC352900D89C89 /* TvingTopStickyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F3784E29FC352800D89C89 /* TvingTopStickyView.swift */; };
 		D2F3785129FD591200D89C89 /* TvingStickyViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F3785029FD591200D89C89 /* TvingStickyViewCell.swift */; };
 		D2F378532A036DF500D89C89 /* TvingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F378522A036DF500D89C89 /* TvingPageViewController.swift */; };
@@ -105,6 +105,7 @@
 		D2FA9D992A0A284B001C66F4 /* HomeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FA9D982A0A284B001C66F4 /* HomeAPI.swift */; };
 		D2FA9D9B2A0A286B001C66F4 /* BaseTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FA9D9A2A0A286B001C66F4 /* BaseTargetType.swift */; };
 		D2FA9D9F2A0A2A35001C66F4 /* AlamofireLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FA9D9E2A0A2A35001C66F4 /* AlamofireLogger.swift */; };
+		D2FA9DA22A0BC03E001C66F4 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D2FA9DA12A0BC03E001C66F4 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -164,7 +165,7 @@
 		D28EBB5729F825CB008CF532 /* TvingPopularChannelSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingPopularChannelSectionCell.swift; sourceTree = "<group>"; };
 		D28EBB5929F825E1008CF532 /* TvingContentSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingContentSectionCell.swift; sourceTree = "<group>"; };
 		D28EBB5C29F83368008CF532 /* TvingContentViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingContentViewCell.swift; sourceTree = "<group>"; };
-		D28EBB5E29F835DD008CF532 /* ContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentModel.swift; sourceTree = "<group>"; };
+		D28EBB5E29F835DD008CF532 /* NowPlayingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingModel.swift; sourceTree = "<group>"; };
 		D28EBB6029F8C5BD008CF532 /* TvingContentHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingContentHeaderView.swift; sourceTree = "<group>"; };
 		D28EBB6229F8D4BF008CF532 /* UICollectionReusableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionReusableView+.swift"; sourceTree = "<group>"; };
 		D28EBB6429F9FA9F008CF532 /* TvingMainNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingMainNavigationView.swift; sourceTree = "<group>"; };
@@ -210,7 +211,7 @@
 		D2D2196529E23A6900C7B126 /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
 		D2D2196829E23ABB00C7B126 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D2D2A5DE29FA38F5003C9A97 /* TvingPopularChannelViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingPopularChannelViewCell.swift; sourceTree = "<group>"; };
-		D2D2A5E029FAD0F2003C9A97 /* ChannelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelModel.swift; sourceTree = "<group>"; };
+		D2D2A5E029FAD0F2003C9A97 /* PopularMovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMovieModel.swift; sourceTree = "<group>"; };
 		D2F3784E29FC352800D89C89 /* TvingTopStickyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingTopStickyView.swift; sourceTree = "<group>"; };
 		D2F3785029FD591200D89C89 /* TvingStickyViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingStickyViewCell.swift; sourceTree = "<group>"; };
 		D2F378522A036DF500D89C89 /* TvingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingPageViewController.swift; sourceTree = "<group>"; };
@@ -226,6 +227,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2FA9DA22A0BC03E001C66F4 /* Kingfisher in Frameworks */,
 				D25323072A06232100562D92 /* Alamofire in Frameworks */,
 				D232569029E242DD00D3B988 /* SnapKit in Frameworks */,
 				D232569329E242FC00D3B988 /* Then in Frameworks */,
@@ -544,9 +546,9 @@
 		D2B6407D2A0A20B100A11697 /* APIModel */ = {
 			isa = PBXGroup;
 			children = (
-				D28EBB5E29F835DD008CF532 /* ContentModel.swift */,
+				D28EBB5E29F835DD008CF532 /* NowPlayingModel.swift */,
 				D28EBB6A29FA0293008CF532 /* PosterModel.swift */,
-				D2D2A5E029FAD0F2003C9A97 /* ChannelModel.swift */,
+				D2D2A5E029FAD0F2003C9A97 /* PopularMovieModel.swift */,
 			);
 			path = APIModel;
 			sourceTree = "<group>";
@@ -759,6 +761,7 @@
 				D232568F29E242DD00D3B988 /* SnapKit */,
 				D232569229E242FC00D3B988 /* Then */,
 				D25323062A06232100562D92 /* Alamofire */,
+				D2FA9DA12A0BC03E001C66F4 /* Kingfisher */,
 			);
 			productName = GoSoptProject;
 			productReference = D2D2193529E2356400C7B126 /* GoSoptProject.app */;
@@ -792,6 +795,7 @@
 				D232568E29E242DD00D3B988 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				D232569129E242FC00D3B988 /* XCRemoteSwiftPackageReference "Then" */,
 				D25323052A06232100562D92 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				D2FA9DA02A0BC03E001C66F4 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = D2D2193629E2356400C7B126 /* Products */;
 			projectDirPath = "";
@@ -850,13 +854,13 @@
 				D2B6408D2A0A228C00A11697 /* TvingTableView.swift in Sources */,
 				D2B640702A0A179900A11697 /* APIConstants.swift in Sources */,
 				D28EBB2729F6E999008CF532 /* TvingMainViewController.swift in Sources */,
-				D28EBB5F29F835DD008CF532 /* ContentModel.swift in Sources */,
+				D28EBB5F29F835DD008CF532 /* NowPlayingModel.swift in Sources */,
 				D25323142A062AA300562D92 /* SignUpResponse.swift in Sources */,
 				D28EBB2F29F6EA77008CF532 /* TvingMovieViewController.swift in Sources */,
 				D2B6406E2A0A178100A11697 /* BaseAPI.swift in Sources */,
 				D2D2195A29E239E700C7B126 /* UIViewController+.swift in Sources */,
 				D2B640762A0A1EF600A11697 /* VoidResult.swift in Sources */,
-				D2D2A5E129FAD0F2003C9A97 /* ChannelModel.swift in Sources */,
+				D2D2A5E129FAD0F2003C9A97 /* PopularMovieModel.swift in Sources */,
 				D28EBB3729F6ED5C008CF532 /* TvingTVProgramView.swift in Sources */,
 				D2B640912A0A229500A11697 /* TvingInfoTableViewCell.swift in Sources */,
 				D2FA9D922A0A234D001C66F4 /* TvingSettingTableViewCell.swift in Sources */,
@@ -1159,6 +1163,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		D2FA9DA02A0BC03E001C66F4 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1176,6 +1188,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D25323052A06232100562D92 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		D2FA9DA12A0BC03E001C66F4 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D2FA9DA02A0BC03E001C66F4 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

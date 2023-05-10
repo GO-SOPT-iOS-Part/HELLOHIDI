@@ -22,7 +22,6 @@ class BaseAPI{
     
     private func judgeStatus<T: Codable>(by statusCode: Int, _ data: Data, _ object: T.Type) -> NetworkResult<Any> {
         let decoder = JSONDecoder()
-        print("❤️ statusCode \(statusCode)")
         guard let decodedData = try? decoder.decode(GenericResponse<T>.self, from: data)
         else {
             return .pathErr
@@ -86,14 +85,3 @@ class BaseAPI{
         }
     }
 }
-//public let response: HTTPURLResponse?
-//
-///// The data returned by the server.
-//public let data: Data?
-
-//print(
-//  "URL: " + (request.request?.url?.absoluteString ?? "") + "\n"
-//    + "Result: " + "\(response.result)" + "\n"
-//    + "StatusCode: " + "\(response.response?.statusCode ?? 0)" + "\n"
-//    + "Data: \(response.data?.toPrettyPrintedString ?? "")"
-//)

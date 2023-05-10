@@ -11,6 +11,5 @@ struct GenericResponse<T: Codable>: Codable {
     var status_code: Int?
     var success: Bool?
     var status_message: String?
-    var data: T?
 }
 

@@ -36,7 +36,6 @@ final class TvingContentViewCell: UICollectionViewCell {
     //MARK: - Custom Method
     
     private func style() {
-        self.backgroundColor = .yellow
         contentTitleLabel.do {
             $0.font = .tvingToastMessage
             $0.textColor = .tvingGray3
@@ -63,10 +62,12 @@ final class TvingContentViewCell: UICollectionViewCell {
         }
     }
     
-//    func dataBind(_ cotent: Content) {
-//        contentImageView.image = cotent.image
-//        contentTitleLabel.text = cotent.title
-//    }
+    func dataBind(_ content: Result?) {
+        guard let postURL = content?.posterPath else { return }
+        contentImageView.kfSetImage(url: "https://image.tmdb.org/t/p/original/\(postURL)")
+        contentTitleLabel.text = content?.title
+    }
+    
     //MARK: - Action Method
     
 }
