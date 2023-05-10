@@ -14,6 +14,7 @@ final class TvingMyPageView: UIScrollView {
     
     //MARK: - UI Components
     
+    private let tvingNavigationView = TvingNavigationView()
     private let tvingProfileView = TvingProfileView()
     private let tvingTicketView = TvingTicketView()
     public let tvingTableView = TvingTableView()
@@ -42,6 +43,7 @@ final class TvingMyPageView: UIScrollView {
     
     private func hierarchy() {
         self.addSubviews(
+            tvingNavigationView,
             tvingProfileView,
             tvingTicketView,
             tvingTableView
@@ -49,8 +51,14 @@ final class TvingMyPageView: UIScrollView {
     }
     
     private func layout() {
+        tvingNavigationView.snp.makeConstraints {
+            $0.top.equalToSuperview()
+            $0.width.equalToSuperview()
+            $0.height.equalTo(80)
+        }
+        
         tvingProfileView.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(35)
+            $0.top.equalTo(self.tvingNavigationView.snp.bottom)
             $0.width.equalToSuperview()
             $0.height.equalTo(103)
         }
