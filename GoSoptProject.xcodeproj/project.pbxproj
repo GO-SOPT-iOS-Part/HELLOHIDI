@@ -19,7 +19,6 @@
 		D238C5C229F662E700B4B8A9 /* TvingSettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D238C5C129F662E700B4B8A9 /* TvingSettingModel.swift */; };
 		D238C5C829F6791700B4B8A9 /* TvingInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D238C5C729F6791700B4B8A9 /* TvingInfoModel.swift */; };
 		D238C5CE29F69A1600B4B8A9 /* UITableHeaderFooterView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D238C5CD29F69A1600B4B8A9 /* UITableHeaderFooterView+.swift */; };
-		D2467F2E29FAD42B00246269 /* TvingPopularChannelHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2467F2D29FAD42B00246269 /* TvingPopularChannelHeaderView.swift */; };
 		D24A047329ED8AD4006835EF /* BaseAuthTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24A047229ED8AD4006835EF /* BaseAuthTextField.swift */; };
 		D25323072A06232100562D92 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D25323062A06232100562D92 /* Alamofire */; };
 		D253230A2A0623F800562D92 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25323092A0623F800562D92 /* Config.swift */; };
@@ -133,7 +132,6 @@
 		D238C5C129F662E700B4B8A9 /* TvingSettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingSettingModel.swift; sourceTree = "<group>"; };
 		D238C5C729F6791700B4B8A9 /* TvingInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingInfoModel.swift; sourceTree = "<group>"; };
 		D238C5CD29F69A1600B4B8A9 /* UITableHeaderFooterView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableHeaderFooterView+.swift"; sourceTree = "<group>"; };
-		D2467F2D29FAD42B00246269 /* TvingPopularChannelHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvingPopularChannelHeaderView.swift; sourceTree = "<group>"; };
 		D24A047229ED8AD4006835EF /* BaseAuthTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAuthTextField.swift; sourceTree = "<group>"; };
 		D25323092A0623F800562D92 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		D253230B2A06241500562D92 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
@@ -243,7 +241,6 @@
 				D28E831329EAAEB000002EB4 /* Pretendard-Bold.otf */,
 				D232569D29E2540C00D3B988 /* Pretendard-Medium.otf */,
 				D232569B29E2528800D3B988 /* Pretendard-SemiBold.otf */,
-				D28EBB4729F81E9C008CF532 /* Pretendard-Regular.otf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -681,8 +678,6 @@
 				D2D2196529E23A6900C7B126 /* UIImageView+.swift */,
 				D232569429E24A7100D3B988 /* UIFont+.swift */,
 				D238C5CD29F69A1600B4B8A9 /* UITableHeaderFooterView+.swift */,
-				D28EBB4129F6F3EF008CF532 /* UICollectionViewCell+.swift */,
-				D28EBB6229F8D4BF008CF532 /* UICollectionReusableView+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -815,7 +810,6 @@
 				D28E831429EAAEB000002EB4 /* Pretendard-Bold.otf in Resources */,
 				D232569C29E2528800D3B988 /* Pretendard-SemiBold.otf in Resources */,
 				D2D2194229E2356500C7B126 /* Assets.xcassets in Resources */,
-				D28EBB4829F81E9C008CF532 /* Pretendard-Regular.otf in Resources */,
 				D2D2194029E2356400C7B126 /* Main.storyboard in Resources */,
 				D232569E29E2540C00D3B988 /* Pretendard-Medium.otf in Resources */,
 			);
@@ -828,7 +822,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D28EBB4429F6F579008CF532 /* TvingTopbarModel.swift in Sources */,
 				D2D2195C29E23A0000C7B126 /* UITableViewCell+.swift in Sources */,
 				D2F3785129FD591200D89C89 /* TvingStickyViewCell.swift in Sources */,
 				D238C59E29F63D7B00B4B8A9 /* SecondSeminarFirstViewController.swift in Sources */,
@@ -836,20 +829,13 @@
 				D2B640892A0A228300A11697 /* TvingMyPageView.swift in Sources */,
 				D238C59A29F63D6700B4B8A9 /* SecondSeminarFirstView.swift in Sources */,
 				D2D2196629E23A6900C7B126 /* UIImageView+.swift in Sources */,
-				D28EBB3129F6EA8D008CF532 /* TvingParamountViewController.swift in Sources */,
 				D2D2193D29E2356400C7B126 /* ViewController.swift in Sources */,
-				D28EBB2929F6EA0B008CF532 /* TvingHomeViewController.swift in Sources */,
-				D28EBB5829F825CB008CF532 /* TvingPopularChannelSectionCell.swift in Sources */,
 				D2601EEF29F229AB00320516 /* TvingNicknameBottomSheetView.swift in Sources */,
 				D2B6408B2A0A228800A11697 /* TvingTicketView.swift in Sources */,
 				D28EBB4629F7AF7C008CF532 /* TvingMainViewModel.swift in Sources */,
 				D2D2195629E2399F00C7B126 /* URLs.swift in Sources */,
 				D238C5C229F662E700B4B8A9 /* TvingSettingModel.swift in Sources */,
-				D2467F2E29FAD42B00246269 /* TvingPopularChannelHeaderView.swift in Sources */,
 				D2D2196929E23ABB00C7B126 /* BaseViewController.swift in Sources */,
-				D28EBB3529F6ED47008CF532 /* TvingHomeView.swift in Sources */,
-				D28EBB6B29FA0293008CF532 /* PosterModel.swift in Sources */,
-				D28EBB5A29F825E1008CF532 /* TvingContentSectionCell.swift in Sources */,
 				D2D2196029E23A2A00C7B126 /* UIColor+.swift in Sources */,
 				D2B6408D2A0A228C00A11697 /* TvingTableView.swift in Sources */,
 				D2B640702A0A179900A11697 /* APIConstants.swift in Sources */,
@@ -883,9 +869,7 @@
 				D2A7F32229E23FD200BFA4E9 /* TvingLoginViewController.swift in Sources */,
 				D232569529E24A7100D3B988 /* UIFont+.swift in Sources */,
 				D2D2193929E2356400C7B126 /* AppDelegate.swift in Sources */,
-				D2F3784F29FC352900D89C89 /* TvingTopStickyView.swift in Sources */,
 				D238C5A029F63D8900B4B8A9 /* SecondSeminarSecondViewController.swift in Sources */,
-				D28EBB6929FA0244008CF532 /* TvingHomePosterCell.swift in Sources */,
 				D2D2193B29E2356400C7B126 /* SceneDelegate.swift in Sources */,
 				D2B640722A0A17A500A11697 /* SimpleResponse.swift in Sources */,
 				D2A7F32429E23FE400BFA4E9 /* TvingWelcomeViewController.swift in Sources */,
@@ -908,12 +892,9 @@
 				D24A047329ED8AD4006835EF /* BaseAuthTextField.swift in Sources */,
 				D28E831229E8FD5D00002EB4 /* String.swift in Sources */,
 				D238C5C829F6791700B4B8A9 /* TvingInfoModel.swift in Sources */,
-				D28EBB5D29F83368008CF532 /* TvingContentViewCell.swift in Sources */,
 				D2601EF329F26B2A00320516 /* BaseToastMessage.swift in Sources */,
 				D2B640932A0A229A00A11697 /* TvingSettingTableFooterView.swift in Sources */,
 				D2A7F32029E23FC500BFA4E9 /* TvingWelcomeView.swift in Sources */,
-				D28EBB3329F6EAB2008CF532 /* TvingTopBarView.swift in Sources */,
-				D28EBB6129F8C5BD008CF532 /* TvingContentHeaderView.swift in Sources */,
 				D2D2195429E2399500C7B126 /* Image.swift in Sources */,
 				D253230C2A06241500562D92 /* NetworkResult.swift in Sources */,
 			);
