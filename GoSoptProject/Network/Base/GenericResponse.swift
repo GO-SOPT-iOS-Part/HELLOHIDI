@@ -8,9 +8,9 @@
 import Foundation
 
 struct GenericResponse<T: Codable>: Codable {
-    var status: Int
-    var success: Bool
-    var message: String?
+    var status_code: Int?
+    var success: Bool?
+    var status_message: String?
     var data: T?
 }
 

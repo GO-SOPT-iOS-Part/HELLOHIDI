@@ -10,6 +10,7 @@ import Foundation
 import Alamofire
 
 protocol BaseTargetType: URLRequestConvertible {
+    var baseURL: String { get }
     var method: HTTPMethod { get }
     var path: String { get }
     var parameters: RequestParams { get }
@@ -17,7 +18,7 @@ protocol BaseTargetType: URLRequestConvertible {
 
 extension BaseTargetType {
 
-    var baseURL: URLConvertible{
+    var baseURL: String {
         return Config.baseURL
     }
     
@@ -38,7 +39,6 @@ extension BaseTargetType {
             let params = request?.toDictionary() ?? [:]
             urlRequest.httpBody = try JSONSerialization.data(withJSONObject: params, options: [])
         }
-
         return urlRequest
     }
 }

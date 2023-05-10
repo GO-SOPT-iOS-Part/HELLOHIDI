@@ -11,22 +11,33 @@ import Alamofire
 
 
 class BaseAPI{
+    
+    let AFManager: Session = {
+        var session = AF
+        let configuration = URLSessionConfiguration.af.default
+        let eventLogger = AlamofireLogger()
+        session = Session(configuration: configuration, eventMonitors: [eventLogger])
+        return session
+    }()
+    
     private func judgeStatus<T: Codable>(by statusCode: Int, _ data: Data, _ object: T.Type) -> NetworkResult<Any> {
         let decoder = JSONDecoder()
+        print("❤️ statusCode \(statusCode)")
         guard let decodedData = try? decoder.decode(GenericResponse<T>.self, from: data)
         else {
             return .pathErr
         }
         
+        guard let realData = try? decoder.decode(object.self, from: data) else {
+            return .decodedErr
+        }
+        
+        print(realData)
         switch statusCode {
         case 200..<205:
-            guard decodedData.data != nil else {
-                print("⛔️ \(self)애서 디코딩 오류가 발생했습니다 ⛔️")
-                return .decodedErr
-            }
-            return .success(decodedData.data as Any)
+            return .success(realData as Any)
         case 400..<500:
-            return .requestErr(decodedData.message ?? "요청에러")
+            return .requestErr(decodedData.status_message ?? "요청에러")
         case 500:
             return .serverErr
         default:
@@ -55,23 +66,34 @@ class BaseAPI{
         }
     }
     
-    public func disposeNetwork<T: Codable>(_ result: Result<AFDataResponse<T>,AFError>, dataModel: T.Type, completion: @escaping (NetworkResult<Any>) -> Void) {
-        switch result{
-        case .success(let response):
-            guard let statusCode = response.response?.statusCode else { return }
-            guard let data = response.data else { return }
+    public func disposeNetwork<T: Codable>(_ result: AFDataResponse<Data>, dataModel: T.Type, completion: @escaping (NetworkResult<Any>) -> Void){
+        switch result.result {
+        case .success:
+            guard let statusCode = result.response?.statusCode else { return }
+            guard let data = result.data else { return }
             
             if dataModel != VoidResult.self{
+                print(data)
                 let networkResult = self.judgeStatus(by: statusCode, data, dataModel.self)
                 completion(networkResult)
             } else {
                 let networkResult = self.judgeSimpleResponseStatus(by: statusCode, data)
                 completion(networkResult)
             }
-            
-        case .failure(let err):
+        case .failure(let error):
             print("여기서 에러나는 경우는 무슨경우?")
-            print(err)
+            print(error)
         }
     }
 }
+//public let response: HTTPURLResponse?
+//
+///// The data returned by the server.
+//public let data: Data?
+
+//print(
+//  "URL: " + (request.request?.url?.absoluteString ?? "") + "\n"
+//    + "Result: " + "\(response.result)" + "\n"
+//    + "StatusCode: " + "\(response.response?.statusCode ?? 0)" + "\n"
+//    + "Data: \(response.data?.toPrettyPrintedString ?? "")"
+//)

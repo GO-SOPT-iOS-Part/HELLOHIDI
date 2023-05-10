@@ -14,7 +14,8 @@ final class TvingContentSectionCell: UICollectionViewCell {
     
     //MARK: - Properties
     
-    private let contentDummy = Content.dummy()
+    private var contentCount: Int?
+    private var contentImage: [UIImage]?
     
     //MARK: - UI Components
     
@@ -68,6 +69,13 @@ final class TvingContentSectionCell: UICollectionViewCell {
         }
     }
     
+    public func dataBind(_ nowPlayingContents: ContentResponse?) {
+        print("🦁🦁🦁셀의 개수는 🦁🦁🦁🦁\(nowPlayingContents?.results.count)")
+        contentCount = nowPlayingContents?.results.count
+        print("🦁🦁🦁셀의 개수는 🦁🦁🦁🦁\(contentCount)")
+        self.tvingContentCollectionView.reloadData()
+    }
+    
     private func createLayout() ->  UICollectionViewCompositionalLayout {
         let itemSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1.0),
@@ -113,12 +121,13 @@ final class TvingContentSectionCell: UICollectionViewCell {
 
 extension TvingContentSectionCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return contentDummy.count
+        print("🦁🦁🦁셀의 개수는 🦁🦁🦁🦁\(contentCount)")
+        return contentCount ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TvingContentViewCell.cellIdentifier, for: indexPath) as? TvingContentViewCell else { return UICollectionViewCell() }
-        cell.dataBind(contentDummy[indexPath.item])
+        //cell.dataBind(contentDummy[indexPath.item])
         return cell
     }
     

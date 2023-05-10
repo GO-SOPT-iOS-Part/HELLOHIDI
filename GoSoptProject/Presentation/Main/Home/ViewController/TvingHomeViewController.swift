@@ -18,6 +18,7 @@ final class TvingHomeViewController: BaseViewController {
     
     //MARK: - Properties
     
+    private var nowPlayingContent: ContentResponse?
     weak var delegate: HomeViewScroll?
     
     //MARK: - UI Components
@@ -34,6 +35,12 @@ final class TvingHomeViewController: BaseViewController {
         super.viewDidLoad()
         
         target()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        requestNowPlayingMovie()
     }
     
     //MARK: - Custom Method
@@ -113,6 +120,8 @@ extension TvingHomeViewController: UICollectionViewDataSource {
             return cell
         case 1:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TvingContentSectionCell.cellIdentifier, for: indexPath) as? TvingContentSectionCell else { return UICollectionViewCell() }
+            print("🍎🍎🍎🍎🍎 셀의 개수는 🍎🍎🍎 \(String(describing: self.nowPlayingContent?.results.count))")
+            cell.dataBind(nowPlayingContent)
             return cell
         case 2:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TvingPopularChannelSectionCell.cellIdentifier, for: indexPath) as? TvingPopularChannelSectionCell else { return UICollectionViewCell() }
@@ -120,5 +129,24 @@ extension TvingHomeViewController: UICollectionViewDataSource {
         default:
             return UICollectionViewCell()
         }
+    }
+}
+
+extension TvingHomeViewController {
+    func requestNowPlayingMovie() {
+        print("🙏🙏🙏🙏🙏🙏🙏🙏🙏🙏🙏🙏🙏🙏")
+        print(#function)
+        HomeAPI.shared.getNowPlaying(request: ContentRequest(api_key: Config.api, language: "en-US", page: 1), completion: { result in
+            print("👑👑👑👑👑👑👑👑\(result)")
+            guard let result = self.validateResult(result) as? ContentResponse else {
+                print("⭐️⭐️⭐️⭐️⭐️⭐️⭐️      ⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️")
+                print("⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️ \(result)")
+                return
+                
+            }
+            self.nowPlayingContent = result
+            print("🍎🍎🍎🍎🍎 셀의 개수는 🍎🍎🍎 \(result.results.count)")
+            self.rootView.tvingHomeView.reloadData()
+        })
     }
 }

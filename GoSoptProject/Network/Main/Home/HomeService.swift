@@ -15,6 +15,7 @@ enum HomeService{
 }
 
 extension HomeService: BaseTargetType {
+    
     var method: Alamofire.HTTPMethod {
         switch self {
         case .getNowPlaying:
