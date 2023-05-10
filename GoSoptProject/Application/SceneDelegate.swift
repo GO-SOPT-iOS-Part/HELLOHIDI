@@ -15,12 +15,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         // 1.
         guard let windowScene = (scene as? UIWindowScene) else { return }
-    // 2.
+        // 2.
         self.window = UIWindow(windowScene: windowScene)
-    // 3.
-        let navigationController = UINavigationController(rootViewController: TvingLoginViewController())
+        // 3.
+        let navigationController = UINavigationController(rootViewController: TvingMainViewController())
         self.window?.rootViewController = navigationController
-    // 4.
+        // 4.
         self.window?.makeKeyAndVisible()
     }
 }
