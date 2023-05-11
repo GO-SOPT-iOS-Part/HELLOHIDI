@@ -37,11 +37,11 @@ final class TvingMainNavigationView: UIView {
         self.backgroundColor = .clear
         
         logoImageView.do {
-            $0.image = Image.logo
+            $0.image = Image.adImage
         }
         
         myPageButton.do {
-            $0.setImage(Image.profile, for: .normal)
+            $0.setImage(Image.adImage, for: .normal)
         }
     }
     

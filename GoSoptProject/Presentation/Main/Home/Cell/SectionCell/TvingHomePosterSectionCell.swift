@@ -14,7 +14,7 @@ final class TvingHomePosterSectionCell: UICollectionViewCell {
     
     //MARK: - Properties
     
-    private let posterDummy = Poster.dummy()
+//    private let posterDummy = Poster.dummy()
     
     //MARK: - UI Components
     
@@ -92,7 +92,7 @@ extension TvingHomePosterSectionCell: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TvingHomePosterCell.cellIdentifier, for: indexPath) as? TvingHomePosterCell else { return UICollectionViewCell() }
-        cell.dataBind(posterDummy[indexPath.item % posterDummy.count])
+        //cell.dataBind(posterDummy[indexPath.item % posterDummy.count])
         return cell
     }
 }

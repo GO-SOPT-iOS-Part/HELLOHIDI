@@ -23,7 +23,6 @@ final class TvingHomePosterCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        style()
         hierarchy()
         layout()
     }
@@ -33,12 +32,6 @@ final class TvingHomePosterCell: UICollectionViewCell {
     }
     
     //MARK: - Custom Method
-    
-    private func style() {
-        posterImage.do {
-            $0.setGradient(color1: .tvingGrad1, color2: .tvingGrad2)
-        }
-    }
     
     private func hierarchy() {
         contentView.addSubview(posterImage)

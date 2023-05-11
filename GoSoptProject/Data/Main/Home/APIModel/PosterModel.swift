@@ -11,15 +11,15 @@ struct Poster {
     var image: UIImage
 }
 
-extension Poster {
-    static func dummy() -> [Poster] {
-        return [
-            Poster(image: Image.poster1),
-            Poster(image: Image.poster2),
-            Poster(image: Image.poster3),
-            Poster(image: Image.poster4),
-            Poster(image: Image.poster1),
-            Poster(image: Image.poster2)
-        ]
-    }
-}
+//extension Poster {
+//    static func dummy() -> [Poster] {
+//        return [
+//            Poster(image: Image.poster1),
+//            Poster(image: Image.poster2),
+//            Poster(image: Image.poster3),
+//            Poster(image: Image.poster4),
+//            Poster(image: Image.poster1),
+//            Poster(image: Image.poster2)
+//        ]
+//    }
+//}
