@@ -43,7 +43,7 @@ final class SignUpService {
                 completion(networkResult)
                 
             case .failure:
-                completion(.networkErr)
+                completion(.networkFail)
             }
         }
     }
@@ -53,7 +53,7 @@ final class SignUpService {
         case 201: return isValidData(data: data)
         case 400, 409: return isValidData(data: data)
         case 500: return .serverErr
-        default: return .networkErr
+        default: return .networkFail
         }
     }
     
